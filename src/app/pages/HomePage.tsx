@@ -76,42 +76,9 @@ export function HomePage() {
           />
         </div>
       </section>
-
-      {/* Why us */}
-      <section className="bg-[#0E0E12] py-20 px-4">
-        <div className="max-w-6xl mx-auto">
-          <div className="text-center mb-14">
-            <h2 className="text-white text-3xl font-bold mb-3">{t.home.whyUs.title}</h2>
-            <p className="text-white/50 max-w-lg mx-auto">{t.home.whyUs.subtitle}</p>
-          </div>
-          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
-            {[
-              { icon: <MapPin size={20} />, title: t.home.whyUs.loc.title, desc: t.home.whyUs.loc.desc },
-              { icon: <Clock size={20} />, title: t.home.whyUs.hours.title, desc: t.home.whyUs.hours.desc },
-              { icon: <Zap size={20} />, title: t.home.whyUs.condition.title, desc: t.home.whyUs.condition.desc },
-              { icon: <Bike size={20} />, title: t.home.whyUs.ages.title, desc: t.home.whyUs.ages.desc },
-              { icon: <Wrench size={20} />, title: t.home.whyUs.fast.title, desc: t.home.whyUs.fast.desc },
-              { icon: <Phone size={20} />, title: t.home.whyUs.support.title, desc: t.home.whyUs.support.desc },
-            ].map(({ icon, title, desc }) => (
-              <div key={title} className="flex gap-4 p-5 rounded-xl bg-white/5 border border-white/10">
-                <div className="w-9 h-9 rounded-lg bg-[#A78BFA]/20 flex items-center justify-center text-[#A78BFA] shrink-0">
-                  {icon}
-                </div>
-                <div>
-                  <p className="text-white font-medium mb-1">{title}</p>
-                  <p className="text-white/50 text-sm leading-relaxed">{desc}</p>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
       {/* CTA */}
       <section className="py-20 px-4">
         <div className="max-w-3xl mx-auto text-center">
-          <h2 className="text-[#0E0E12] text-3xl font-bold mb-4">{t.home.cta.title}</h2>
-          <p className="text-gray-500 mb-8">{t.home.cta.subtitle}</p>
           <div className="flex flex-col sm:flex-row justify-center gap-4">
             <a
               href="https://wa.me/34612477841"
