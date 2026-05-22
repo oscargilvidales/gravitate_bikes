@@ -30,7 +30,7 @@ export default async function RootLayout({
     <html lang={lang}>
       <body>
         <div className="min-h-screen flex flex-col bg-white">
-          <Navbar lang={lang as any} />
+          <Navbar />
           <main className="flex-1">{children}</main>
           <footer className="bg-[#0E0E12] text-white/50 text-sm py-6 px-4 text-center">
             <p>
