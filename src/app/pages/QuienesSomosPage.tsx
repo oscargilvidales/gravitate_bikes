@@ -50,9 +50,9 @@ export function QuienesSomosPage() {
               <p>{t.quienesSomos.bio.desc2}</p>
             </div>
           </div>
-          <div className="rounded-2xl overflow-hidden h-80 bg-gray-50 border-2 border-dashed border-gray-200 flex flex-col items-center justify-center text-gray-400">
-            <span className="text-lg font-bold uppercase tracking-widest mb-2">Foto Gabi haciendo Plegada</span>
-            <span className="text-sm">Tamaño recomendado: 1200x900px</span>
+          <div className="rounded-2xl overflow-hidden h-80 md:h-96 shadow-xl flex items-center justify-center">
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img src="/about/Sin título.jpeg" alt="Gabi haciendo Plegada" className="w-full h-full object-cover" />
           </div>
         </div>
       </section>

@@ -11,14 +11,14 @@ export const dictionaries = {
     home: {
       hero: {
         location: "San Pedro Alcántara · Marbella",
-        title1: "Descubre el paseo",
+        title1: "Visita Marbella",
         title2: "en bicicleta",
         btnRent: "Ver tarifas de alquiler",
         btnRepair: "Reparaciones",
       },
       services: {
-        title: "¿Qué ofrecemos?",
-        subtitle: "Todo lo que necesitas para disfrutar de la bici en el paseo marítimo de San Pedro Alcántara.",
+        title: "Disfruta de Marbella de una manera diferente",
+        subtitle: "Bicis de paseo y eléctricas desde 15€/día. Recorre el paseo marítimo de Marbella a tu ritmo, con precios claros y taller propio.",
         rent: { title: "Alquiler de bicicletas por día", desc: "Bicis cómodas y ligeras, perfectas para recorrer el paseo marítimo a tu ritmo.", btn: "Ver tarifas" },
         repair: { title: "Taller de reparaciones", desc: "Reparaciones rápidas y profesionales. Pinchazos, frenos, cambios de marchas y mucho más.", btn: "Ver servicios" },
         clean: { title: "Servicio de limpieza", desc: "Déjala como nueva. Limpieza de transmisión por 15€ y limpieza de bici completa por 20€.", btn: "Solicitar cita" }
@@ -29,7 +29,7 @@ export const dictionaries = {
         loc: { title: "Ubicación inmejorable", desc: "En el corazón del paseo marítimo de San Pedro Alcántara." },
         hours: { title: "Abierto todos los días", desc: "Disponibles durante toda la temporada para que no te pierdas ni un paseo." },
         condition: { title: "Bicis en perfecto estado", desc: "Mantenimiento constante para que tu experiencia sea siempre segura y cómoda." },
-        ages: { title: "Para todos los públicos", desc: "Bicis adaptadas a adultos, jóvenes y familias. Tenemos la bici que buscas." },
+        ages: { title: "Desde 15€ al día", desc: "Precios imbatibles para que pedalear por Marbella no te cueste un ojo de la cara. Sin sorpresas, sin letra pequeña." },
         fast: { title: "Taller rápido", desc: "Reparaciones en el momento para que no pierdas tiempo y vuelvas a rodar enseguida." },
         support: { title: "Atención personalizada", desc: "Te asesoramos sobre rutas y te recomendamos la mejor opción según tus necesidades." }
       },
@@ -157,14 +157,14 @@ export const dictionaries = {
     home: {
       hero: {
         location: "San Pedro Alcántara · Marbella",
-        title1: "Discover the promenade",
+        title1: "Visit Marbella",
         title2: "by bicycle",
         btnRent: "View rental rates",
         btnRepair: "Repairs",
       },
       services: {
-        title: "What do we offer?",
-        subtitle: "Everything you need to enjoy cycling on the San Pedro Alcántara promenade.",
+        title: "Enjoy Marbella in a different way",
+        subtitle: "Discover Marbella in a different and sustainable way. Bike rentals and fast repairs so you don't lose a minute.",
         rent: { title: "Daily bike rental", desc: "Comfortable and light bikes, perfect for exploring the promenade at your own pace.", btn: "View rates" },
         repair: { title: "Repair Shop", desc: "Fast and professional repairs. Punctures, brakes, gear shifts, and much more.", btn: "View services" },
         clean: { title: "Cleaning Service", desc: "Make it look like new. Drivetrain cleaning for 15€ and full bike cleaning for 20€.", btn: "Request appointment" }
@@ -175,7 +175,7 @@ export const dictionaries = {
         loc: { title: "Unbeatable location", desc: "In the heart of the San Pedro Alcántara promenade." },
         hours: { title: "Open every day", desc: "Available throughout the season so you never miss a ride." },
         condition: { title: "Bikes in perfect condition", desc: "Constant maintenance so your experience is always safe and comfortable." },
-        ages: { title: "For all ages", desc: "Bikes adapted for adults, youth, and families. We have the bike you are looking for." },
+        ages: { title: "From 15€ per day", desc: "Unbeatable prices to explore Marbella by bike. No surprises, no hidden fees." },
         fast: { title: "Fast workshop", desc: "On-the-spot repairs so you don't waste time and get back to riding right away." },
         support: { title: "Personalized attention", desc: "We advise you on routes and recommend the best option according to your needs." }
       },
@@ -303,14 +303,14 @@ export const dictionaries = {
     home: {
       hero: {
         location: "San Pedro Alcántara · Marbella",
-        title1: "Découvrez la promenade",
+        title1: "Visitez Marbella",
         title2: "à vélo",
         btnRent: "Voir les tarifs de location",
         btnRepair: "Réparations",
       },
       services: {
-        title: "Que proposons-nous ?",
-        subtitle: "Tout ce dont vous avez besoin pour profiter du vélo sur la promenade de San Pedro Alcántara.",
+        title: "Profitez de Marbella d'une manière différente",
+        subtitle: "Vélos de promenade et électriques à partir de 15€/jour. Explorez la promenade de Marbella à votre rythme, avec des prix clairs et un atelier sur place.",
         rent: { title: "Location de vélos à la journée", desc: "Des vélos confortables et légers, parfaits pour explorer la promenade à votre rythme.", btn: "Voir les tarifs" },
         repair: { title: "Atelier de réparation", desc: "Réparations rapides et professionnelles. Crevaisons, freins, changements de vitesse, et bien plus encore.", btn: "Voir les services" },
         clean: { title: "Service de nettoyage", desc: "Rendez-le comme neuf. Nettoyage de la transmission pour 15€ et nettoyage complet pour 20€.", btn: "Prendre rendez-vous" }
@@ -321,7 +321,7 @@ export const dictionaries = {
         loc: { title: "Emplacement imbattable", desc: "Au cœur de la promenade de San Pedro Alcántara." },
         hours: { title: "Ouvert tous les jours", desc: "Disponibles toute la saison pour que vous ne manquiez aucune balade." },
         condition: { title: "Vélos en parfait état", desc: "Un entretien constant pour que votre expérience soit toujours sûre et confortable." },
-        ages: { title: "Pour tous les âges", desc: "Des vélos adaptés aux adultes, aux jeunes et aux familles. Nous avons le vélo que vous cherchez." },
+        ages: { title: "À partir de 15€ par jour", desc: "Des prix imbattables pour explorer Marbella à vélo. Sans surprises, sans frais cachés." },
         fast: { title: "Atelier rapide", desc: "Réparations sur place pour ne pas perdre de temps et repartir rouler tout de suite." },
         support: { title: "Attention personnalisée", desc: "Nous vous conseillons sur les itinéraires et vous recommandons la meilleure option selon vos besoins." }
       },

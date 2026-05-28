@@ -2,7 +2,6 @@
 
 import { Bike, Zap, Clock, Info } from "lucide-react";
 import { useTranslation } from "@/i18n/useTranslation";
-import { ImageWithFallback } from "../components/figma/ImageWithFallback";
 
 export function AlquilerPage() {
   const { t } = useTranslation();
@@ -29,9 +28,9 @@ export function AlquilerPage() {
         <div className="grid md:grid-cols-2 gap-8 items-start">
 
           {/* Foto */}
-          <div className="rounded-2xl overflow-hidden h-72 md:h-80 bg-gray-50 border-2 border-dashed border-gray-200 flex flex-col items-center justify-center text-gray-400">
-            <span className="text-lg font-bold uppercase tracking-widest mb-2">Foto Bici Paseo</span>
-            <span className="text-sm">Tamaño recomendado: 1200x900px</span>
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <div className="rounded-2xl overflow-hidden h-72 md:h-80 flex items-center justify-center p-6">
+            <img src="/bikes/bici_paseo.svg" alt="Bicicleta de paseo" className="w-full h-full object-contain" />
           </div>
 
           {/* Tarifas */}
@@ -115,9 +114,9 @@ export function AlquilerPage() {
           <div className="space-y-12">
             {/* E-bike Básica */}
             <div className="grid md:grid-cols-2 gap-8 items-start">
-              <div className="rounded-2xl overflow-hidden h-72 md:h-80 relative group bg-gray-50 border-2 border-dashed border-gray-200 flex flex-col items-center justify-center text-gray-400">
-                <span className="text-lg font-bold uppercase tracking-widest mb-2">Foto E-bike Básica</span>
-                <span className="text-sm">Tamaño recomendado: 1200x900px</span>
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <div className="rounded-2xl overflow-hidden h-72 md:h-80 flex items-center justify-center p-6">
+                <img src="/bikes/bici_electrica.svg" alt="E-Bike basica" className="w-full h-full object-contain" />
               </div>
 
               <div className="space-y-4">
@@ -164,9 +163,9 @@ export function AlquilerPage() {
 
             {/* E-bike Bosch */}
             <div className="grid md:grid-cols-2 gap-8 items-start pt-8 border-t border-gray-100">
-              <div className="rounded-2xl overflow-hidden h-72 md:h-80 relative group bg-gray-50 border-2 border-dashed border-gray-200 flex flex-col items-center justify-center text-gray-400">
-                <span className="text-lg font-bold uppercase tracking-widest mb-2">Foto E-bike Bosh</span>
-                <span className="text-sm">Tamaño recomendado: 1200x900px</span>
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <div className="rounded-2xl overflow-hidden h-72 md:h-80 flex items-center justify-center p-6">
+                <img src="/bikes/bici_electrica_premium.svg" alt="E-bike premium Bosch" className="w-full h-full object-contain" />
               </div>
 
               <div className="space-y-4">

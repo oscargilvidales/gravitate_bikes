@@ -1,60 +1,170 @@
 "use client";
 
-import { Bike, ShieldCheck, Scale, Ruler, ChevronRight } from "lucide-react";
+import { Bike, ChevronRight, ChevronLeft } from "lucide-react";
 import { useTranslation } from "@/i18n/useTranslation";
-import { ImageWithFallback } from "../components/figma/ImageWithFallback";
 import Link from "next/link";
+import { useState, useEffect } from "react";
 
 const models = [
   {
     id: "w1",
-    name: "woom 1",
+    name: "Woom Go 1",
     wheel: '12"',
-    color: "#FF6B6B",
+    color: "#EAB308",
+    images: [
+      "/woom/woom_go_1/woom_go_1_1.avif",
+      "/woom/woom_go_1/woom_go_1_2.avif",
+      "/woom/woom_go_1/woom_go_1_3.avif",
+      "/woom/woom_go_1/woom_go_1_4.avif",
+      "/woom/woom_go_1/woom_go_1_5.avif",
+      "/woom/woom_go_1/woom_go_1_6.avif",
+      "/woom/woom_go_1/woom_go_1_7.avif",
+      "/woom/woom_go_1/woom_go_1_8.avif",
+      "/woom/woom_go_1/woom_go_1_9.avif",
+      "/woom/woom_go_1/woom_go_1_10.avif"
+    ],
   },
   {
     id: "w2",
-    name: "woom 2",
+    name: "Woom Go 2",
     wheel: '14"',
-    color: "#FFB347",
+    color: "#3B82F6",
+    images: [
+      "/woom/woom_go_2/woom_go_2_1.avif",
+      "/woom/woom_go_2/woom_go_2_2.avif",
+      "/woom/woom_go_2/woom_go_2_3.avif",
+      "/woom/woom_go_2/woom_go_2_4.avif",
+      "/woom/woom_go_2/woom_go_2_5.avif",
+      "/woom/woom_go_2/woom_go_2_6.avif",
+      "/woom/woom_go_2/woom_go_2_7.avif",
+      "/woom/woom_go_2/woom_go_2_8.avif",
+      "/woom/woom_go_2/woom_go_2_9.avif",
+      "/woom/woom_go_2/woom_go_2_10.avif",
+      "/woom/woom_go_2/woom_go_2_11.avif"
+    ],
   },
   {
     id: "w3",
-    name: "woom 3",
+    name: "Woom Go 3",
     wheel: '16"',
-    color: "#A78BFA",
+    color: "#EC4899",
+    images: [
+      "/woom/woom_go_3/woom_go_3_1.avif",
+      "/woom/woom_go_3/woom_go_3_2.avif",
+      "/woom/woom_go_3/woom_go_3_3.avif",
+      "/woom/woom_go_3/woom_go_3_4.avif",
+      "/woom/woom_go_3/woom_go_3_5.avif",
+      "/woom/woom_go_3/woom_go_3_6.avif",
+      "/woom/woom_go_3/woom_go_3_7.avif",
+      "/woom/woom_go_3/woom_go_3_8.avif",
+      "/woom/woom_go_3/woom_go_3_9.avif",
+      "/woom/woom_go_3/woom_go_3_10.avif",
+      "/woom/woom_go_3/woom_go_3_11.avif",
+      "/woom/woom_go_3/woom_go_3_12.avif"
+
+    ],
   },
   {
     id: "w4",
-    name: "woom 4",
+    name: "Woom Go 4",
     wheel: '20"',
-    color: "#4ECDC4",
-  },
-  {
-    id: "w5",
-    name: "woom 5",
-    wheel: '24"',
-    color: "#45B7D1",
-  },
-  {
-    id: "w6",
-    name: "woom 6",
-    wheel: '26"',
-    color: "#96CEB4",
-  },
-  {
-    id: "woff",
-    name: "woom OFF",
-    wheel: '16" – 26"',
-    color: "#6B8E5E",
-  },
-  {
-    id: "wup",
-    name: "woom UP",
-    wheel: '20" – 24"',
-    color: "#A78BFA",
+    color: "#EF4444",
+    images: [
+      "/woom/woom_go_4/woom_go_4_1.avif",
+      "/woom/woom_go_4/woom_go_4_2.avif",
+      "/woom/woom_go_4/woom_go_4_3.avif",
+      "/woom/woom_go_4/woom_go_4_4.avif",
+      "/woom/woom_go_4/woom_go_4_5.avif",
+      "/woom/woom_go_4/woom_go_4_6.avif",
+      "/woom/woom_go_4/woom_go_4_7.avif",
+      "/woom/woom_go_4/woom_go_4_8.avif",
+      "/woom/woom_go_4/woom_go_4_9.avif",
+      "/woom/woom_go_4/woom_go_4_10.avif",
+      "/woom/woom_go_4/woom_go_4_11.avif",
+      "/woom/woom_go_4/woom_go_4_12.avif",
+      "/woom/woom_go_4/woom_go_4_13.avif",
+      "/woom/woom_go_4/woom_go_4_14.avif"
+    ]
   },
 ];
+
+function HoverCarousel({ images, alt }: { images: string[], alt: string }) {
+  const [currentIndex, setCurrentIndex] = useState(0);
+  const [isHovered, setIsHovered] = useState(false);
+  const [isPaused, setIsPaused] = useState(false);
+
+  useEffect(() => {
+    if (!isHovered || isPaused || images.length <= 1) return;
+
+    const interval = setInterval(() => {
+      setCurrentIndex((prev) => (prev + 1) % images.length);
+    }, 1200); // Cambia de foto cada 1.2 segundos
+
+    return () => clearInterval(interval);
+  }, [isHovered, isPaused, images.length]);
+
+  const goToPrev = (e: React.MouseEvent) => {
+    e.preventDefault();
+    e.stopPropagation();
+    setIsPaused(true);
+    setCurrentIndex((prev) => (prev - 1 + images.length) % images.length);
+  };
+
+  const goToNext = (e: React.MouseEvent) => {
+    e.preventDefault();
+    e.stopPropagation();
+    setIsPaused(true);
+    setCurrentIndex((prev) => (prev + 1) % images.length);
+  };
+
+  return (
+    <div
+      className="relative w-full h-full cursor-pointer flex items-center justify-center group/carousel"
+      onMouseEnter={() => setIsHovered(true)}
+      onMouseLeave={() => {
+        setIsHovered(false);
+        setIsPaused(false);
+        setCurrentIndex(0); // Vuelve a la primera foto al quitar el ratón
+      }}
+    >
+      {/* eslint-disable-next-line @next/next/no-img-element */}
+      <img
+        src={images[currentIndex]}
+        alt={alt}
+        className="w-full h-full object-contain transition-transform duration-500 hover:scale-105 drop-shadow-md"
+      />
+      {images.length > 1 && (
+        <>
+          {/* Flechas */}
+          <button
+            onClick={goToPrev}
+            className="absolute left-2 md:left-4 top-1/2 -translate-y-1/2 w-8 h-8 md:w-10 md:h-10 bg-white/80 hover:bg-white rounded-full flex items-center justify-center shadow-md text-gray-800 opacity-0 group-hover/carousel:opacity-100 transition-opacity z-10"
+            aria-label="Foto anterior"
+          >
+            <ChevronLeft size={20} />
+          </button>
+          <button
+            onClick={goToNext}
+            className="absolute right-2 md:right-4 top-1/2 -translate-y-1/2 w-8 h-8 md:w-10 md:h-10 bg-white/80 hover:bg-white rounded-full flex items-center justify-center shadow-md text-gray-800 opacity-0 group-hover/carousel:opacity-100 transition-opacity z-10"
+            aria-label="Siguiente foto"
+          >
+            <ChevronRight size={20} />
+          </button>
+
+          {/* Dots */}
+          <div className="absolute bottom-4 left-0 right-0 flex justify-center gap-2">
+            {images.map((_, i) => (
+              <div
+                key={i}
+                className={`h-2 rounded-full transition-all duration-300 ${i === currentIndex ? 'w-6 bg-[#A78BFA]' : 'w-2 bg-gray-300'}`}
+              />
+            ))}
+          </div>
+        </>
+      )}
+    </div>
+  );
+}
 
 export function WoomPage() {
   const { t } = useTranslation();
@@ -84,125 +194,75 @@ export function WoomPage() {
               <ChevronRight size={16} />
             </Link>
           </div>
-          <div className="rounded-2xl overflow-hidden h-72 md:h-80 bg-gray-50 border-2 border-dashed border-gray-200 flex flex-col items-center justify-center text-gray-400">
-            <span className="text-lg font-bold uppercase tracking-widest mb-2">Foto Hero</span>
-            <span className="text-sm">Tamaño recomendado: 1200x900px</span>
+          {/* Montaje de imágenes - Estilo Bento Grid */}
+          <div className="grid grid-cols-2 grid-rows-2 gap-3 md:gap-4 h-80 md:h-[26rem] w-full mt-8 md:mt-0">
+            {/* Imagen Principal (Izquierda, doble altura) */}
+            <div className="col-span-1 row-span-2 rounded-[2rem] overflow-hidden relative shadow-lg">
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img src="/woom/woom_0.jpeg" alt="Woom 1" className="w-full h-full object-cover" />
+            </div>
+
+            {/* Imagen 2 (Arriba Derecha) */}
+            <div className="col-span-1 row-span-1 rounded-[2rem] overflow-hidden relative shadow-lg">
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img src="/woom/woom_0_1.jpeg" alt="Woom 2" className="w-full h-full object-cover" />
+            </div>
+
+            {/* Imagen 3 (Abajo Derecha) */}
+            <div className="col-span-1 row-span-1 rounded-[2rem] overflow-hidden relative shadow-lg">
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img src="/woom/Sin título.jpeg" alt="Woom 3" className="w-full h-full object-cover" />
+            </div>
           </div>
         </div>
       </div>
 
-      {/* Why woom */}
-      <section className="py-14 px-4 bg-gray-50">
-        <div className="max-w-6xl mx-auto">
-          <div className="text-center mb-10">
-            <h2 className="text-[#0E0E12] text-2xl font-bold mb-2">{t.woom.why}</h2>
-            <p className="text-gray-600 leading-relaxed mb-6">
-              {t.woom.desc}
-            </p>
-            
-            <div className="space-y-4">
-              <div className="flex gap-4 p-4 rounded-xl border border-gray-100 bg-white">
-                <div className="w-10 h-10 rounded-lg bg-[#A78BFA]/10 flex items-center justify-center text-[#A78BFA] shrink-0">
-                  <Scale size={20} />
-                </div>
-                <div className="text-left">
-                  <h3 className="font-bold text-[#0E0E12]">{t.woom.features.weight}</h3>
-                  <p className="text-sm text-gray-500">{t.woom.features.weightDesc}</p>
-                </div>
-              </div>
-              <div className="flex gap-4 p-4 rounded-xl border border-gray-100 bg-white">
-                <div className="w-10 h-10 rounded-lg bg-[#A78BFA]/10 flex items-center justify-center text-[#A78BFA] shrink-0">
-                  <Ruler size={20} />
-                </div>
-                <div className="text-left">
-                  <h3 className="font-bold text-[#0E0E12]">{t.woom.features.ergonomics}</h3>
-                  <p className="text-sm text-gray-500">{t.woom.features.ergonomicsDesc}</p>
-                </div>
-              </div>
-              <div className="flex gap-4 p-4 rounded-xl border border-gray-100 bg-white">
-                <div className="w-10 h-10 rounded-lg bg-[#A78BFA]/10 flex items-center justify-center text-[#A78BFA] shrink-0">
-                  <ShieldCheck size={20} />
-                </div>
-                <div className="text-left">
-                  <h3 className="font-bold text-[#0E0E12]">{t.woom.features.brakes}</h3>
-                  <p className="text-sm text-gray-500">{t.woom.features.brakesDesc}</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Models grid */}
-      <section className="py-16 px-4 max-w-6xl mx-auto">
-        <div className="flex items-end justify-between mb-10">
-          <div>
-            <h2 className="text-[#0E0E12] text-2xl font-bold mb-1">{t.woom.range}</h2>
-            <p className="text-gray-500 text-sm">{t.woom.rangeDesc}</p>
-          </div>
-        </div>
-        <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-5">
-          {models.map((model) => {
+      {/* Globos de Bicis (Catálogo) */}
+      <section className="py-24 px-4 bg-gray-50 min-h-screen">
+        <div className="max-w-5xl mx-auto space-y-16">
+          {models.map((model, index) => {
             const modelData = t.woom.models[model.id as keyof typeof t.woom.models];
+            // Alternamos el layout en zigzag para darle más dinamismo
+            const isEven = index % 2 === 0;
+
             return (
-            <div
-              key={model.name}
-              className="border border-gray-100 rounded-2xl overflow-hidden bg-white flex flex-col"
-            >
-              {/* Marco para futura foto */}
-              <div className="h-56 w-full bg-gray-50 border-b border-dashed border-gray-200 flex flex-col items-center justify-center text-gray-400 relative">
-                <span className="text-sm font-bold uppercase tracking-widest mb-1">Foto {model.name}</span>
-                <span className="text-xs">Tamaño: 800x600px</span>
-              </div>
-              
-              {/* Información del modelo */}
-              <div className="p-5 flex-1 flex flex-col">
-                <div className="flex items-start justify-between mb-1">
-                  <p className="font-bold text-[#0E0E12]">{model.name}</p>
-                  <span
-                    className="text-xs px-2 py-0.5 rounded-full font-medium shrink-0"
-                    style={{ backgroundColor: model.color + "22", color: model.color }}
-                  >
-                    {modelData.type}
-                  </span>
+              <div
+                key={model.id}
+                className={`flex flex-col md:flex-row items-center gap-8 md:gap-16 bg-white p-8 md:p-12 rounded-[3rem] shadow-xl border border-gray-100 ${!isEven ? 'md:flex-row-reverse' : ''}`}
+              >
+                {/* Carrusel Hover */}
+                <div className="w-full md:w-1/2 aspect-[4/3] bg-[#F9F9FB] rounded-[2.5rem] p-8 relative flex items-center justify-center">
+                  <HoverCarousel images={model.images} alt={model.name} />
                 </div>
-                <p className="text-xs text-gray-400 mb-3">{modelData.age} · {model.wheel}</p>
-                <p className="text-gray-500 text-sm leading-relaxed flex-1">{modelData.desc}</p>
+
+                {/* Información y Descripción */}
+                <div className="w-full md:w-1/2 space-y-6">
+                  <div className="flex items-center gap-3">
+                    <span
+                      className="inline-flex items-center justify-center px-4 py-1.5 rounded-full text-sm font-bold shadow-sm"
+                      style={{ backgroundColor: model.color + '20', color: model.color }}
+                    >
+                      {modelData.type}
+                    </span>
+                    <span className="text-sm font-semibold text-gray-400 border border-gray-200 px-3 py-1 rounded-full">
+                      {model.wheel}
+                    </span>
+                  </div>
+
+                  <h2 className="text-4xl md:text-5xl font-extrabold text-[#0E0E12] tracking-tight">{model.name}</h2>
+
+                  <div className="space-y-4">
+                    <p className="text-lg font-medium text-[#0E0E12]">
+                      {modelData.age}
+                    </p>
+                    <p className="text-xl text-gray-500 leading-relaxed">
+                      {modelData.desc}
+                    </p>
+                  </div>
+                </div>
               </div>
-            </div>
             );
           })}
-        </div>
-
-        {/* Botón WhatsApp Disponibilidad */}
-        <div className="mt-12 flex justify-center">
-          <a
-            href="https://wa.me/34612477841"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex items-center justify-center gap-2 bg-[#25D366] hover:bg-[#20bd5a] text-white px-8 py-4 rounded-xl font-bold transition-all shadow-md hover:shadow-lg"
-          >
-            {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img src="/whatsapp-glyph-black.svg" alt="WhatsApp" className="w-5 h-5 brightness-0 invert" />
-            {t.woom.pricing.btnWa}
-          </a>
-        </div>
-      </section>
-
-      {/* CTA */}
-      <section className="bg-[#0E0E12] py-14 px-4">
-        <div className="max-w-2xl mx-auto text-center">
-          <h2 className="text-white text-2xl font-bold mb-3">{t.woom.ctaBottom.title}</h2>
-          <p className="text-white/50 mb-8 text-sm leading-relaxed">
-            {t.woom.ctaBottom.desc}
-          </p>
-          <Link
-            href="/contacto"
-            className="inline-flex items-center gap-2 bg-[#A78BFA] hover:bg-[#9370e8] text-white px-6 py-3.5 rounded-lg font-medium transition-colors"
-          >
-            <ChevronRight size={16} />
-            {t.woom.ctaBottom.btn}
-          </Link>
         </div>
       </section>
     </div>

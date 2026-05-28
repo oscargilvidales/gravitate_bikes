@@ -3,7 +3,6 @@
 import Link from "next/link";
 import { Wrench, Bike, Zap, MapPin, Clock, Phone, Sparkles } from "lucide-react";
 import { useTranslation } from "@/i18n/useTranslation";
-import { ImageWithFallback } from "../components/figma/ImageWithFallback";
 import { BrandCarousel } from "../components/BrandCarousel";
 
 export function HomePage() {
@@ -14,10 +13,8 @@ export function HomePage() {
       <BrandCarousel />
       {/* Hero */}
       <section className="relative h-[90vh] min-h-[520px] flex items-center justify-center overflow-hidden">
-        <div className="absolute inset-0 w-full h-full bg-gray-50 border-2 border-dashed border-gray-200 flex flex-col items-center justify-center text-gray-400">
-          <span className="text-xl font-bold uppercase tracking-widest mb-2">Foto Bulevar/Paseo Maritimo</span>
-          <span className="text-sm">Tamaño recomendado: 1920x1080px</span>
-        </div>
+        {/* eslint-disable-next-line @next/next/no-img-element */}
+        <img src="/home/puestaDeSol.jpeg" alt="Bulevar / Paseo Marítimo" className="absolute inset-0 w-full h-full object-cover" />
         <div className="absolute inset-0 bg-[#0E0E12]/65" />
         <div className="relative z-10 text-center px-4 max-w-3xl mx-auto">
           <span className="inline-block bg-[#A78BFA]/20 text-[#A78BFA] border border-[#A78BFA]/30 text-sm px-4 py-1.5 rounded-full mb-6">
