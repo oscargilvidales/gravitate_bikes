@@ -128,11 +128,11 @@ function HoverCarousel({ images, alt }: { images: string[], alt: string }) {
         setCurrentIndex(0); // Vuelve a la primera foto al quitar el ratón
       }}
     >
-      {/* Image optimized */}
       <Image
         src={images[currentIndex]}
         alt={alt}
         fill
+        sizes="(max-width: 768px) 100vw, 50vw"
         className="object-contain transition-transform duration-500 hover:scale-105 drop-shadow-md p-4"
       />
       {images.length > 1 && (
@@ -204,19 +204,19 @@ export function WoomPage() {
             {/* Imagen Principal (Izquierda, doble altura) */}
             <div className="col-span-1 row-span-2 rounded-[2rem] overflow-hidden relative shadow-lg">
               {/* Image optimized */}
-              <Image src="/woom/woom_0.jpeg" alt="Woom 1" fill className="object-cover" priority />
+              <Image src="/woom/woom_0.jpeg" alt="Woom 1" fill sizes="(max-width: 768px) 100vw, 50vw" className="object-cover" priority />
             </div>
 
             {/* Imagen 2 (Arriba Derecha) */}
             <div className="col-span-1 row-span-1 rounded-[2rem] overflow-hidden relative shadow-lg">
               {/* Image optimized */}
-              <Image src="/woom/woom_0_1.jpeg" alt="Woom 2" fill className="object-cover" priority />
+              <Image src="/woom/woom_0_1.jpeg" alt="Woom 2" fill sizes="(max-width: 768px) 100vw, 25vw" className="object-cover" priority />
             </div>
 
             {/* Imagen 3 (Abajo Derecha) */}
             <div className="col-span-1 row-span-1 rounded-[2rem] overflow-hidden relative shadow-lg">
               {/* Image optimized */}
-              <Image src="/woom/Sin título.jpeg" alt="Woom 3" fill className="object-cover" priority />
+              <Image src="/woom/Sin título.jpeg" alt="Woom 3" fill sizes="(max-width: 768px) 100vw, 25vw" className="object-cover" priority />
             </div>
           </div>
         </div>

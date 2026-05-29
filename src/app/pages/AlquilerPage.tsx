@@ -29,8 +29,9 @@ export function AlquilerPage() {
         <div className="grid md:grid-cols-2 gap-8 items-start">
 
           {/* Foto */}
-          <div className="rounded-2xl overflow-hidden h-72 md:h-80 flex items-center justify-center p-6 relative">
-            <Image src="/bikes/bici_paseo.svg" alt="Bicicleta de paseo" fill className="object-contain p-6" />
+          <div className="rounded-3xl overflow-hidden h-72 md:h-80 flex items-center justify-center p-6 relative bg-gradient-to-br from-white to-gray-50 border border-gray-100 shadow-sm">
+            <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(167,139,250,0.05)_0%,transparent_70%)]" />
+            <Image src="/bikes/bici_paseo.svg" alt="Bicicleta de paseo" fill className="object-contain p-8 drop-shadow-2xl" />
           </div>
 
           {/* Tarifas */}
@@ -114,8 +115,9 @@ export function AlquilerPage() {
           <div className="space-y-12">
             {/* E-bike Básica */}
             <div className="grid md:grid-cols-2 gap-8 items-start">
-              <div className="rounded-2xl overflow-hidden h-72 md:h-80 flex items-center justify-center p-6 relative">
-                <Image src="/bikes/bici_electrica.svg" alt="E-Bike basica" fill className="object-contain p-6" />
+              <div className="rounded-3xl overflow-hidden h-72 md:h-80 flex items-center justify-center p-6 relative bg-gradient-to-br from-white to-gray-50 border border-gray-100 shadow-sm">
+                <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(167,139,250,0.05)_0%,transparent_70%)]" />
+                <Image src="/bikes/bici_electrica.svg" alt="E-Bike basica" fill className="object-contain p-8 drop-shadow-2xl" />
               </div>
 
               <div className="space-y-4">
@@ -161,8 +163,9 @@ export function AlquilerPage() {
 
             {/* E-bike Bosch */}
             <div className="grid md:grid-cols-2 gap-8 items-start pt-8 border-t border-gray-100">
-              <div className="rounded-2xl overflow-hidden h-72 md:h-80 flex items-center justify-center p-6 relative">
-                <Image src="/bikes/bici_electrica_premium.svg" alt="E-bike premium Bosch" fill className="object-contain p-6" />
+              <div className="rounded-3xl overflow-hidden h-72 md:h-80 flex items-center justify-center p-6 relative bg-gradient-to-br from-white to-gray-50 border border-gray-100 shadow-sm">
+                <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(167,139,250,0.05)_0%,transparent_70%)]" />
+                <Image src="/bikes/bici_electrica_premium.svg" alt="E-bike premium Bosch" fill className="object-contain p-8 drop-shadow-2xl" />
               </div>
 
               <div className="space-y-4">
