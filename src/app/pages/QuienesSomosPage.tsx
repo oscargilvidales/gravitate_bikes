@@ -71,7 +71,7 @@ export function QuienesSomosPage() {
           {[
             { value: "28", label: t.quienesSomos.stats.y28 },
             { value: "10+", label: t.quienesSomos.stats.ref },
-            { value: "1º", label: t.quienesSomos.stats.cup },
+            { value: lang === 'de' ? "1. Platz" : lang === 'en' ? "1st" : lang === 'fr' ? "1er" : "1º", label: t.quienesSomos.stats.cup },
             { value: "FAC", label: t.quienesSomos.stats.fac },
           ].map(({ value, label }) => (
             <div key={label}>
