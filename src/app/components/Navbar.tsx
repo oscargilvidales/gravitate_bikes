@@ -3,6 +3,7 @@
 import { useState } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import Image from "next/image";
 import { Menu, X, Globe } from "lucide-react";
 import { useTranslation, Locale } from "@/i18n/useTranslation";
 
@@ -10,6 +11,7 @@ const availableLocales = [
   { code: "es", label: "ES" },
   { code: "en", label: "EN" },
   { code: "fr", label: "FR" },
+  { code: "de", label: "DE" },
 ];
 
 export function Navbar() {
@@ -39,11 +41,14 @@ export function Navbar() {
           className="flex items-center group shrink-0"
           onClick={() => setOpen(false)}
         >
-          {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img
+          {/* Logo */}
+          <Image
             src="/logo.png"
             alt="Gravitate Bikes – San Pedro"
+            width={120}
+            height={64}
             className="h-16 w-auto object-contain"
+            priority
           />
         </Link>
 

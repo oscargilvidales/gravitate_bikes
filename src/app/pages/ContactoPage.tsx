@@ -1,6 +1,7 @@
 "use client";
 
 import { MapPin, Phone, Clock, Mail, Instagram, Facebook } from "lucide-react";
+import Image from "next/image";
 import { useTranslation } from "@/i18n/useTranslation";
 
 export function ContactoPage() {
@@ -16,15 +17,22 @@ export function ContactoPage() {
     <div>
       {/* Page header */}
       <div className="bg-[#0E0E12] py-16 px-4">
-        <div className="max-w-6xl mx-auto">
-          <div className="flex items-center gap-2 text-[#A78BFA] text-sm mb-4">
-            <MapPin size={16} />
-            <span>{t.contacto.header.title}</span>
+        <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-10 items-center">
+          <div>
+            <div className="flex items-center gap-2 text-[#A78BFA] text-sm mb-4">
+              <MapPin size={16} />
+              <span>{t.contacto.header.title}</span>
+            </div>
+            <h1 className="text-white text-4xl font-bold mb-3">{t.contacto.header.title}</h1>
+            <p className="text-white/60 max-w-xl">
+              {t.contacto.header.subtitle}
+            </p>
           </div>
-          <h1 className="text-white text-4xl font-bold mb-3">{t.contacto.header.title}</h1>
-          <p className="text-white/60 max-w-xl">
-            {t.contacto.header.subtitle}
-          </p>
+          {/* Hueco para foto del taller */}
+          <div className="rounded-2xl overflow-hidden h-64 bg-white/5 border-2 border-dashed border-white/20 flex flex-col items-center justify-center text-white/30">
+            <span className="text-sm font-bold uppercase tracking-widest mb-1">Foto del Taller</span>
+            <span className="text-xs">Tamaño recomendado: 1200×900 px</span>
+          </div>
         </div>
       </div>
 
@@ -81,10 +89,9 @@ export function ContactoPage() {
                 href="https://wa.me/34612477841"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center justify-center gap-3 bg-[#25D366] hover:bg-[#20bd5a] text-white w-full py-4 rounded-xl font-bold transition-all shadow-md hover:shadow-lg text-lg"
+                className="flex items-center justify-center gap-3 bg-[#25D366] hover:bg-[#20bd5a] text-[#0E0E12] w-full py-4 rounded-xl font-bold transition-all shadow-md hover:shadow-lg text-lg"
               >
-                {/* eslint-disable-next-line @next/next/no-img-element */}
-                <img src="/whatsapp-glyph-black.svg" alt="WhatsApp" className="w-6 h-6 brightness-0 invert" />
+                <Image src="/whatsapp-glyph-black.svg" alt="WhatsApp" width={24} height={24} />
                 {t.contacto.waBtn}
               </a>
             </div>

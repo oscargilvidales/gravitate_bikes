@@ -1,6 +1,7 @@
 "use client";
 
 import { Bike, Zap, Clock, Info } from "lucide-react";
+import Image from "next/image";
 import { useTranslation } from "@/i18n/useTranslation";
 
 export function AlquilerPage() {
@@ -28,9 +29,8 @@ export function AlquilerPage() {
         <div className="grid md:grid-cols-2 gap-8 items-start">
 
           {/* Foto */}
-          {/* eslint-disable-next-line @next/next/no-img-element */}
-          <div className="rounded-2xl overflow-hidden h-72 md:h-80 flex items-center justify-center p-6">
-            <img src="/bikes/bici_paseo.svg" alt="Bicicleta de paseo" className="w-full h-full object-contain" />
+          <div className="rounded-2xl overflow-hidden h-72 md:h-80 flex items-center justify-center p-6 relative">
+            <Image src="/bikes/bici_paseo.svg" alt="Bicicleta de paseo" fill className="object-contain p-6" />
           </div>
 
           {/* Tarifas */}
@@ -88,9 +88,9 @@ export function AlquilerPage() {
               href="https://wa.me/34612477841"
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center justify-center gap-2 w-full bg-[#25D366] hover:bg-[#20bd5a] text-white py-3.5 rounded-xl font-medium transition-all shadow-md hover:shadow-lg mt-2"
+              className="flex items-center justify-center gap-2 w-full bg-[#25D366] hover:bg-[#20bd5a] text-[#0E0E12] py-3.5 rounded-xl font-medium transition-all shadow-md hover:shadow-lg mt-2"
             >
-              <img src="/whatsapp-glyph-black.svg" alt="WhatsApp" className="w-5 h-5 brightness-0 invert" />
+              <Image src="/whatsapp-glyph-black.svg" alt="WhatsApp" width={20} height={20} />
               {t.alquiler.btnWa}
             </a>
           </div>
@@ -114,9 +114,8 @@ export function AlquilerPage() {
           <div className="space-y-12">
             {/* E-bike Básica */}
             <div className="grid md:grid-cols-2 gap-8 items-start">
-              {/* eslint-disable-next-line @next/next/no-img-element */}
-              <div className="rounded-2xl overflow-hidden h-72 md:h-80 flex items-center justify-center p-6">
-                <img src="/bikes/bici_electrica.svg" alt="E-Bike basica" className="w-full h-full object-contain" />
+              <div className="rounded-2xl overflow-hidden h-72 md:h-80 flex items-center justify-center p-6 relative">
+                <Image src="/bikes/bici_electrica.svg" alt="E-Bike basica" fill className="object-contain p-6" />
               </div>
 
               <div className="space-y-4">
@@ -152,10 +151,9 @@ export function AlquilerPage() {
                   href="https://wa.me/34612477841"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex items-center justify-center gap-2 w-full bg-[#25D366] hover:bg-[#20bd5a] text-white py-3.5 rounded-xl font-medium transition-all shadow-md hover:shadow-lg mt-2"
+                  className="flex items-center justify-center gap-2 w-full bg-[#25D366] hover:bg-[#20bd5a] text-[#0E0E12] py-3.5 rounded-xl font-medium transition-all shadow-md hover:shadow-lg mt-2"
                 >
-                  {/* eslint-disable-next-line @next/next/no-img-element */}
-                  <img src="/whatsapp-glyph-black.svg" alt="WhatsApp" className="w-5 h-5 brightness-0 invert" />
+                  <Image src="/whatsapp-glyph-black.svg" alt="WhatsApp" width={20} height={20} />
                   {t.alquiler.ebike.models.basica.btn}
                 </a>
               </div>
@@ -163,9 +161,8 @@ export function AlquilerPage() {
 
             {/* E-bike Bosch */}
             <div className="grid md:grid-cols-2 gap-8 items-start pt-8 border-t border-gray-100">
-              {/* eslint-disable-next-line @next/next/no-img-element */}
-              <div className="rounded-2xl overflow-hidden h-72 md:h-80 flex items-center justify-center p-6">
-                <img src="/bikes/bici_electrica_premium.svg" alt="E-bike premium Bosch" className="w-full h-full object-contain" />
+              <div className="rounded-2xl overflow-hidden h-72 md:h-80 flex items-center justify-center p-6 relative">
+                <Image src="/bikes/bici_electrica_premium.svg" alt="E-bike premium Bosch" fill className="object-contain p-6" />
               </div>
 
               <div className="space-y-4">
@@ -230,10 +227,9 @@ export function AlquilerPage() {
                   href="https://wa.me/34612477841"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex items-center justify-center gap-2 w-full bg-[#25D366] hover:bg-[#20bd5a] text-white py-3.5 rounded-xl font-medium transition-all shadow-md hover:shadow-lg mt-2"
+                  className="flex items-center justify-center gap-2 w-full bg-[#25D366] hover:bg-[#20bd5a] text-[#0E0E12] py-3.5 rounded-xl font-medium transition-all shadow-md hover:shadow-lg mt-2"
                 >
-                  {/* eslint-disable-next-line @next/next/no-img-element */}
-                  <img src="/whatsapp-glyph-black.svg" alt="WhatsApp" className="w-5 h-5 brightness-0 invert" />
+                  <Image src="/whatsapp-glyph-black.svg" alt="WhatsApp" width={20} height={20} />
                   {t.alquiler.ebike.models.premium.btn}
                 </a>
               </div>

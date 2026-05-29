@@ -1,6 +1,7 @@
 "use client";
 
 import { Heart, Wrench, Bike, Sun, Users, MapPin } from "lucide-react";
+import Image from "next/image";
 import { useTranslation } from "@/i18n/useTranslation";
 
 export function QuienesSomosPage() {
@@ -13,12 +14,12 @@ export function QuienesSomosPage() {
       desc: t.quienesSomos.values.q1.desc,
     },
     {
-      icon: <Heart size={20} />,
+      icon: <Bike size={20} />,
       title: t.quienesSomos.values.q2.title,
       desc: t.quienesSomos.values.q2.desc,
     },
     {
-      icon: <Bike size={20} />,
+      icon: <Wrench size={20} />,
       title: t.quienesSomos.values.q3.title,
       desc: t.quienesSomos.values.q3.desc,
     }
@@ -26,19 +27,6 @@ export function QuienesSomosPage() {
 
   return (
     <div>
-      {/* Page header */}
-      <div className="bg-[#0E0E12] py-16 px-4">
-        <div className="max-w-6xl mx-auto">
-          <div className="flex items-center gap-2 text-[#A78BFA] text-sm mb-4">
-            <Users size={16} />
-            <span>{t.nav.quienesSomos}</span>
-          </div>
-          <h1 className="text-white text-4xl font-bold mb-3">{t.quienesSomos.header.title}</h1>
-          <p className="text-white/60 max-w-xl">
-            {t.quienesSomos.header.subtitle}
-          </p>
-        </div>
-      </div>
 
       {/* Main story */}
       <section className="py-16 px-4 max-w-6xl mx-auto">
@@ -50,9 +38,9 @@ export function QuienesSomosPage() {
               <p>{t.quienesSomos.bio.desc2}</p>
             </div>
           </div>
-          <div className="rounded-2xl overflow-hidden h-80 md:h-96 shadow-xl flex items-center justify-center">
-            {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img src="/about/Sin título.jpeg" alt="Gabi haciendo Plegada" className="w-full h-full object-cover" />
+          <div className="rounded-2xl overflow-hidden h-80 md:h-96 shadow-xl flex items-center justify-center relative">
+            {/* Image optimized */}
+            <Image src="/about/Sin título.jpeg" alt="Gabi haciendo Plegada" fill className="object-cover" />
           </div>
         </div>
       </section>
@@ -77,32 +65,6 @@ export function QuienesSomosPage() {
           </div>
         </div>
       </section>
-
-      {/* Team / personal touch */}
-      <section className="py-16 px-4 max-w-6xl mx-auto">
-        <div className="grid md:grid-cols-2 gap-12 items-center">
-          <div className="rounded-2xl overflow-hidden h-72 bg-gray-50 border-2 border-dashed border-gray-200 flex flex-col items-center justify-center text-gray-400">
-            <span className="text-lg font-bold uppercase tracking-widest mb-2">Foto Taller</span>
-            <span className="text-sm">Tamaño recomendado: 1200x900px</span>
-          </div>
-          <div>
-            <h2 className="text-[#0E0E12] text-2xl font-bold mb-5">{t.quienesSomos.workshop.title}</h2>
-            <p className="text-gray-600 leading-relaxed mb-6">
-              {t.quienesSomos.workshop.desc}
-            </p>
-            <div className="flex items-center gap-4">
-              <div className="w-12 h-12 rounded-xl bg-[#A78BFA]/10 flex items-center justify-center text-[#A78BFA] shrink-0">
-                <MapPin size={24} />
-              </div>
-              <div>
-                <p className="text-sm font-medium text-[#0E0E12]">{t.quienesSomos.workshop.findUs}</p>
-                <p className="text-xs text-gray-500">{t.quienesSomos.workshop.location}</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
       {/* Stats banner */}
       <section className="bg-[#0E0E12] py-14 px-4">
         <div className="max-w-4xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-8 text-center">

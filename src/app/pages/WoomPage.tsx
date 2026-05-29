@@ -3,6 +3,7 @@
 import { Bike, ChevronRight, ChevronLeft } from "lucide-react";
 import { useTranslation } from "@/i18n/useTranslation";
 import Link from "next/link";
+import Image from "next/image";
 import { useState, useEffect } from "react";
 
 const models = [
@@ -127,11 +128,12 @@ function HoverCarousel({ images, alt }: { images: string[], alt: string }) {
         setCurrentIndex(0); // Vuelve a la primera foto al quitar el ratón
       }}
     >
-      {/* eslint-disable-next-line @next/next/no-img-element */}
-      <img
+      {/* Image optimized */}
+      <Image
         src={images[currentIndex]}
         alt={alt}
-        className="w-full h-full object-contain transition-transform duration-500 hover:scale-105 drop-shadow-md"
+        fill
+        className="object-contain transition-transform duration-500 hover:scale-105 drop-shadow-md p-4"
       />
       {images.length > 1 && (
         <>
@@ -186,32 +188,35 @@ export function WoomPage() {
             <p className="text-white/60 max-w-xl mb-8">
               {t.woom.header.subtitle}
             </p>
-            <Link
-              href="/contacto"
-              className="inline-flex items-center gap-2 bg-[#A78BFA] hover:bg-[#9370e8] text-white px-6 py-3.5 rounded-lg font-medium transition-colors"
+            <a
+              href="https://wa.me/34612477841"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 bg-[#25D366] hover:bg-[#20bd5a] text-[#0E0E12] px-6 py-3.5 rounded-lg font-bold transition-all shadow-md hover:shadow-lg mt-2"
             >
+              {/* WhatsApp Icon */}
+              <Image src="/whatsapp-glyph-black.svg" alt="WhatsApp" width={20} height={20} />
               {t.woom.header.cta}
-              <ChevronRight size={16} />
-            </Link>
+            </a>
           </div>
           {/* Montaje de imágenes - Estilo Bento Grid */}
           <div className="grid grid-cols-2 grid-rows-2 gap-3 md:gap-4 h-80 md:h-[26rem] w-full mt-8 md:mt-0">
             {/* Imagen Principal (Izquierda, doble altura) */}
             <div className="col-span-1 row-span-2 rounded-[2rem] overflow-hidden relative shadow-lg">
-              {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img src="/woom/woom_0.jpeg" alt="Woom 1" className="w-full h-full object-cover" />
+              {/* Image optimized */}
+              <Image src="/woom/woom_0.jpeg" alt="Woom 1" fill className="object-cover" priority />
             </div>
 
             {/* Imagen 2 (Arriba Derecha) */}
             <div className="col-span-1 row-span-1 rounded-[2rem] overflow-hidden relative shadow-lg">
-              {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img src="/woom/woom_0_1.jpeg" alt="Woom 2" className="w-full h-full object-cover" />
+              {/* Image optimized */}
+              <Image src="/woom/woom_0_1.jpeg" alt="Woom 2" fill className="object-cover" priority />
             </div>
 
             {/* Imagen 3 (Abajo Derecha) */}
             <div className="col-span-1 row-span-1 rounded-[2rem] overflow-hidden relative shadow-lg">
-              {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img src="/woom/Sin título.jpeg" alt="Woom 3" className="w-full h-full object-cover" />
+              {/* Image optimized */}
+              <Image src="/woom/Sin título.jpeg" alt="Woom 3" fill className="object-cover" priority />
             </div>
           </div>
         </div>
@@ -220,6 +225,9 @@ export function WoomPage() {
       {/* Globos de Bicis (Catálogo) */}
       <section className="py-24 px-4 bg-gray-50 min-h-screen">
         <div className="max-w-5xl mx-auto space-y-16">
+          <h2 className="text-3xl md:text-4xl font-extrabold text-[#0E0E12] text-center">
+            {t.woom.range}
+          </h2>
           {models.map((model, index) => {
             const modelData = t.woom.models[model.id as keyof typeof t.woom.models];
             // Alternamos el layout en zigzag para darle más dinamismo

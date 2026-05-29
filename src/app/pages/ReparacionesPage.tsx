@@ -2,6 +2,7 @@
 
 import { useState, useRef, useEffect } from "react";
 import { Wrench, CheckCircle, Clock } from "lucide-react";
+import Image from "next/image";
 import { useTranslation } from "@/i18n/useTranslation";
 
 const maintenancePackages = [
@@ -101,14 +102,13 @@ export function ReparacionesPage() {
             return (
               <div
                 key={pkg.id}
-                onClick={() => setSelectedTier(selectedTier === pkg.id ? null : pkg.id)}
-                className="flex flex-col border border-gray-100 rounded-2xl overflow-hidden hover:shadow-lg transition-shadow bg-white cursor-pointer"
+                className="flex flex-col border border-gray-100 rounded-2xl overflow-hidden hover:shadow-lg transition-shadow bg-white"
               >
                 <div className={`px-5 py-4 flex items-center justify-between border-b ${pkg.borderColor} border-opacity-30`}>
                   <span className={`font-bold text-lg ${pkg.color}`}>{pkgData.name}</span>
                   <span className="font-bold text-[#0E0E12] text-xl">{pkg.price}</span>
                 </div>
-                <div className="p-5 flex-1 flex flex-col pointer-events-none">
+                <div className="p-5 flex-1 flex flex-col">
                   <ul className="space-y-4 flex-1">
                     {pkgData.features.map((feature, i) => (
                       <li key={i} className="flex items-start gap-2">
@@ -123,7 +123,7 @@ export function ReparacionesPage() {
                     </div>
                   )}
 
-                  {/* Botón visual para indicar que se puede desplegar */}
+                  {/* VERSIÓN FUTURA: botón desplegable de proceso de reparación
                   <div
                     className={`mt-4 pt-4 border-t border-gray-100 w-full text-left text-sm font-medium flex items-center justify-between transition-colors ${selectedTier === pkg.id ? pkg.color : 'text-[#0E0E12] group-hover:text-[#A78BFA]'}`}
                   >
@@ -132,13 +132,14 @@ export function ReparacionesPage() {
                       <svg fill="none" height="16" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" viewBox="0 0 24 24" width="16"><path d="M6 9l6 6 6-6"></path></svg>
                     </span>
                   </div>
+                  */}
                 </div>
               </div>
             );
           })}
         </div>
 
-        {/* Visor de ancho completo para el proceso de reparación seleccionado */}
+        {/* VERSIÓN FUTURA: panel expandible con proceso de reparación paso a paso
         <div ref={panelRef} className="scroll-mt-32">
           {selectedTier && (
             <div className="mt-12 bg-white rounded-3xl p-8 md:p-12 shadow-xl border border-gray-100 animate-in fade-in slide-in-from-top-8 duration-500">
@@ -162,17 +163,13 @@ export function ReparacionesPage() {
                         {t.reparaciones.expandedView.closePanel}
                       </button>
                     </div>
-
                     <div className="space-y-16">
                       {[1, 2, 3, 4, 5].map((step) => (
                         <div key={step} className="grid md:grid-cols-2 gap-8 lg:gap-16 items-center">
-                          {/* Placeholder de imagen GRANDE */}
                           <div className={`aspect-[4/3] rounded-2xl bg-gray-50 border-2 border-dashed border-gray-200 flex flex-col items-center justify-center text-gray-400 shadow-inner ${step % 2 === 0 ? 'md:order-last' : ''}`}>
                             <span className="text-lg font-bold uppercase tracking-widest mb-2">{t.reparaciones.expandedView.photo} {step}</span>
                             <span className="text-sm">{t.reparaciones.expandedView.size}</span>
                           </div>
-
-                          {/* Descripción del paso */}
                           <div className="space-y-4">
                             <div className={`inline-flex items-center justify-center w-12 h-12 rounded-full ${pkg.bgColor} text-white font-bold text-xl shadow-md`}>
                               {step}
@@ -190,19 +187,20 @@ export function ReparacionesPage() {
               })}
             </div>
           )}
-          {/* Botón WhatsApp Reparaciones */}
-          <div className="mt-12 flex justify-center">
-            <a
-              href="https://wa.me/34612477841"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex items-center justify-center gap-2 bg-[#25D366] hover:bg-[#20bd5a] text-white px-8 py-3.5 rounded-xl font-bold transition-all shadow-md hover:shadow-lg"
-            >
-              {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img src="/whatsapp-glyph-black.svg" alt="WhatsApp" className="w-5 h-5 brightness-0 invert" />
-              {t.reparaciones.plans.btnWa}
-            </a>
-          </div>
+        </div>
+        */}
+
+        {/* Botón WhatsApp Reparaciones */}
+        <div className="mt-12 flex justify-center">
+          <a
+            href="https://wa.me/34612477841"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex items-center justify-center gap-2 bg-[#25D366] hover:bg-[#20bd5a] text-[#0E0E12] px-8 py-3.5 rounded-xl font-bold transition-all shadow-md hover:shadow-lg"
+          >
+            <Image src="/whatsapp-glyph-black.svg" alt="WhatsApp" width={20} height={20} />
+            {t.reparaciones.plans.btnWa}
+          </a>
         </div>
 
         {/* Sección de Limpieza (Nueva Minisección Paralela) */}
@@ -214,14 +212,13 @@ export function ReparacionesPage() {
               return (
                 <div
                   key={pkg.id}
-                  onClick={() => setSelectedCleaning(selectedCleaning === pkg.id ? null : pkg.id)}
-                  className="flex flex-col border border-gray-100 rounded-2xl overflow-hidden hover:shadow-lg transition-shadow bg-white cursor-pointer"
+                  className="flex flex-col border border-gray-100 rounded-2xl overflow-hidden hover:shadow-lg transition-shadow bg-white"
                 >
                   <div className={`px-5 py-4 flex items-center justify-between border-b ${pkg.borderColor} border-opacity-30`}>
                     <span className={`font-bold text-lg ${pkg.color}`}>{pkgData.name}</span>
                     <span className="font-bold text-[#0E0E12] text-xl">{pkg.price}</span>
                   </div>
-                  <div className="p-5 flex-1 flex flex-col pointer-events-none">
+                  <div className="p-5 flex-1 flex flex-col">
                     <ul className="space-y-4 flex-1">
                       {pkgData.features.map((feature, i) => (
                         <li key={i} className="flex items-start gap-2">
@@ -231,7 +228,7 @@ export function ReparacionesPage() {
                       ))}
                     </ul>
 
-                    {/* Botón visual para indicar que se puede desplegar */}
+                    {/* VERSIÓN FUTURA: botón desplegable de proceso de limpieza
                     <div
                       className={`mt-4 pt-4 border-t border-gray-100 w-full text-left text-sm font-medium flex items-center justify-between transition-colors ${selectedCleaning === pkg.id ? pkg.color : 'text-[#0E0E12] group-hover:text-[#A78BFA]'}`}
                     >
@@ -240,13 +237,14 @@ export function ReparacionesPage() {
                         <svg fill="none" height="16" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" viewBox="0 0 24 24" width="16"><path d="M6 9l6 6 6-6"></path></svg>
                       </span>
                     </div>
+                    */}
                   </div>
                 </div>
               );
             })}
           </div>
 
-          {/* Visor de ancho completo para Limpieza */}
+          {/* VERSIÓN FUTURA: panel expandible con proceso de limpieza paso a paso
           <div ref={cleaningPanelRef} className="scroll-mt-32">
             {selectedCleaning && (
               <div className="mt-12 bg-white rounded-3xl p-8 md:p-12 shadow-xl border border-gray-100 animate-in fade-in slide-in-from-top-8 duration-500">
@@ -270,17 +268,13 @@ export function ReparacionesPage() {
                           {t.reparaciones.expandedView.closePanel}
                         </button>
                       </div>
-
                       <div className="space-y-16">
                         {[1, 2, 3].map((step) => (
                           <div key={step} className="grid md:grid-cols-2 gap-8 lg:gap-16 items-center">
-                            {/* Placeholder de imagen GRANDE */}
                             <div className={`aspect-[4/3] rounded-2xl bg-gray-50 border-2 border-dashed border-gray-200 flex flex-col items-center justify-center text-gray-400 shadow-inner ${step % 2 === 0 ? 'md:order-last' : ''}`}>
                               <span className="text-lg font-bold uppercase tracking-widest mb-2">{t.reparaciones.expandedView.photo} {step}</span>
                               <span className="text-sm">{t.reparaciones.expandedView.size}</span>
                             </div>
-
-                            {/* Descripción del paso */}
                             <div className="space-y-4">
                               <div className={`inline-flex items-center justify-center w-12 h-12 rounded-full ${pkg.bgColor} text-white font-bold text-xl shadow-md`}>
                                 {step}
@@ -299,6 +293,7 @@ export function ReparacionesPage() {
               </div>
             )}
           </div>
+          */}
         </div>
 
         {/* Botón WhatsApp Reparaciones */}
@@ -307,10 +302,9 @@ export function ReparacionesPage() {
             href="https://wa.me/34612477841"
             target="_blank"
             rel="noopener noreferrer"
-            className="flex items-center justify-center gap-2 bg-[#25D366] hover:bg-[#20bd5a] text-white px-8 py-3.5 rounded-xl font-bold transition-all shadow-md hover:shadow-lg"
+            className="flex items-center justify-center gap-2 bg-[#25D366] hover:bg-[#20bd5a] text-[#0E0E12] px-8 py-3.5 rounded-xl font-bold transition-all shadow-md hover:shadow-lg"
           >
-            {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img src="/whatsapp-glyph-black.svg" alt="WhatsApp" className="w-5 h-5 brightness-0 invert" />
+            <Image src="/whatsapp-glyph-black.svg" alt="WhatsApp" width={20} height={20} />
             {t.reparaciones.plans.btnWa}
           </a>
         </div>

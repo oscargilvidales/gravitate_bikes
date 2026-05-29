@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { Wrench, Bike, Zap, MapPin, Clock, Phone, Sparkles } from "lucide-react";
 import { useTranslation } from "@/i18n/useTranslation";
 import { BrandCarousel } from "../components/BrandCarousel";
@@ -13,8 +14,8 @@ export function HomePage() {
       <BrandCarousel />
       {/* Hero */}
       <section className="relative h-[90vh] min-h-[520px] flex items-center justify-center overflow-hidden">
-        {/* eslint-disable-next-line @next/next/no-img-element */}
-        <img src="/home/puestaDeSol.jpeg" alt="Bulevar / Paseo Marítimo" className="absolute inset-0 w-full h-full object-cover" />
+        {/* Hero Image optimized */}
+        <Image src="/home/puestaDeSol.jpeg" alt="Bulevar / Paseo Marítimo" fill className="object-cover" priority />
         <div className="absolute inset-0 bg-[#0E0E12]/65" />
         <div className="relative z-10 text-center px-4 max-w-3xl mx-auto">
           <span className="inline-block bg-[#A78BFA]/20 text-[#A78BFA] border border-[#A78BFA]/30 text-sm px-4 py-1.5 rounded-full mb-6">
@@ -27,7 +28,7 @@ export function HomePage() {
           <div className="flex flex-col sm:flex-row gap-3 justify-center">
             <Link
               href={`/${lang}/alquiler`}
-              className="inline-flex items-center justify-center gap-2 bg-[#A78BFA] hover:bg-[#9370e8] text-white px-7 py-3.5 rounded-lg font-medium transition-colors"
+              className="inline-flex items-center justify-center gap-2 bg-[#7C3AED] hover:bg-[#6D28D9] text-white px-7 py-3.5 rounded-lg font-medium transition-colors"
             >
               <Bike size={18} />
               {t.home.hero.btnRent}
@@ -81,10 +82,10 @@ export function HomePage() {
               href="https://wa.me/34612477841"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center justify-center gap-2 bg-[#25D366] hover:bg-[#20bd5a] text-white px-8 py-4 rounded-lg font-medium transition-colors shadow-md hover:shadow-lg"
+              className="inline-flex items-center justify-center gap-2 bg-[#25D366] hover:bg-[#20bd5a] text-[#0E0E12] px-8 py-4 rounded-lg font-medium transition-colors shadow-md hover:shadow-lg"
             >
-              {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img src="/whatsapp-glyph-black.svg" alt="WhatsApp" className="w-5 h-5 brightness-0 invert" />
+              {/* WhatsApp Icon optimized */}
+              <Image src="/whatsapp-glyph-black.svg" alt="WhatsApp" width={20} height={20} />
               {t.home.cta.btnWa}
             </a>
             <Link
@@ -122,7 +123,7 @@ function ServiceCard({
       <h3 className="text-[#0E0E12] font-semibold mb-2">{title}</h3>
       <p className="text-gray-500 text-sm leading-relaxed mb-5">{description}</p>
       <span
-        className="text-[#A78BFA] text-sm font-medium group-hover:underline"
+        className="text-[#7C3AED] text-sm font-medium group-hover:underline"
       >
         {linkLabel} →
       </span>

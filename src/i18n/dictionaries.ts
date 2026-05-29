@@ -45,7 +45,7 @@ export const dictionaries = {
       paseo: { title: "Bicicleta de paseo", desc: "Cómoda y ligera, perfecta para recorrer el paseo marítimo de San Pedro Alcántara a tu propio ritmo. Incluye casco y candado.", priceDay: "Tarifa por día", priceDayDesc: "Alquiler de 1 a 6 días", priceWeek: "Tarifa semanal (7 días o más)", priceWeekDesc: "Ahorra 33%", note: "Incluye casco y candado. El precio semanal se aplica a partir del 7.º día de alquiler consecutivo." },
       ebike: {
         title: "Bicicletas Eléctricas (E-bikes)",
-        warning: "Para alquilar bicicletas eléctricas es necesario presentar DNI/Pasaporte original y tarjeta de crédito física.",
+        warning: "Para alquilar bicicletas eléctricas es necesario presentar DNI/Pasaporte original y tarjeta de crédito física. El alquiler es de 10:00 a 19:30 h. Si la bici se entrega después de las 19:30 h, se deberá abonar el día siguiente.",
         aviso: "Aviso importante:",
         models: {
           basica: {
@@ -80,8 +80,8 @@ export const dictionaries = {
       btnWa: "Reservar por WhatsApp"
     },
     reparaciones: {
-      header: { title: "Reparaciones", subtitle: "Taller especializado en todo tipo de bicicletas. Reparaciones rápidas y al mejor precio en San Pedro Alcántara." },
-      workshop: { title: "Servicio rápido y profesional", desc: "En nuestro taller trabajamos con todo tipo de bicicletas: de paseo, montaña, carretera y eléctricas. Diagnosis rápida y presupuesto sin compromiso.", points: ["Reparaciones en el día para la mayoría de averías", "Presupuesto gratuito antes de cualquier trabajo", "Piezas de repuesto de calidad", "Técnicos con experiencia en bicis eléctricas"] },
+      header: { title: "Reparaciones", subtitle: "Taller especializado en todo tipo de bicicletas. Cada reparación se hace con rigor, experiencia y recambios originales." },
+      workshop: { title: "Servicio fiable y profesional", desc: "En nuestro taller trabajamos con todo tipo de bicicletas: de paseo, montaña, carretera y eléctricas. Cada trabajo se revisa antes de salir del taller y siempre te informamos antes de hacer nada.", points: ["Diagnóstico honesto y sin sorpresas", "Presupuesto previo y sin compromiso", "Componentes de calidad contrastada", "Técnicos con años de experiencia en todo tipo de bicis"] },
       plans: { title: "Planes de mantenimiento", btnProcess: "Ver proceso de reparación", btnClose: "Cerrar", note: "* No se incluyen retenes ni componentes de reemplazo.", btnWa: "Solicitar cita para taller" },
       packages: {
         bronce: { name: "Bronce", features: ["Ajuste total de la bicicleta", "Checkeo de seguridad"] },
@@ -107,13 +107,13 @@ export const dictionaries = {
     },
     quienesSomos: {
       header: { title: "Nuestra historia", subtitle: "Un negocio familiar nacido del amor por las bicis y por el paseo marítimo de San Pedro Alcántara." },
-      bio: { title: "28 años de pasión por el ciclismo", desc1: "Nuestro fundador, Gabriel Sarria, lleva toda una vida dedicado al mundo de la bicicleta. Empezó como competidor, llegando a ser campeón de España de descenso, y ha ganado la Copa de Descenso tanto en España como en Portugal. Además, fue el referente en Andalucía de esta disciplina durante 10 años consecutivos.", desc2: "Tras su exitosa etapa competitiva, Gabriel ha viajado por varios países adquiriendo experiencia y los más altos estándares de reparación. Es monitor de ciclismo titulado por la FAC, combinando su conocimiento técnico con la pasión por enseñar y compartir la cultura ciclista." },
+      bio: { title: "Gabi lleva toda la vida con las bicis", desc1: "Gabi Sarria lleva años trabajando en el mundo de la bicicleta. Empezó compitiendo en descenso, lo que le dió un conocimiento técnico que muy pocos tienen. Con el tiempo, ese conocimiento lo llevó al taller: durante años fue el mecánico de Bike Base, donde ha reparado todo tipo de bicis para todo tipo de ciclistas.", desc2: "Parte de su formación la hizo en el extranjero, donde aprendió a trabajar con los estándares de reparación de distintos países. Esa experiencia es la que trae ahora a Gravitate Bikes: un sitio donde hacer las cosas bien, sin más complicaciones." },
       values: { title: "Nuestros Valores", subtitle: "Lo que nos mueve cada día", q1: { title: "Calidad profesional", desc: "Aplicamos los estándares de la alta competición a cada bicicleta que entra en nuestro taller." }, q2: { title: "Trato cercano", desc: "Somos una familia ciclista. Queremos que te sientas como en casa cada vez que nos visitas." }, q3: { title: "Pasión", desc: "No es solo nuestro trabajo, es nuestra forma de vida. Amamos cada aspecto del ciclismo." } },
-      workshop: { title: "Nuestro taller", desc: "Nuestro espacio de trabajo está equipado con las mejores herramientas para garantizar una reparación precisa y de calidad. Nos aseguramos de que cada bicicleta salga en perfectas condiciones.", btnWa: "Contactar por WhatsApp", findUs: "Encuéntranos en el paseo marítimo", location: "San Pedro Alcántara, Marbella" },
+      workshop: { title: "Nuestro taller", desc: "Nuestro espacio de trabajo está equipado con las mejores herramientas para garantizar una reparación precisa y de calidad. Nos aseguramos de que cada bicicleta salga en perfectas condiciones.", btnWa: "Contactar por WhatsApp", findUs: "Encuéntranos junto al bulevar", location: "Bulevar de San Pedro Alcántara, Marbella" },
       stats: { y28: "Años de experiencia", ref: "Años de referente en Andalucía", cup: "Copa de Descenso (ESP y PT)", fac: "Monitor de Ciclismo Oficial" }
     },
     contacto: {
-      header: { title: "¿Dónde estamos?", subtitle: "Encuéntranos en el paseo marítimo de San Pedro Alcántara. Pásate por el local o contáctanos por cualquiera de estos medios." },
+      header: { title: "¿Dónde estamos?", subtitle: "El taller se encuentra junto al bulevar de San Pedro Alcántara. Pásate por el local o contáctanos por cualquiera de estos medios." },
       address: "Dirección",
       phone: "Teléfono",
       email: "Email",
@@ -124,9 +124,9 @@ export const dictionaries = {
       sunday: "Domingos y festivos"
     },
     woom: {
-      header: { title: "Bicis Woom", subtitle: "Las mejores bicicletas ultraligeras para niños, ahora disponibles para alquiler.", cta: "Consultar disponibilidad" },
+      header: { title: "Bicis Woom", subtitle: "Las mejores bicicletas ultraligeras para niños. Diseñadas para que aprender a pedalear sea fácil, seguro y divertido.", cta: "Preguntar por WhatsApp" },
       why: "¿Por qué woom?",
-      range: "Gama woom",
+      range: "Bicis para niños",
       rangeDesc: "Una bici para cada etapa, de 1,5 a 14 años. También disponemos de toda la gama de accesorios originales woom.",
       desc: "Las bicicletas Woom están diseñadas específicamente para la anatomía de los niños. Son hasta un 40% más ligeras que las bicicletas infantiles convencionales, lo que hace que aprender a montar sea más fácil, rápido y seguro.",
       features: { weight: "Ultraligeras", weightDesc: "Fáciles de manejar y levantar", ergonomics: "Ergonomía infantil", ergonomicsDesc: "Geometría adaptada a su cuerpo", brakes: "Frenos especiales", brakesDesc: "Palancas adaptadas para manos pequeñas" },
@@ -191,7 +191,7 @@ export const dictionaries = {
       paseo: { title: "City Bike", desc: "Comfortable and lightweight, perfect for exploring the San Pedro Alcántara promenade. Includes helmet and lock.", priceDay: "Daily rate", priceDayDesc: "1 to 6 days rental", priceWeek: "Weekly rate (7+ days)", priceWeekDesc: "Save 33%", note: "Includes helmet and lock. Weekly price applies from the 7th consecutive day of rental." },
       ebike: {
         title: "Electric Bicycles (E-bikes)",
-        warning: "To rent electric bicycles, an original ID/Passport and a physical credit card are required.",
+        warning: "To rent electric bicycles, an original ID/Passport and a physical credit card are required. Rental hours are from 10:00 to 19:30. If the bike is returned after 19:30, the following day will be charged.",
         aviso: "Important notice:",
         models: {
           basica: {
@@ -226,8 +226,8 @@ export const dictionaries = {
       btnWa: "Book via WhatsApp"
     },
     reparaciones: {
-      header: { title: "Repairs", subtitle: "Specialized workshop for all types of bicycles. Fast repairs at the best price in San Pedro Alcántara." },
-      workshop: { title: "Fast and professional service", desc: "In our workshop, we work with all types of bicycles: city, mountain, road, and e-bikes. Quick diagnosis and free quotes.", points: ["Same-day repairs for most issues", "Free quote before any work", "Quality replacement parts", "Technicians with e-bike experience"] },
+      header: { title: "Repairs", subtitle: "Specialized workshop for all types of bicycles. Every repair is done with precision, experience and original spare parts." },
+      workshop: { title: "Reliable and professional service", desc: "In our workshop, we work with all types of bicycles: city, mountain, road, and e-bikes. Every job is checked before it leaves the workshop, and we always keep you informed before doing anything.", points: ["Honest diagnosis, no surprises", "Free quote before any work", "Proven quality components", "Technicians with years of experience across all bike types"] },
       plans: { title: "Maintenance Plans", btnProcess: "View repair process", btnClose: "Close", note: "* Seals and replacement components are not included.", btnWa: "Request workshop appointment" },
       packages: {
         bronce: { name: "Bronze", features: ["Full bicycle adjustment", "Safety check"] },
@@ -253,13 +253,13 @@ export const dictionaries = {
     },
     quienesSomos: {
       header: { title: "Our History", subtitle: "A family business born from the love of bikes and the San Pedro Alcántara promenade." },
-      bio: { title: "28 years of passion for cycling", desc1: "Our founder, Gabriel Sarria, has dedicated his whole life to the world of bicycles. He started as a competitor, becoming the Spanish downhill champion, and has won the Downhill Cup in both Spain and Portugal. Furthermore, he was the benchmark in Andalusia for this discipline for 10 consecutive years.", desc2: "After his successful competitive stage, Gabriel has traveled through several countries acquiring experience and the highest repair standards. He is a certified cycling instructor by the FAC, combining his technical knowledge with the passion to teach and share cycling culture." },
+      bio: { title: "Gabi has been around bikes his whole life", desc1: "Gabi Sarria has spent years working in the world of bicycles. He started out competing in downhill, which gave him a technical knowledge that very few people have. Over time, that knowledge moved into the workshop: he spent years as the mechanic at Bike Base, where he has repaired all kinds of bikes for all kinds of riders.", desc2: "Part of his training took him abroad, where he learned to work to the repair standards of different countries. That experience is what he now brings to Gravitate Bikes: a place where things are done properly, without any fuss." },
       values: { title: "Our Values", subtitle: "What moves us every day", q1: { title: "Professional quality", desc: "We apply the standards of high competition to every bicycle that enters our workshop." }, q2: { title: "Friendly service", desc: "We are a cycling family. We want you to feel at home every time you visit us." }, q3: { title: "Passion", desc: "It's not just our job, it's our way of life. We love every aspect of cycling." } },
-      workshop: { title: "Our workshop", desc: "Our workspace is equipped with the best tools to ensure precise and high-quality repairs. We make sure every bicycle leaves in perfect condition.", btnWa: "Contact via WhatsApp", findUs: "Find us on the promenade", location: "San Pedro Alcántara, Marbella" },
+      workshop: { title: "Our workshop", desc: "Our workspace is equipped with the best tools to ensure precise and high-quality repairs. We make sure every bicycle leaves in perfect condition.", btnWa: "Contact via WhatsApp", findUs: "Find us next to the boulevard", location: "Bulevar de San Pedro Alcántara, Marbella" },
       stats: { y28: "Years of experience", ref: "Years as a reference in Andalusia", cup: "Downhill Cup (ESP & PT)", fac: "Official Cycling Instructor" }
     },
     contacto: {
-      header: { title: "Where are we?", subtitle: "Find us on the San Pedro Alcántara promenade. Drop by the shop or contact us through any of these means." },
+      header: { title: "Where are we?", subtitle: "Our workshop is located next to the boulevard of San Pedro Alcántara. Drop by or contact us through any of these means." },
       address: "Address",
       phone: "Phone",
       email: "Email",
@@ -270,9 +270,9 @@ export const dictionaries = {
       sunday: "Sundays & Holidays"
     },
     woom: {
-      header: { title: "Woom Bikes", subtitle: "The best ultralight bicycles for children, now available for rent.", cta: "Check availability" },
+      header: { title: "Woom Bikes", subtitle: "The best ultralight bicycles for children. Designed to make learning to ride easy, safe, and fun.", cta: "Ask via WhatsApp" },
       why: "Why woom?",
-      range: "woom range",
+      range: "Kids Bikes",
       rangeDesc: "A bike for every stage, from 1.5 to 14 years. We also have the full range of original woom accessories.",
       desc: "Woom bikes are specifically designed for children's anatomy. They are up to 40% lighter than conventional children's bikes, making learning to ride easier, faster, and safer.",
       features: { weight: "Ultralight", weightDesc: "Easy to handle and lift", ergonomics: "Child ergonomics", ergonomicsDesc: "Geometry adapted to their bodies", brakes: "Special brakes", brakesDesc: "Levers adapted for small hands" },
@@ -337,7 +337,7 @@ export const dictionaries = {
       paseo: { title: "Vélo de ville", desc: "Confortable et léger, parfait pour explorer la promenade de San Pedro Alcántara. Comprend casque et cadenas.", priceDay: "Tarif journalier", priceDayDesc: "Location de 1 à 6 jours", priceWeek: "Tarif hebdomadaire (7+ jours)", priceWeekDesc: "Économisez 33%", note: "Comprend casque et cadenas. Le prix hebdomadaire s'applique à partir du 7ème jour consécutif." },
       ebike: {
         title: "Vélos Électriques (E-bikes)",
-        warning: "Pour louer des vélos électriques, une pièce d'identité/passeport original et une carte de crédit physique sont requis.",
+        warning: "Pour louer des vélos électriques, une pièce d'identité/passeport original et une carte de crédit physique sont requis. La location est de 10h00 à 19h30. Si le vélo est rendu après 19h30, le jour suivant sera facturé.",
         aviso: "Avis important :",
         models: {
           basica: {
@@ -372,8 +372,8 @@ export const dictionaries = {
       btnWa: "Réserver via WhatsApp"
     },
     reparaciones: {
-      header: { title: "Réparations", subtitle: "Atelier spécialisé pour tous types de vélos. Réparations rapides au meilleur prix à San Pedro Alcántara." },
-      workshop: { title: "Service rapide et professionnel", desc: "Dans notre atelier, nous travaillons avec tous types de vélos : ville, montagne, route et e-bikes. Diagnostic rapide et devis gratuits.", points: ["Réparations le jour même pour la plupart des pannes", "Devis gratuit avant toute intervention", "Pièces de rechange de qualité", "Techniciens avec expérience en e-bikes"] },
+      header: { title: "Réparations", subtitle: "Atelier spécialisé pour tous types de vélos. Chaque réparation est effectuée avec rigueur, expérience et des pièces de rechange d'origine." },
+      workshop: { title: "Service fiable et professionnel", desc: "Dans notre atelier, nous travaillons avec tous types de vélos : ville, montagne, route et e-bikes. Chaque travail est vérifié avant de quitter l'atelier et nous vous informons toujours avant d'intervenir.", points: ["Diagnostic honnête, sans surprises", "Devis gratuit avant toute intervention", "Composants de qualité éprouvée", "Techniciens expérimentés sur tout type de vélo"] },
       plans: { title: "Plans d'entretien", btnProcess: "Voir le processus de réparation", btnClose: "Fermer", note: "* Les joints et composants de remplacement ne sont pas inclus.", btnWa: "Demander un rendez-vous à l'atelier" },
       packages: {
         bronce: { name: "Bronze", features: ["Réglage complet du vélo", "Contrôle de sécurité"] },
@@ -399,13 +399,13 @@ export const dictionaries = {
     },
     quienesSomos: {
       header: { title: "Notre Histoire", subtitle: "Une entreprise familiale née de l'amour pour les vélos et la promenade de San Pedro Alcántara." },
-      bio: { title: "28 ans de passion pour le cyclisme", desc1: "Notre fondateur, Gabriel Sarria, a consacré toute sa vie au monde du vélo. Il a commencé comme compétiteur, devenant champion d'Espagne de descente, et a remporté la Coupe de Descente en Espagne et au Portugal. De plus, il a été la référence en Andalousie pour cette discipline pendant 10 années consécutives.", desc2: "Après sa carrière compétitive réussie, Gabriel a voyagé dans plusieurs pays en acquérant de l'expérience et les normes de réparation les plus élevées. Il est moniteur de cyclisme certifié par la FAC, combinant ses connaissances techniques avec la passion d'enseigner et de partager la culture cycliste." },
+      bio: { title: "Gabi a passé toute sa vie avec les vélos", desc1: "Gabi Sarria travaille dans le monde du vélo depuis des années. Il a commencé en compétant en descente, ce qui lui a donné une connaissance technique que très peu de personnes possèdent. Avec le temps, cette expérience l'a conduit à l'atelier : il a été pendant des années le mécanicien de Bike Base, où il a réparé toutes sortes de vélos pour toutes sortes de cyclistes.", desc2: "Une partie de sa formation s'est faite à l'étranger, où il a appris à travailler selon les normes de réparation de différents pays. C'est cette expérience qu'il apporte aujourd'hui à Gravitate Bikes : un endroit où le travail est bien fait, simplement." },
       values: { title: "Nos Valeurs", subtitle: "Ce qui nous motive chaque jour", q1: { title: "Qualité professionnelle", desc: "Nous appliquons les standards de la haute compétition à chaque vélo qui entre dans notre atelier." }, q2: { title: "Service convivial", desc: "Nous sommes une famille cycliste. Nous voulons que vous vous sentiez chez vous à chaque visite." }, q3: { title: "Passion", desc: "Ce n'est pas seulement notre travail, c'est notre mode de vie. Nous aimons chaque aspect du cyclisme." } },
-      workshop: { title: "Notre atelier", desc: "Notre espace de travail est équipé des meilleurs outils pour garantir une réparation précise et de qualité. Nous veillons à ce que chaque vélo parte en parfait état.", btnWa: "Contacter par WhatsApp", findUs: "Retrouvez-nous sur la promenade", location: "San Pedro Alcántara, Marbella" },
+      workshop: { title: "Notre atelier", desc: "Notre espace de travail est équipé des meilleurs outils pour garantir une réparation précise et de qualité. Nous veillons à ce que chaque vélo parte en parfait état.", btnWa: "Contacter par WhatsApp", findUs: "Retrouvez-nous à côté du boulevard", location: "Bulevar de San Pedro Alcántara, Marbella" },
       stats: { y28: "Années d'expérience", ref: "Années de référence en Andalousie", cup: "Coupe de Descente (ESP & PT)", fac: "Moniteur de Cyclisme Officiel" }
     },
     contacto: {
-      header: { title: "Où sommes-nous ?", subtitle: "Retrouvez-nous sur la promenade de San Pedro Alcántara. Passez à la boutique ou contactez-nous par l'un de ces moyens." },
+      header: { title: "Où sommes-nous ?", subtitle: "Notre atelier se trouve à côté du boulevard de San Pedro Alcántara. Passez à la boutique ou contactez-nous par l'un de ces moyens." },
       address: "Adresse",
       phone: "Téléphone",
       email: "Email",
@@ -416,9 +416,9 @@ export const dictionaries = {
       sunday: "Dimanches et jours fériés"
     },
     woom: {
-      header: { title: "Vélos Woom", subtitle: "Les meilleurs vélos ultra-légers pour enfants, maintenant disponibles à la location.", cta: "Vérifier la disponibilité" },
+      header: { title: "Vélos Woom", subtitle: "Les meilleurs vélos ultra-légers pour enfants. Conçus pour rendre l'apprentissage du vélo facile, sûr et amusant.", cta: "Demander via WhatsApp" },
       why: "Pourquoi woom ?",
-      range: "Gamme woom",
+      range: "Vélos pour enfants",
       rangeDesc: "Un vélo pour chaque étape, de 1,5 à 14 ans. Nous disposons également de toute la gamme d'accessoires originaux woom.",
       desc: "Les vélos Woom sont spécialement conçus pour l'anatomie des enfants. Ils sont jusqu'à 40 % plus légers que les vélos pour enfants classiques, ce qui rend l'apprentissage plus facile, rapide et sûr.",
       features: { weight: "Ultra-légers", weightDesc: "Faciles à manier et à soulever", ergonomics: "Ergonomie infantile", ergonomicsDesc: "Géométrie adaptée à leur corps", brakes: "Freins spéciaux", brakesDesc: "Leviers adaptés aux petites mains" },
@@ -436,5 +436,152 @@ export const dictionaries = {
       ctaBottom: { title: "Vous ne savez pas quelle taille choisir ?", desc: "Passez chez Gravitate Bikes et nous vous aiderons à trouver le vélo woom parfait pour votre enfant. Nous avons des modèles d'exposition en magasin et des conseils personnalisés sans engagement.", btn: "Visitez notre magasin" }
     },
     footer: "© 2026 Gravitate Bikes · Av. Lopez de Mena 14, San Pedro Alcántara · Tous droits réservés"
+  },
+  de: {
+    nav: {
+      inicio: "Startseite",
+      alquiler: "Verleih",
+      reparaciones: "Reparaturen",
+      woom: "Woom Kinderräder",
+      quienesSomos: "Über uns",
+      contacto: "Kontakt",
+    },
+    home: {
+      hero: {
+        location: "San Pedro Alcántara · Marbella",
+        title1: "Marbella entdecken",
+        title2: "mit dem Fahrrad",
+        btnRent: "Mietpreise ansehen",
+        btnRepair: "Reparaturen",
+      },
+      services: {
+        title: "Marbella auf andere Weise erleben",
+        subtitle: "Stadt- und Elektroräder ab 15 €/Tag. Erkunden Sie die Strandpromenade von Marbella in Ihrem Tempo, mit klaren Preisen und eigenem Werkstatt.",
+        rent: { title: "Tagesweise Fahrradvermietung", desc: "Komfortable und leichte Räder, ideal für die Strandpromenade in Ihrem eigenen Tempo.", btn: "Preise ansehen" },
+        repair: { title: "Reparaturwerkstatt", desc: "Schnelle und professionelle Reparaturen. Reifenpannen, Bremsen, Gangschaltungen und vieles mehr.", btn: "Dienste ansehen" },
+        clean: { title: "Reinigungsservice", desc: "Wie neu aussehen lassen. Antriebsreinigung für 15 € und vollständige Fahrradreinigung für 20 €.", btn: "Termin anfragen" }
+      },
+      whyUs: {
+        title: "Warum uns wählen?",
+        subtitle: "Engagiert für Ihr Erlebnis auf der Strandpromenade von San Pedro.",
+        loc: { title: "Unschlagbare Lage", desc: "Im Herzen der Strandpromenade von San Pedro Alcántara." },
+        hours: { title: "Täglich geöffnet", desc: "Die ganze Saison über verfügbar, damit Sie keine Ausfahrt verpassen." },
+        condition: { title: "Fahrräder in perfektem Zustand", desc: "Ständige Wartung für ein stets sicheres und komfortables Erlebnis." },
+        ages: { title: "Ab 15 € pro Tag", desc: "Unschlagbare Preise, um Marbella per Rad zu erkunden. Keine Überraschungen, keine versteckten Kosten." },
+        fast: { title: "Schnelle Werkstatt", desc: "Sofortreparaturen, damit Sie keine Zeit verlieren und sofort wieder fahren können." },
+        support: { title: "Persönliche Beratung", desc: "Wir beraten Sie zu Routen und empfehlen die beste Option für Ihre Bedürfnisse." }
+      },
+      cta: {
+        title: "Bereit zum Radfahren?",
+        subtitle: "Kontaktieren Sie uns unverbindlich oder reservieren Sie Ihr Fahrrad jetzt.",
+        btnWa: "Per WhatsApp buchen",
+        btnLoc: "Wo sind wir?"
+      }
+    },
+    alquiler: {
+      header: { title: "Fahrrad mieten", subtitle: "Wählen Sie zwischen unseren Stadträdern und E-Bikes, um die Strandpromenade in Ihrem Tempo zu genießen." },
+      paseo: { title: "Stadtrad", desc: "Komfortabel und leicht, ideal für die Strandpromenade von San Pedro Alcántara. Inklusive Helm und Schloss.", priceDay: "Tagespreis", priceDayDesc: "Miete von 1 bis 6 Tagen", priceWeek: "Wochenpreis (7+ Tage)", priceWeekDesc: "33% sparen", note: "Inklusive Helm und Schloss. Der Wochenpreis gilt ab dem 7. aufeinanderfolgenden Miettag." },
+      ebike: {
+        title: "Elektrofahrräder (E-Bikes)",
+        warning: "Zum Mieten von Elektrofahrrädern sind ein gültiger Personalausweis/Reisepass und eine physische Kreditkarte erforderlich. Die Mietzeit ist von 10:00 bis 19:30 Uhr. Bei Rückgabe nach 19:30 Uhr wird der folgende Tag berechnet.",
+        aviso: "Wichtiger Hinweis:",
+        models: {
+          basica: {
+            title: "Basis E-Bike",
+            desc: "Ideal für müheloses Fahren in der Stadt und auf der Promenade. Akku mit guter Reichweite für einen ganzen Tag.",
+            rateDay: "Tagespreis",
+            priceStd: "Standardpreis",
+            perDay: "Pro Miettag",
+            day: "/ Tag",
+            includes: "Helm und Schloss inklusive.",
+            btn: "Per WhatsApp buchen"
+          },
+          premium: {
+            badge: "Bosch Motor",
+            title: "Premium E-Bike (Bosch Motor)",
+            desc: "Maximale Leistung und Zuverlässigkeit mit Bosch Mittelmotor. Ideal für lange Strecken oder hügeliges Gelände. Größere Reichweite und überlegener Komfort.",
+            rateDay: "Tagespreis",
+            rent1to4: "Miete von 1 bis 4 Tagen",
+            priceStd: "Standardpreis",
+            day: "/ Tag",
+            promo: "Angebot!",
+            rateReduced: "Vergünstigter Preis (5 Tage oder mehr)",
+            rent5plus: "Miete ab 5+ Tagen",
+            pricePerDay: "Preis pro Tag",
+            save: "Sparen Sie",
+            includes: "Helm und Schloss inklusive. Der Aktionspreis gilt bei Miete des Bosch E-Bikes für 5 aufeinanderfolgende Tage oder mehr.",
+            btn: "Per WhatsApp buchen"
+          }
+        }
+      },
+      info: { title: "Wichtige Informationen", id: "Für die Miete ist ein Ausweisdokument (Personalausweis oder Reisepass) erforderlich.", deposit: "Rückerstattbare Kaution in bar oder per Karte bei Abholung.", minors: "Kinder unter 14 Jahren müssen von einem Erwachsenen begleitet werden.", rain: "Bei Regen bitte Verfügbarkeit und Bedingungen erfragen." },
+      btnWa: "Per WhatsApp buchen"
+    },
+    reparaciones: {
+      header: { title: "Reparaturen", subtitle: "Spezialisierte Werkstatt für alle Fahrradtypen. Jede Reparatur wird mit Sorgfalt, Erfahrung und Originalersatzteilen durchgeführt." },
+      workshop: { title: "Zuverlässiger und professioneller Service", desc: "In unserer Werkstatt arbeiten wir mit allen Fahrradtypen: Stadträder, Mountainbikes, Rennräder und E-Bikes. Jede Arbeit wird vor der Ausgabe geprüft und wir informieren Sie immer, bevor wir etwas unternehmen.", points: ["Ehrliche Diagnose, keine Überraschungen", "Kostenloser Kostenvoranschlag vor jeder Arbeit", "Bewährte Qualitätskomponenten", "Techniker mit jahrelanger Erfahrung mit allen Fahrradtypen"] },
+      plans: { title: "Wartungspakete", btnProcess: "Reparaturprozess ansehen", btnClose: "Schließen", note: "* Dichtungen und Ersatzteile sind nicht inbegriffen.", btnWa: "Werkstatttermin anfragen" },
+      packages: {
+        bronce: { name: "Bronze", features: ["Vollständige Fahrradeinstellung", "Sicherheitskontrolle"] },
+        plata: { name: "Silber", features: ["Enthält Bronze-Paket", "Antriebsreinigung"] },
+        gold: { name: "Gold", features: ["Enthält Silber-Paket", "Vollständige Fahrradreinigung", "Schaltzugerneuerung (falls notwendig)", "Kontrolle von Tretlager, Steuersatz und Naben"] },
+        platinum: { name: "Platin", features: ["Enthält Gold-Paket", "Federungsüberprüfung", "Hinterbauüberprüfung", "Bremsenwartung (Entlüften)"], note: "* Dichtungen und Ersatzteile sind nicht inbegriffen." }
+      },
+      expandedView: {
+        process: "Prozess", closePanel: "Bereich schließen ✕", photo: "Foto", size: "Empfohlene Größe: 1200x900px", stepDesc: "Schritt-Beschreibung",
+        placeholderDesc: "[Fügen Sie eine detaillierte Beschreibung des Schritts hinzu. Hier können Sie genau erklären, was am Fahrrad gemacht wird, welche Werkzeuge verwendet werden und warum dieser Schritt für die ordnungsgemäße Wartung wichtig ist.]"
+      },
+      turnaround: {
+        title: "Bearbeitungszeiten",
+        desc: "Einfache Reparaturen werden sofort durchgeführt. Bei komplexeren Schäden teilen wir Ihnen einen ungefähren Zeitrahmen mit. Falls das Fahrrad unvorhergesehene zusätzliche Arbeiten oder Teile benötigt, werden wir Sie immer vorher kontaktieren, um den neuen Kostenvoranschlag zu genehmigen."
+      },
+      limpieza: {
+        title: "Reinigung",
+        packages: {
+          transmision: { name: "Antriebsreinigung", features: ["Vollständige Entfettung von Kette, Kassette und Kettenblättern", "Professionelle Schmierung", "Grundeinstellung der Schaltung"] },
+          completa: { name: "Vollständige Fahrradreinigung", features: ["Handwäsche des gesamten Fahrrads", "Antriebsreinigung inklusive", "Rahmentrocknung und -politur", "Komponentenschmierung"] }
+        }
+      }
+    },
+    quienesSomos: {
+      header: { title: "Unsere Geschichte", subtitle: "Ein Familienbetrieb, geboren aus der Liebe zu Fahrrädern und der Strandpromenade von San Pedro Alcántara." },
+      bio: { title: "Gabi hat sein ganzes Leben mit Fahrrädern verbracht", desc1: "Gabi Sarria arbeitet seit Jahren in der Fahrradwelt. Er begann als Downhill-Rennfahrer, was ihm ein technisches Wissen gab, das nur wenige besitzen. Mit der Zeit führte ihn dieses Wissen in die Werkstatt: Jahrelang war er der Mechaniker bei Bike Base, wo er alle Arten von Rädern für alle Arten von Fahrern repariert hat.", desc2: "Einen Teil seiner Ausbildung absolvierte er im Ausland, wo er nach den Reparaturstandards verschiedener Länder arbeiten lernte. Diese Erfahrung bringt er jetzt zu Gravitate Bikes: ein Ort, an dem die Dinge richtig gemacht werden, ganz einfach." },
+      values: { title: "Unsere Werte", subtitle: "Was uns jeden Tag antreibt", q1: { title: "Professionelle Qualität", desc: "Wir wenden die Standards des Hochleistungssports auf jedes Fahrrad an, das unsere Werkstatt betritt." }, q2: { title: "Freundlicher Service", desc: "Wir sind eine Radfamilie. Wir möchten, dass Sie sich bei jedem Besuch wie zu Hause fühlen." }, q3: { title: "Leidenschaft", desc: "Es ist nicht nur unser Beruf, es ist unsere Lebensweise. Wir lieben jeden Aspekt des Radsports." } },
+      workshop: { title: "Unsere Werkstatt", desc: "Unser Arbeitsbereich ist mit den besten Werkzeugen ausgestattet, um präzise und hochwertige Reparaturen zu gewährleisten. Wir stellen sicher, dass jedes Fahrrad in einwandfreiem Zustand die Werkstatt verlässt.", btnWa: "Per WhatsApp kontaktieren", findUs: "Finden Sie uns neben dem Boulevard", location: "Bulevar de San Pedro Alcántara, Marbella" },
+      stats: { y28: "Jahre Erfahrung", ref: "Jahre als Referenz in Andalusien", cup: "Downhill-Cup (ESP & PT)", fac: "Offizieller Radsport-Instructor" }
+    },
+    contacto: {
+      header: { title: "Wo sind wir?", subtitle: "Unsere Werkstatt befindet sich neben dem Boulevard von San Pedro Alcántara. Kommen Sie vorbei oder kontaktieren Sie uns über einen dieser Kanäle." },
+      address: "Adresse",
+      phone: "Telefon",
+      email: "E-Mail",
+      hours: "Öffnungszeiten",
+      waBtn: "WhatsApp schreiben",
+      weekdays: "Montag – Freitag",
+      saturday: "Samstag",
+      sunday: "Sonntag & Feiertage"
+    },
+    woom: {
+      header: { title: "Woom Fahrräder", subtitle: "Die besten ultraleichten Fahrräder für Kinder. Entwickelt, um das Fahrradfahren lernen einfach, sicher und spaßig zu machen.", cta: "Per WhatsApp anfragen" },
+      why: "Warum woom?",
+      range: "Kinderräder",
+      rangeDesc: "Ein Fahrrad für jede Etappe, von 1,5 bis 14 Jahren. Wir führen auch das komplette Sortiment an originalen woom-Zubehör.",
+      desc: "Woom-Fahrräder sind speziell für die Anatomie von Kindern entwickelt. Sie sind bis zu 40 % leichter als herkömmliche Kinderräder, was das Radfahren lernen einfacher, schneller und sicherer macht.",
+      features: { weight: "Ultraleicht", weightDesc: "Einfach zu handhaben und zu heben", ergonomics: "Kinderergonomie", ergonomicsDesc: "Auf ihren Körper abgestimmte Geometrie", brakes: "Spezielle Bremsen", brakesDesc: "Hebel für kleine Hände angepasst" },
+      pricing: { title: "Woom-Tarife", price: "18 €", day: "/ Tag", btnWa: "Nach Verfügbarkeit fragen" },
+      models: {
+        w1: { type: "Laufrad", age: "1,5 – 3 Jahre", desc: "Das erste Fahrrad Ihres Kindes. Ohne Pedale, um das Gleichgewicht auf natürliche Weise zu lernen." },
+        w2: { type: "Pedalrad", age: "3 – 4,5 Jahre", desc: "Leicht und einfach zu handhaben. Mit vollem Vertrauen auf Pedale umsteigen." },
+        w3: { type: "Pedalrad", age: "4 – 6 Jahre", desc: "Mehr Geschwindigkeit, mehr Abenteuer. Mit Handbremsen für kleine Hände." },
+        w4: { type: "Pedalrad", age: "6 – 8 Jahre", desc: "Der Schritt zu großen Rädern. Gangschaltung und optimierte Geometrie für Kinder." },
+        w5: { type: "Pedalrad", age: "8 – 11 Jahre", desc: "Für starke Pedaleure. Qualitätskomponenten und geringes Gewicht." },
+        w6: { type: "Pedalrad", age: "10 – 14 Jahre", desc: "Fast ein Erwachsenenrad. Perfekt für die anspruchsvollsten jungen Radfahrer." },
+        woff: { type: "Mountainbike", age: "4 – 14 Jahre", desc: "Für das Gelände entwickelt. Breite Reifen, Federung und Geländehandling." },
+        wup: { type: "Kinder E-Bike", age: "8 – 14 Jahre", desc: "Mit sanfter elektrischer Unterstützung, damit sie Sie auf den längsten Touren begleiten können." }
+      },
+      ctaBottom: { title: "Sie wissen nicht, welche Größe Sie wählen sollen?", desc: "Kommen Sie zu Gravitate Bikes und wir helfen Ihnen, das perfekte woom-Fahrrad für Ihr Kind zu finden. Wir haben Ausstellungsmodelle im Geschäft und persönliche Beratung ohne Verpflichtung.", btn: "Besuchen Sie unseren Shop" }
+    },
+    footer: "© 2026 Gravitate Bikes · Av. Lopez de Mena 14, San Pedro Alcántara · Alle Rechte vorbehalten"
   }
 };
+

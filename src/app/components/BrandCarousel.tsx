@@ -2,28 +2,28 @@
 import { useRef, useEffect, useState } from "react";
 
 const brands = [
-  { name: "Giro", src: "/carrusel/giro-vector-logo.svg", scaleClass: "scale-[3]" },
-  { name: "Maxxis", src: "/carrusel/maxxis-vector-logo.svg", scaleClass: "scale-[3]" },
-  { name: "Mondraker", src: "/carrusel/mondraker-logo-vector.svg", scaleClass: "scale-[5]" },
-  { name: "RockShox", src: "/carrusel/rockshox.svg", scaleClass: "scale-[1.5]", square: true },
-  { name: "Santa Cruz", src: "/carrusel/Santacruz_bycicles_logo.svg", scaleClass: "scale-[1.5]", square: true },
-  { name: "Shimano", src: "/carrusel/shimano.svg", scaleClass: "scale-[3]" },
-  { name: "SRAM", src: "/carrusel/sram-5.svg", scaleClass: "scale-[3]" },
-  { name: "Woom", src: "/carrusel/Woom_idMSQPEq8u_1.svg" },
-  { name: "PRO", src: "/carrusel/pro-logo.svg", scaleClass: "scale-[1.5]", square: true },
-  { name: "Kryptonite", src: "/carrusel/kryptonite-logo.svg", scaleClass: "scale-[3]" },
-  { name: "Troy Lee Designs", src: "/carrusel/troy-lee-designs-logo.svg", scaleClass: "scale-[3]" },
-  { name: "JOE'S", src: "/carrusel/joes-logo.svg", darkLogo: true },
-  { name: "Hawkers", src: "/carrusel/hawkers-logo.svg", scaleClass: "scale-[1.5]", darkLogo: true },
-  { name: "Vittoria", src: "/carrusel/vittoria-logo.svg", scaleClass: "scale-[3]" },
-  { name: "KENDA", src: "/carrusel/kenda-logo.svg" },
-  { name: "CamelBak", src: "/carrusel/camelbak-logo.svg", scaleClass: "scale-[1.5]", square: true },
-  { name: "Fox Shox", src: "/carrusel/fox-shox-logo.svg", offsetY: "12px", square: true },
-  { name: "GURPIL", src: "/carrusel/gurpil-logo.svg" },
+  { name: "Giro", src: "/carrusel/giro_logo.png", scaleClass: "scale-[3]" },
+  { name: "Maxxis", src: "/carrusel/maxxis_logo.png", scaleClass: "scale-[3]" },
+  { name: "Mondraker", src: "/carrusel/mondraker_logo.png", scaleClass: "scale-[5]" },
+  { name: "RockShox", src: "/carrusel/rockshox_logo.png", scaleClass: "scale-[1.5]", square: true },
+  { name: "Santa Cruz", src: "/carrusel/santacruz_logo.png", scaleClass: "scale-[1.5]", square: true },
+  { name: "Shimano", src: "/carrusel/shimano_logo.png", scaleClass: "scale-[3]" },
+  { name: "SRAM", src: "/carrusel/sram_logo.png", scaleClass: "scale-[3]" },
+  { name: "Woom", src: "/carrusel/woom_logo.png" },
+  { name: "PRO", src: "/carrusel/pro_logo.png", scaleClass: "scale-[1.5]", square: true },
+  { name: "Kryptonite", src: "/carrusel/kryptonite_logo.png", scaleClass: "scale-[3]" },
+  { name: "Troy Lee Designs", src: "/carrusel/tld_logo.png", scaleClass: "scale-[3]" },
+  { name: "JOE'S", src: "/carrusel/joes_logo.png", darkLogo: true },
+  { name: "Hawkers", src: "/carrusel/hawkers_logo.png", scaleClass: "scale-[1.5]", darkLogo: true },
+  { name: "Vittoria", src: "/carrusel/vittoria_logo.png", scaleClass: "scale-[3]" },
+  { name: "KENDA", src: "/carrusel/kenda_logo.png" },
+  { name: "CamelBak", src: "/carrusel/camelbak_logo.png", scaleClass: "scale-[1.5]", square: true },
+  { name: "Fox Shox", src: "/carrusel/fox_logo.png", offsetY: "12px", square: true },
+  { name: "GURPIL", src: "/carrusel/gurpil_logo.png" },
 ];
 
 // Velocidad de auto-scroll en píxeles por frame (≈60fps)
-const AUTO_VEL = -1.5;
+const AUTO_VEL = -0.4;
 // Factor de fricción: cuánto de la velocidad se conserva cada frame durante la inercia
 const FRICTION = 0.97;
 // Umbral para considerar que la inercia ha terminado y volver al auto-scroll
@@ -137,7 +137,7 @@ export function BrandCarousel() {
 
   return (
     <div
-      className="bg-[#0E0E12] border-b border-white/10 py-8 overflow-hidden flex select-none"
+      className="bg-[#0E0E12] border-b border-white/10 py-6 overflow-hidden flex select-none"
       style={{ cursor: grabbing ? "grabbing" : "grab" }}
     >
       <div
@@ -150,21 +150,22 @@ export function BrandCarousel() {
         {[...brands, ...brands, ...brands].map((brand, i) => (
           <div
             key={i}
-            className="flex items-center justify-center shrink-0 w-32 h-16 md:w-44 md:h-20"
+            className="flex items-center justify-center shrink-0 w-32 h-14 md:w-44 md:h-18"
             style={{ marginLeft: getMxPx(brand.scaleClass, brand.square), marginRight: getMxPx(brand.scaleClass, brand.square) }}
           >
-            {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img
-              src={brand.src}
-              alt={brand.name}
-              draggable={false}
-              className={`w-full h-full object-contain opacity-60 transition-all duration-300 ${brand.scaleClass || "scale-100"}`}
+            <div
+              className={`w-full h-full opacity-45 hover:opacity-100 transition-opacity duration-300 ${brand.scaleClass || "scale-100"}`}
               style={{
-                filter: brand.darkLogo
-                  ? "brightness(0) invert(1)"
-                  : "grayscale(100%) invert(100%) brightness(2)",
-                mixBlendMode: brand.darkLogo ? "normal" : "screen",
-                transform: `${brand.scaleClass ? "" : "scale(1) "}translateY(${brand.offsetY || "0px"})`,
+                backgroundColor: "white",
+                maskImage: `url(${brand.src})`,
+                maskSize: "contain",
+                maskRepeat: "no-repeat",
+                maskPosition: "center",
+                WebkitMaskImage: `url(${brand.src})`,
+                WebkitMaskSize: "contain",
+                WebkitMaskRepeat: "no-repeat",
+                WebkitMaskPosition: "center",
+                transform: `translateY(${brand.offsetY || "0px"}) translateZ(0)`,
                 pointerEvents: "none",
               }}
             />
