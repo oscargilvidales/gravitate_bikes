@@ -5,7 +5,7 @@ import Image from "next/image";
 import { useTranslation } from "@/i18n/useTranslation";
 
 export function QuienesSomosPage() {
-  const { t } = useTranslation();
+  const { t, lang } = useTranslation();
 
   const values = [
     {
