@@ -40,7 +40,7 @@ export function QuienesSomosPage() {
           </div>
           <div className="rounded-2xl overflow-hidden h-80 md:h-96 shadow-xl flex items-center justify-center relative">
             {/* Image optimized */}
-            <Image src="/about/Sin título.jpeg" alt="Gabi haciendo Plegada" fill className="object-cover" />
+            <Image src="/about/Sin título.jpeg" alt="\bGab\b haciendo Plegada" fill className="object-cover" />
           </div>
         </div>
       </section>
