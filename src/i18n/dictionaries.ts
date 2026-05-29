@@ -455,11 +455,11 @@ export const dictionaries = {
         btnRepair: "Reparaturen",
       },
       services: {
-        title: "Marbella auf andere Weise erleben",
-        subtitle: "Stadt- und Elektroräder ab 15 €/Tag. Erkunden Sie die Strandpromenade von Marbella in Ihrem Tempo, mit klaren Preisen und eigenem Werkstatt.",
-        rent: { title: "Tagesweise Fahrradvermietung", desc: "Komfortable und leichte Räder, ideal für die Strandpromenade in Ihrem eigenen Tempo.", btn: "Preise ansehen" },
-        repair: { title: "Reparaturwerkstatt", desc: "Schnelle und professionelle Reparaturen. Reifenpannen, Bremsen, Gangschaltungen und vieles mehr.", btn: "Dienste ansehen" },
-        clean: { title: "Reinigungsservice", desc: "Wie neu aussehen lassen. Antriebsreinigung für 15 € und vollständige Fahrradreinigung für 20 €.", btn: "Termin anfragen" }
+        title: "Marbella auf eine andere Art erleben",
+        subtitle: "Stadt- und Elektroräder ab 15 €/Tag. Erkunden Sie die Strandpromenade von Marbella ganz flexibel, mit transparenten Preisen und unserer eigenen Werkstatt.",
+        rent: { title: "Tagesweiser Fahrradverleih", desc: "Komfortable und leichte Räder, ideal, um die Strandpromenade in Ihrem eigenen Tempo zu erkunden.", btn: "Preise ansehen" },
+        repair: { title: "Reparaturwerkstatt", desc: "Schneller und professioneller Service. Reifenpannen, Bremsen, Gangschaltungen und vieles mehr.", btn: "Leistungen ansehen" },
+        clean: { title: "Reinigungsservice", desc: "Wieder wie neu. Antriebsreinigung für 15 € und vollständige Fahrradreinigung für 20 €.", btn: "Termin anfragen" }
       },
       whyUs: {
         title: "Warum uns wählen?",
@@ -483,7 +483,7 @@ export const dictionaries = {
       paseo: { title: "Stadtrad", desc: "Komfortabel und leicht, ideal für die Strandpromenade von San Pedro Alcántara. Inklusive Helm und Schloss.", priceDay: "Tagespreis", priceDayDesc: "Miete von 1 bis 6 Tagen", priceWeek: "Wochenpreis (7+ Tage)", priceWeekDesc: "33% sparen", note: "Inklusive Helm und Schloss. Der Wochenpreis gilt ab dem 7. aufeinanderfolgenden Miettag." },
       ebike: {
         title: "Elektrofahrräder (E-Bikes)",
-        warning: "Zum Mieten von Elektrofahrrädern sind ein gültiger Personalausweis/Reisepass und eine physische Kreditkarte erforderlich. Die Mietzeit ist von 10:00 bis 19:30 Uhr. Bei Rückgabe nach 19:30 Uhr wird der folgende Tag berechnet.",
+        warning: "Zum Mieten von Elektrofahrrädern sind ein gültiger Personalausweis/Reisepass und eine physische Kreditkarte erforderlich. Ein Miettag gilt von 10:00 bis 19:30 Uhr. Bei Rückgabe nach 19:30 Uhr wird der folgende Tag berechnet.",
         aviso: "Wichtiger Hinweis:",
         models: {
           basica: {
@@ -514,7 +514,7 @@ export const dictionaries = {
           }
         }
       },
-      info: { title: "Wichtige Informationen", id: "Für die Miete ist ein Ausweisdokument (Personalausweis oder Reisepass) erforderlich.", deposit: "Rückerstattbare Kaution in bar oder per Karte bei Abholung.", minors: "Kinder unter 14 Jahren müssen von einem Erwachsenen begleitet werden.", rain: "Bei Regen bitte Verfügbarkeit und Bedingungen erfragen." },
+      info: { title: "Wichtige Informationen", id: "Für die Miete ist ein Ausweisdokument (Personalausweis oder Reisepass) erforderlich.", deposit: "Kaution (in bar oder per Karte) ist bei Abholung zu hinterlegen.", minors: "Kinder unter 14 Jahren müssen von einem Erwachsenen begleitet werden.", rain: "Bei Regen bitte Verfügbarkeit und Bedingungen erfragen." },
       btnWa: "Per WhatsApp buchen"
     },
     reparaciones: {
@@ -523,9 +523,9 @@ export const dictionaries = {
       plans: { title: "Wartungspakete", btnProcess: "Reparaturprozess ansehen", btnClose: "Schließen", note: "* Dichtungen und Ersatzteile sind nicht inbegriffen.", btnWa: "Werkstatttermin anfragen" },
       packages: {
         bronce: { name: "Bronze", features: ["Vollständige Fahrradeinstellung", "Sicherheitskontrolle"] },
-        plata: { name: "Silber", features: ["Enthält Bronze-Paket", "Antriebsreinigung"] },
-        gold: { name: "Gold", features: ["Enthält Silber-Paket", "Vollständige Fahrradreinigung", "Schaltzugerneuerung (falls notwendig)", "Kontrolle von Tretlager, Steuersatz und Naben"] },
-        platinum: { name: "Platin", features: ["Enthält Gold-Paket", "Federungsüberprüfung", "Hinterbauüberprüfung", "Bremsenwartung (Entlüften)"], note: "* Dichtungen und Ersatzteile sind nicht inbegriffen." }
+        plata: { name: "Silber", features: ["Inklusive Bronze-Paket", "Antriebsreinigung"] },
+        gold: { name: "Gold", features: ["Inklusive Silber-Paket", "Vollständige Fahrradreinigung", "Schaltzugerneuerung (falls notwendig)", "Kontrolle von Tretlager, Steuersatz und Naben"] },
+        platinum: { name: "Platin", features: ["Inklusive Gold-Paket", "Federungsüberprüfung", "Hinterbauüberprüfung", "Bremsenwartung (Entlüften)"], note: "* Dichtungen und Ersatzteile sind nicht inbegriffen." }
       },
       expandedView: {
         process: "Prozess", closePanel: "Bereich schließen ✕", photo: "Foto", size: "Empfohlene Größe: 1200x900px", stepDesc: "Schritt-Beschreibung",
@@ -533,7 +533,7 @@ export const dictionaries = {
       },
       turnaround: {
         title: "Bearbeitungszeiten",
-        desc: "Einfache Reparaturen werden sofort durchgeführt. Bei komplexeren Schäden teilen wir Ihnen einen ungefähren Zeitrahmen mit. Falls das Fahrrad unvorhergesehene zusätzliche Arbeiten oder Teile benötigt, werden wir Sie immer vorher kontaktieren, um den neuen Kostenvoranschlag zu genehmigen."
+        desc: "Kleinere Reparaturen werden sofort durchgeführt. Bei komplexeren Schäden teilen wir Ihnen einen ungefähren Zeitrahmen mit. Falls das Fahrrad unvorhergesehene zusätzliche Arbeiten oder Teile benötigt, werden wir Sie immer vorher kontaktieren, um Ihre Freigabe für die zusätzlichen Arbeiten einzuholen."
       },
       limpieza: {
         title: "Reinigung",
@@ -545,13 +545,13 @@ export const dictionaries = {
     },
     quienesSomos: {
       header: { title: "Unsere Geschichte", subtitle: "Ein Familienbetrieb, geboren aus der Liebe zu Fahrrädern und der Strandpromenade von San Pedro Alcántara." },
-      bio: { title: "Gabi hat sein ganzes Leben mit Fahrrädern verbracht", desc1: "Gabi Sarria arbeitet seit Jahren in der Fahrradwelt. Er begann als Downhill-Rennfahrer, was ihm ein technisches Wissen gab, das nur wenige besitzen. Mit der Zeit führte ihn dieses Wissen in die Werkstatt: Jahrelang war er der Mechaniker bei Bike Base, wo er alle Arten von Rädern für alle Arten von Fahrern repariert hat.", desc2: "Einen Teil seiner Ausbildung absolvierte er im Ausland, wo er nach den Reparaturstandards verschiedener Länder arbeiten lernte. Diese Erfahrung bringt er jetzt zu Gravitate Bikes: ein Ort, an dem die Dinge richtig gemacht werden, ganz einfach." },
+      bio: { title: "Gabi hat sein ganzes Leben mit Fahrrädern verbracht", desc1: "Gabi Sarria arbeitet seit Jahren in der Fahrradbranche. Er begann als Downhill-Rennfahrer, was ihm ein technisches Verständnis verschaffte, das nur wenige besitzen. Mit der Zeit führte ihn dieses Wissen in die Werkstatt: Jahrelang war er der Mechaniker bei Bike Base, wo er alle Arten von Rädern für alle Arten von Fahrern repariert hat.", desc2: "Einen Teil seiner Ausbildung absolvierte er im Ausland, wo er nach den Reparaturstandards verschiedener Länder arbeiten lernte. Diese Erfahrung bringt er jetzt zu Gravitate Bikes: ein Ort, an dem die Dinge richtig gemacht werden, ganz einfach." },
       values: { title: "Unsere Werte", subtitle: "Was uns jeden Tag antreibt", q1: { title: "Professionelle Qualität", desc: "Wir wenden die Standards des Hochleistungssports auf jedes Fahrrad an, das unsere Werkstatt betritt." }, q2: { title: "Freundlicher Service", desc: "Wir sind eine Radfamilie. Wir möchten, dass Sie sich bei jedem Besuch wie zu Hause fühlen." }, q3: { title: "Leidenschaft", desc: "Es ist nicht nur unser Beruf, es ist unsere Lebensweise. Wir lieben jeden Aspekt des Radsports." } },
       workshop: { title: "Unsere Werkstatt", desc: "Unser Arbeitsbereich ist mit den besten Werkzeugen ausgestattet, um präzise und hochwertige Reparaturen zu gewährleisten. Wir stellen sicher, dass jedes Fahrrad in einwandfreiem Zustand die Werkstatt verlässt.", btnWa: "Per WhatsApp kontaktieren", findUs: "Finden Sie uns neben dem Boulevard", location: "Bulevar de San Pedro Alcántara, Marbella" },
       stats: { y28: "Jahre Erfahrung", ref: "Jahre als Referenz in Andalusien", cup: "Downhill-Cup (ESP & PT)", fac: "Offizieller Radsport-Instructor" }
     },
     contacto: {
-      header: { title: "Wo sind wir?", subtitle: "Unsere Werkstatt befindet sich neben dem Boulevard von San Pedro Alcántara. Kommen Sie vorbei oder kontaktieren Sie uns über einen dieser Kanäle." },
+      header: { title: "Standort & Kontakt", subtitle: "Unsere Werkstatt befindet sich direkt am Boulevard von San Pedro Alcántara. Kommen Sie vorbei oder kontaktieren Sie uns über einen dieser Kanäle." },
       address: "Adresse",
       phone: "Telefon",
       email: "E-Mail",
@@ -559,7 +559,7 @@ export const dictionaries = {
       waBtn: "WhatsApp schreiben",
       weekdays: "Montag – Freitag",
       saturday: "Samstag",
-      sunday: "Sonntag & Feiertage"
+      sunday: "Sonn- und Feiertage"
     },
     woom: {
       header: { title: "Woom Fahrräder", subtitle: "Die besten ultraleichten Fahrräder für Kinder. Entwickelt, um das Fahrradfahren lernen einfach, sicher und spaßig zu machen.", cta: "Per WhatsApp anfragen" },
