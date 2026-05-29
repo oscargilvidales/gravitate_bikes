@@ -16,8 +16,7 @@ export function HomePage() {
       <section className="relative h-[90vh] min-h-[520px] flex items-center justify-center overflow-hidden">
         {/* Hero Image optimized */}
         <Image src="/home/puestaDeSol.jpeg" alt="Bulevar / Paseo Marítimo" fill className="object-cover" priority />
-        <div className="absolute inset-0 bg-[#0E0E12]/65" />
-        <div className="relative z-10 text-center px-4 max-w-3xl mx-auto">
+        <div className="relative z-10 text-center px-4 max-w-3xl mx-auto -translate-y-[10vh]">
           <span className="inline-block bg-[#A78BFA]/20 text-[#A78BFA] border border-[#A78BFA]/30 text-sm px-4 py-1.5 rounded-full mb-6">
             {t.home.hero.location}
           </span>

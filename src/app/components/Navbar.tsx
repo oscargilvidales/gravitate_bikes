@@ -42,15 +42,10 @@ export function Navbar() {
           onClick={() => setOpen(false)}
         >
           {/* Logo */}
-          <Image
+          <img
             src="/logo.png"
             alt="Gravitate Bikes – San Pedro"
-            width={120}
-            height={64}
             className="h-16 w-auto object-contain"
-            style={{ width: 'auto', height: 'auto' }}
-            unoptimized
-            priority
           />
         </Link>
 
