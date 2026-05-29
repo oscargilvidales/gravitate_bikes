@@ -9,8 +9,11 @@ export const metadata: Metadata = {
     template: "%s | Gravitate Bikes",
   },
   description:
-    "Disfruta de paseos inolvidables por las costas y senderos de Marbella con nuestras bicicletas de alta calidad. Disponemos de bicis para todas las edades y niveles, eléctricas y convencionales y ofrecemos servicio técnico especializado para garantizar tu seguridad y comodidad.",
+    "Bicis de paseo y eléctricas desde 15€/día. Recorre el paseo marítimo de Marbella a tu ritmo, con precios claros y taller propio.",
   keywords: ["Taller de bicicletas", "reparación de bicicletas", "venta de bicicletas", "alquiler de bicicletas", "san pedro alcántara", "marbella", "bici eléctrica", "reparaciones bici", "woom", "bici niña", "bici niño", "bici montaña", "bici eléctrica"],
+  icons: {
+    icon: '/logo.png',
+  },
   openGraph: {
     siteName: "Gravitate Bikes",
     locale: "es_ES",
