@@ -1,17 +1,21 @@
 import { NextResponse } from 'next/server';
 import type { NextRequest } from 'next/server';
 
-const locales = ['es', 'en', 'fr'];
+const locales = ['es', 'en', 'fr', 'de'];
 const defaultLocale = 'en';
 
 function getLocale(request: NextRequest): string {
   const acceptLanguage = request.headers.get('accept-language');
   if (!acceptLanguage) return defaultLocale;
   
-  const preferredLocale = acceptLanguage.split(',')[0].split('-')[0].toLowerCase();
-  
-  if (locales.includes(preferredLocale)) {
-    return preferredLocale;
+  const langs = acceptLanguage
+    .split(',')
+    .map(lang => lang.split(';')[0].split('-')[0].trim().toLowerCase());
+    
+  for (const lang of langs) {
+    if (locales.includes(lang)) {
+      return lang;
+    }
   }
   
   return defaultLocale;
