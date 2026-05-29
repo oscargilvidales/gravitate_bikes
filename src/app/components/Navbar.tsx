@@ -48,6 +48,8 @@ export function Navbar() {
             width={120}
             height={64}
             className="h-16 w-auto object-contain"
+            style={{ width: 'auto', height: 'auto' }}
+            unoptimized
             priority
           />
         </Link>
@@ -58,11 +60,10 @@ export function Navbar() {
             <Link
               key={href}
               href={href}
-              className={`px-4 py-2 rounded-md text-sm font-medium transition-colors ${
-                isActive(href)
-                  ? "bg-[#A78BFA]/20 text-[#A78BFA]"
-                  : "text-white/70 hover:text-white hover:bg-white/5"
-              }`}
+              className={`px-4 py-2 rounded-md text-sm font-medium transition-colors ${isActive(href)
+                ? "bg-[#A78BFA]/20 text-[#A78BFA]"
+                : "text-white/70 hover:text-white hover:bg-white/5"
+                }`}
             >
               {label}
             </Link>
@@ -80,9 +81,8 @@ export function Navbar() {
               <Link
                 key={l.code}
                 href={newPath || `/${l.code}`}
-                className={`text-xs font-bold px-2 py-1 rounded transition-colors ${
-                  lang === l.code ? "bg-[#A78BFA] text-white" : "text-white/50 hover:text-white"
-                }`}
+                className={`text-xs font-bold px-2 py-1 rounded transition-colors ${lang === l.code ? "bg-[#A78BFA] text-white" : "text-white/50 hover:text-white"
+                  }`}
               >
                 {l.label}
               </Link>
@@ -108,11 +108,10 @@ export function Navbar() {
               key={href}
               href={href}
               onClick={() => setOpen(false)}
-              className={`block px-4 py-3 rounded-md text-sm font-medium transition-colors ${
-                isActive(href)
-                  ? "bg-[#A78BFA]/20 text-[#A78BFA]"
-                  : "text-white/70 hover:text-white hover:bg-white/5"
-              }`}
+              className={`block px-4 py-3 rounded-md text-sm font-medium transition-colors ${isActive(href)
+                ? "bg-[#A78BFA]/20 text-[#A78BFA]"
+                : "text-white/70 hover:text-white hover:bg-white/5"
+                }`}
             >
               {label}
             </Link>
@@ -130,9 +129,8 @@ export function Navbar() {
                     key={l.code}
                     href={newPath || `/${l.code}`}
                     onClick={() => setOpen(false)}
-                    className={`text-sm font-bold px-3 py-1.5 rounded transition-colors ${
-                      lang === l.code ? "bg-[#A78BFA] text-white" : "bg-white/10 text-white/70"
-                    }`}
+                    className={`text-sm font-bold px-3 py-1.5 rounded transition-colors ${lang === l.code ? "bg-[#A78BFA] text-white" : "bg-white/10 text-white/70"
+                      }`}
                   >
                     {l.label}
                   </Link>
