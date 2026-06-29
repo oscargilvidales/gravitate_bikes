@@ -23,7 +23,13 @@ const brands = [
 ];
 
 // Velocidad de auto-scroll en píxeles por frame (≈60fps)
-const AUTO_VEL = -0.4;
+// En móvil (< 768px) se usa una velocidad mayor para que el carrusel se sienta más ágil
+const AUTO_VEL_DESKTOP = -0.4;
+const AUTO_VEL_MOBILE  = -0.9;
+function getAutoVel() {
+  if (typeof window === "undefined") return AUTO_VEL_DESKTOP;
+  return window.innerWidth < 768 ? AUTO_VEL_MOBILE : AUTO_VEL_DESKTOP;
+}
 // Factor de fricción: cuánto de la velocidad se conserva cada frame durante la inercia
 const FRICTION = 0.97;
 // Umbral para considerar que la inercia ha terminado y volver al auto-scroll
@@ -47,8 +53,9 @@ export function BrandCarousel() {
   const rafRef = useRef<number>(0);
 
   // Estado de la física (refs para evitar re-renders en el loop)
+  const autoVel = useRef(AUTO_VEL_DESKTOP); // se inicializa en el efecto con el valor correcto
   const posX = useRef(0);          // posición actual en px
-  const velX = useRef(AUTO_VEL);   // velocidad actual en px/frame
+  const velX = useRef(AUTO_VEL_DESKTOP);   // velocidad actual en px/frame
   const isDragging = useRef(false);
   const isInertia = useRef(false);
   const lastClientX = useRef(0);
@@ -62,13 +69,21 @@ export function BrandCarousel() {
     const track = trackRef.current;
     if (!track) return;
 
+    // Inicializar velocidad según el dispositivo actual
+    autoVel.current = getAutoVel();
+    velX.current = autoVel.current;
+
+    // Actualizar velocidad si cambia el tamaño de ventana (ej. rotación)
+    const onResize = () => { autoVel.current = getAutoVel(); };
+    window.addEventListener("resize", onResize);
+
     const tick = () => {
       if (!isDragging.current) {
         if (isInertia.current) {
-          // Blend suave desde la velocidad de inercia hacia AUTO_VEL
-          velX.current = velX.current * FRICTION + AUTO_VEL * (1 - FRICTION);
-          if (Math.abs(velX.current - AUTO_VEL) < SNAP_THRESHOLD) {
-            velX.current = AUTO_VEL;
+          // Blend suave desde la velocidad de inercia hacia autoVel
+          velX.current = velX.current * FRICTION + autoVel.current * (1 - FRICTION);
+          if (Math.abs(velX.current - autoVel.current) < SNAP_THRESHOLD) {
+            velX.current = autoVel.current;
             isInertia.current = false;
           }
         }
@@ -89,7 +104,10 @@ export function BrandCarousel() {
     };
 
     rafRef.current = requestAnimationFrame(tick);
-    return () => cancelAnimationFrame(rafRef.current);
+    return () => {
+      cancelAnimationFrame(rafRef.current);
+      window.removeEventListener("resize", onResize);
+    };
   }, []);
 
   // ── Drag handlers ──────────────────────────────────────────────────────────
@@ -131,7 +149,7 @@ export function BrandCarousel() {
 
     // Si el usuario soltó rápido, aplica inercia con su velocidad; si no, vuelve al auto-scroll suavemente
     const releasedWithMomentum = Math.abs(dragVel.current) > 0.5;
-    velX.current = releasedWithMomentum ? dragVel.current : AUTO_VEL;
+    velX.current = releasedWithMomentum ? dragVel.current : autoVel.current;
     isInertia.current = true;
   };
 
