@@ -143,7 +143,53 @@ export const dictionaries = {
       },
       ctaBottom: { title: "¿No sabes qué talla elegir?", desc: "Pásate por Gravitate Bikes y te ayudamos a encontrar la bici woom perfecta para tu hijo. Tenemos exposición en tienda y asesoramiento personalizado sin compromiso.", btn: "Visítanos en tienda" }
     },
-    footer: "© 2026 Gravitate Bikes · Av. Lopez de Mena nº 14, San Pedro Alcántara · Todos los derechos reservados"
+    footer: "© 2026 Gravitate Bikes · Av. Lopez de Mena nº 14, San Pedro Alcántara · Todos los derechos reservados",
+    footerPrivacy: "Política de Privacidad",
+    privacidad: {
+      breadcrumb: "Legal",
+      title: "Política de Privacidad",
+      lastUpdated: "Última actualización: junio de 2026",
+      intro: "En Gravitate Bikes nos tomamos muy en serio la privacidad de nuestros usuarios. A continuación te explicamos de forma clara qué información recopilamos, con qué finalidad y cómo la tratamos.",
+      s1: {
+        title: "1. Responsable del tratamiento",
+        body: "El responsable del tratamiento de los datos personales es:",
+        rows: [
+          { label: "Negocio", value: "Gravitate Bikes" },
+          { label: "Dirección", value: "Av. Lopez de Mena nº 14, 29670 San Pedro Alcántara, Marbella" },
+          { label: "Email", value: "info@gravitatebikes.es" },
+          { label: "Teléfono", value: "+34 612 47 78 41" }
+        ]
+      },
+      s2: {
+        title: "2. Cookies",
+        noCookies: "Gravitate Bikes no utiliza cookies propias ni sistemas de rastreo de ningún tipo en este sitio web. No instalamos cookies de análisis, marketing ni de preferencias.",
+        googleMapsLabel: "Google Maps:",
+        googleMaps: "Esta web embebe un mapa de Google Maps en la página de contacto para facilitar la localización de nuestra tienda. Google Maps puede establecer cookies de terceros sobre las que Gravitate Bikes no tiene control ni responsabilidad. Si lo deseas, puedes consultar la política de privacidad de Google para más información.",
+        googleLink: "Ver política de privacidad de Google →"
+      },
+      s3: {
+        title: "3. Comunicación por WhatsApp",
+        body: "Ofrecemos la posibilidad de contactar con nosotros a través de WhatsApp para realizar reservas, consultas y gestionar servicios de taller. Los datos que facilitas a través de WhatsApp (como tu nombre y número de teléfono) se utilizan exclusivamente con fines profesionales y para atender tu solicitud:",
+        bullets: [
+          "Gestión de reservas de bicicletas y citas de taller.",
+          "Respuesta a consultas sobre productos o servicios.",
+          "No se ceden a terceros ni se utilizan con fines comerciales."
+        ]
+      },
+      s4: {
+        title: "4. Datos recogidos a través del sitio web",
+        body: "Más allá del uso de Google Maps descrito anteriormente, este sitio web no recoge, almacena ni procesa ningún dato personal de forma directa. No disponemos de formularios de contacto propios ni sistemas de registro de usuarios."
+      },
+      s5: {
+        title: "5. Tus derechos",
+        body: "Tienes derecho a acceder, rectificar, suprimir y oponerte al tratamiento de tus datos personales en los términos previstos por la normativa vigente (RGPD y LOPDGDD). Para ejercer estos derechos, puedes contactarnos en:"
+      },
+      s6: {
+        title: "6. Cambios en esta política",
+        body: "Nos reservamos el derecho de actualizar esta política de privacidad en cualquier momento. Cualquier modificación se publicará en esta misma página con la fecha de última actualización indicada al inicio."
+      },
+      footer: "Gravitate Bikes · San Pedro Alcántara, Marbella"
+    }
   },
   en: {
     nav: {
@@ -289,7 +335,53 @@ export const dictionaries = {
       },
       ctaBottom: { title: "Not sure which size to choose?", desc: "Stop by Gravitate Bikes and we'll help you find the perfect woom bike for your child. We have in-store displays and personalized advice with no commitment.", btn: "Visit our store" }
     },
-    footer: "© 2026 Gravitate Bikes · Av. Lopez de Mena 14, San Pedro Alcántara · All rights reserved"
+    footer: "© 2026 Gravitate Bikes · Av. Lopez de Mena 14, San Pedro Alcántara · All rights reserved",
+    footerPrivacy: "Privacy Policy",
+    privacidad: {
+      breadcrumb: "Legal",
+      title: "Privacy Policy",
+      lastUpdated: "Last updated: June 2026",
+      intro: "At Gravitate Bikes we take the privacy of our users very seriously. Below we explain clearly what information we collect, for what purpose, and how we handle it.",
+      s1: {
+        title: "1. Data Controller",
+        body: "The data controller for personal data is:",
+        rows: [
+          { label: "Business", value: "Gravitate Bikes" },
+          { label: "Address", value: "Av. Lopez de Mena 14, 29670 San Pedro Alcántara, Marbella" },
+          { label: "Email", value: "info@gravitatebikes.es" },
+          { label: "Phone", value: "+34 612 47 78 41" }
+        ]
+      },
+      s2: {
+        title: "2. Cookies",
+        noCookies: "Gravitate Bikes does not use its own cookies or any kind of tracking system on this website. We do not install analytics, marketing, or preference cookies.",
+        googleMapsLabel: "Google Maps:",
+        googleMaps: "This website embeds a Google Maps map on the contact page to help you find our shop. Google Maps may set third-party cookies over which Gravitate Bikes has no control or responsibility. You can consult Google's privacy policy for more information.",
+        googleLink: "View Google's privacy policy →"
+      },
+      s3: {
+        title: "3. Communication via WhatsApp",
+        body: "We offer the possibility of contacting us via WhatsApp to make reservations, ask questions, and arrange workshop appointments. The data you provide through WhatsApp (such as your name and phone number) is used exclusively for professional purposes to handle your request:",
+        bullets: [
+          "Managing bike rentals and workshop appointments.",
+          "Responding to enquiries about products or services.",
+          "It is not shared with third parties or used for commercial purposes."
+        ]
+      },
+      s4: {
+        title: "4. Data collected through the website",
+        body: "Beyond the use of Google Maps described above, this website does not directly collect, store, or process any personal data. We do not have our own contact forms or user registration systems."
+      },
+      s5: {
+        title: "5. Your rights",
+        body: "You have the right to access, rectify, delete, and object to the processing of your personal data in accordance with applicable regulations (GDPR). To exercise these rights, please contact us at:"
+      },
+      s6: {
+        title: "6. Changes to this policy",
+        body: "We reserve the right to update this privacy policy at any time. Any changes will be published on this same page with the date of the last update shown at the top."
+      },
+      footer: "Gravitate Bikes · San Pedro Alcántara, Marbella"
+    }
   },
   fr: {
     nav: {
@@ -435,7 +527,53 @@ export const dictionaries = {
       },
       ctaBottom: { title: "Vous ne savez pas quelle taille choisir ?", desc: "Passez chez Gravitate Bikes et nous vous aiderons à trouver le vélo woom parfait pour votre enfant. Nous avons des modèles d'exposition en magasin et des conseils personnalisés sans engagement.", btn: "Visitez notre magasin" }
     },
-    footer: "© 2026 Gravitate Bikes · Av. Lopez de Mena 14, San Pedro Alcántara · Tous droits réservés"
+    footer: "© 2026 Gravitate Bikes · Av. Lopez de Mena 14, San Pedro Alcántara · Tous droits réservés",
+    footerPrivacy: "Politique de Confidentialité",
+    privacidad: {
+      breadcrumb: "Mentions légales",
+      title: "Politique de Confidentialité",
+      lastUpdated: "Dernière mise à jour : juin 2026",
+      intro: "Chez Gravitate Bikes, nous prenons la confidentialité de nos utilisateurs très au sérieux. Vous trouverez ci-dessous une explication claire des informations que nous collectons, dans quel but et comment nous les traitons.",
+      s1: {
+        title: "1. Responsable du traitement",
+        body: "Le responsable du traitement des données personnelles est :",
+        rows: [
+          { label: "Entreprise", value: "Gravitate Bikes" },
+          { label: "Adresse", value: "Av. Lopez de Mena 14, 29670 San Pedro Alcántara, Marbella" },
+          { label: "Email", value: "info@gravitatebikes.es" },
+          { label: "Téléphone", value: "+34 612 47 78 41" }
+        ]
+      },
+      s2: {
+        title: "2. Cookies",
+        noCookies: "Gravitate Bikes n'utilise pas de cookies propres ni aucun système de suivi sur ce site web. Nous n'installons pas de cookies analytiques, publicitaires ou de préférences.",
+        googleMapsLabel: "Google Maps :",
+        googleMaps: "Ce site web intègre une carte Google Maps sur la page de contact pour faciliter la localisation de notre boutique. Google Maps peut placer des cookies tiers sur lesquels Gravitate Bikes n'a aucun contrôle ni responsabilité. Vous pouvez consulter la politique de confidentialité de Google pour plus d'informations.",
+        googleLink: "Voir la politique de confidentialité de Google →"
+      },
+      s3: {
+        title: "3. Communication par WhatsApp",
+        body: "Nous offrons la possibilité de nous contacter via WhatsApp pour effectuer des réservations, poser des questions et organiser des rendez-vous en atelier. Les données que vous fournissez via WhatsApp (comme votre nom et numéro de téléphone) sont utilisées exclusivement à des fins professionnelles pour traiter votre demande :",
+        bullets: [
+          "Gestion des réservations de vélos et des rendez-vous en atelier.",
+          "Réponse aux demandes de renseignements sur les produits ou services.",
+          "Elles ne sont pas partagées avec des tiers ni utilisées à des fins commerciales."
+        ]
+      },
+      s4: {
+        title: "4. Données collectées via le site web",
+        body: "Au-delà de l'utilisation de Google Maps décrite ci-dessus, ce site web ne collecte, ne stocke ni ne traite directement aucune donnée personnelle. Nous ne disposons pas de formulaires de contact propres ni de systèmes d'inscription d'utilisateurs."
+      },
+      s5: {
+        title: "5. Vos droits",
+        body: "Vous avez le droit d'accéder, de rectifier, de supprimer et de vous opposer au traitement de vos données personnelles conformément à la réglementation en vigueur (RGPD). Pour exercer ces droits, veuillez nous contacter à :"
+      },
+      s6: {
+        title: "6. Modifications de cette politique",
+        body: "Nous nous réservons le droit de mettre à jour cette politique de confidentialité à tout moment. Toute modification sera publiée sur cette même page avec la date de dernière mise à jour indiquée en haut."
+      },
+      footer: "Gravitate Bikes · San Pedro Alcántara, Marbella"
+    }
   },
   de: {
     nav: {
@@ -581,7 +719,53 @@ export const dictionaries = {
       },
       ctaBottom: { title: "Sie wissen nicht, welche Größe Sie wählen sollen?", desc: "Kommen Sie zu Gravitate Bikes und wir helfen Ihnen, das perfekte woom-Fahrrad für Ihr Kind zu finden. Wir haben Ausstellungsmodelle im Geschäft und persönliche Beratung ohne Verpflichtung.", btn: "Besuchen Sie unseren Shop" }
     },
-    footer: "© 2026 Gravitate Bikes · Av. Lopez de Mena 14, San Pedro Alcántara · Alle Rechte vorbehalten"
+    footer: "© 2026 Gravitate Bikes · Av. Lopez de Mena 14, San Pedro Alcántara · Alle Rechte vorbehalten",
+    footerPrivacy: "Datenschutzerklärung",
+    privacidad: {
+      breadcrumb: "Rechtliches",
+      title: "Datenschutzerklärung",
+      lastUpdated: "Letzte Aktualisierung: Juni 2026",
+      intro: "Bei Gravitate Bikes nehmen wir den Datenschutz unserer Nutzer sehr ernst. Im Folgenden erklären wir klar und verständlich, welche Informationen wir erheben, zu welchem Zweck und wie wir damit umgehen.",
+      s1: {
+        title: "1. Verantwortlicher für die Datenverarbeitung",
+        body: "Der Verantwortliche für die Verarbeitung personenbezogener Daten ist:",
+        rows: [
+          { label: "Unternehmen", value: "Gravitate Bikes" },
+          { label: "Adresse", value: "Av. Lopez de Mena 14, 29670 San Pedro Alcántara, Marbella" },
+          { label: "E-Mail", value: "info@gravitatebikes.es" },
+          { label: "Telefon", value: "+34 612 47 78 41" }
+        ]
+      },
+      s2: {
+        title: "2. Cookies",
+        noCookies: "Gravitate Bikes verwendet keine eigenen Cookies oder sonstige Tracking-Systeme auf dieser Website. Wir setzen keine Analyse-, Marketing- oder Präferenz-Cookies ein.",
+        googleMapsLabel: "Google Maps:",
+        googleMaps: "Diese Website bindet auf der Kontaktseite eine Google Maps-Karte ein, um die Auffindbarkeit unseres Geschäfts zu erleichtern. Google Maps kann Drittanbieter-Cookies setzen, über die Gravitate Bikes keine Kontrolle oder Verantwortung hat. Weitere Informationen finden Sie in der Datenschutzrichtlinie von Google.",
+        googleLink: "Datenschutzrichtlinie von Google ansehen →"
+      },
+      s3: {
+        title: "3. Kommunikation per WhatsApp",
+        body: "Wir bieten die Möglichkeit, uns über WhatsApp für Reservierungen, Anfragen und Werkstatttermine zu kontaktieren. Die Daten, die Sie über WhatsApp übermitteln (wie Ihr Name und Ihre Telefonnummer), werden ausschließlich für professionelle Zwecke zur Bearbeitung Ihrer Anfrage verwendet:",
+        bullets: [
+          "Verwaltung von Fahrradreservierungen und Werkstattterminen.",
+          "Beantwortung von Anfragen zu Produkten oder Dienstleistungen.",
+          "Sie werden nicht an Dritte weitergegeben oder zu kommerziellen Zwecken genutzt."
+        ]
+      },
+      s4: {
+        title: "4. Über die Website erhobene Daten",
+        body: "Abgesehen von der oben beschriebenen Nutzung von Google Maps erhebt, speichert oder verarbeitet diese Website keine personenbezogenen Daten direkt. Wir verfügen weder über eigene Kontaktformulare noch über Benutzerregistrierungssysteme."
+      },
+      s5: {
+        title: "5. Ihre Rechte",
+        body: "Sie haben das Recht, gemäß den geltenden Vorschriften (DSGVO) auf Ihre personenbezogenen Daten zuzugreifen, diese zu berichtigen, zu löschen und der Verarbeitung zu widersprechen. Um diese Rechte auszuüben, kontaktieren Sie uns bitte unter:"
+      },
+      s6: {
+        title: "6. Änderungen dieser Richtlinie",
+        body: "Wir behalten uns das Recht vor, diese Datenschutzerklärung jederzeit zu aktualisieren. Alle Änderungen werden auf dieser Seite veröffentlicht, mit dem oben angegebenen Datum der letzten Aktualisierung."
+      },
+      footer: "Gravitate Bikes · San Pedro Alcántara, Marbella"
+    }
   }
 };
 
