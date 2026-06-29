@@ -29,15 +29,22 @@ export default async function RootLayout({
   params: Promise<{ lang: string }>;
 }) {
   const { lang } = await params;
+  const dict = dictionaries[lang as keyof typeof dictionaries] || dictionaries.es;
   return (
     <html lang={lang}>
       <body>
         <div className="min-h-screen flex flex-col bg-white">
           <Navbar />
           <main className="flex-1">{children}</main>
-          <footer className="bg-[#0E0E12] text-white/50 text-sm py-6 px-4 text-center">
+          <footer className="bg-[#0E0E12] text-white/50 text-sm py-6 px-4 text-center space-y-2">
+            <p>{dict.footer}</p>
             <p>
-              {dictionaries[lang as keyof typeof dictionaries]?.footer || dictionaries.en.footer}
+              <a
+                href={`/${lang}/privacidad`}
+                className="text-[#A78BFA]/70 hover:text-[#A78BFA] transition-colors underline underline-offset-2"
+              >
+                {dict.footerPrivacy}
+              </a>
             </p>
           </footer>
         </div>
