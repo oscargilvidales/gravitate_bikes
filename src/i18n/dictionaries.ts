@@ -156,7 +156,7 @@ export const dictionaries = {
         rows: [
           { label: "Negocio", value: "Gravitate Bikes" },
           { label: "Dirección", value: "Av. Lopez de Mena nº 14, 29670 San Pedro Alcántara, Marbella" },
-          { label: "Email", value: "info@gravitatebikes.es" },
+          { label: "Email", value: "gravitatebikes@gmail.com" },
           { label: "Teléfono", value: "+34 612 47 78 41" }
         ]
       },
@@ -348,7 +348,7 @@ export const dictionaries = {
         rows: [
           { label: "Business", value: "Gravitate Bikes" },
           { label: "Address", value: "Av. Lopez de Mena 14, 29670 San Pedro Alcántara, Marbella" },
-          { label: "Email", value: "info@gravitatebikes.es" },
+          { label: "Email", value: "gravitatebikes@gmail.com" },
           { label: "Phone", value: "+34 612 47 78 41" }
         ]
       },
@@ -540,7 +540,7 @@ export const dictionaries = {
         rows: [
           { label: "Entreprise", value: "Gravitate Bikes" },
           { label: "Adresse", value: "Av. Lopez de Mena 14, 29670 San Pedro Alcántara, Marbella" },
-          { label: "Email", value: "info@gravitatebikes.es" },
+          { label: "Email", value: "gravitatebikes@gmail.com" },
           { label: "Téléphone", value: "+34 612 47 78 41" }
         ]
       },
@@ -732,7 +732,7 @@ export const dictionaries = {
         rows: [
           { label: "Unternehmen", value: "Gravitate Bikes" },
           { label: "Adresse", value: "Av. Lopez de Mena 14, 29670 San Pedro Alcántara, Marbella" },
-          { label: "E-Mail", value: "info@gravitatebikes.es" },
+          { label: "E-Mail", value: "gravitatebikes@gmail.com" },
           { label: "Telefon", value: "+34 612 47 78 41" }
         ]
       },
