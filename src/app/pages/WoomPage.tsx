@@ -216,7 +216,7 @@ export function WoomPage() {
             {/* Imagen 3 (Abajo Derecha) */}
             <div className="col-span-1 row-span-1 rounded-[2rem] overflow-hidden relative shadow-lg">
               {/* Image optimized */}
-              <Image src="/woom/Sin Título.jpg" alt="Woom 3" fill sizes="(max-width: 768px) 100vw, 25vw" className="object-cover" priority />
+              <Image src="/woom/Sin título.jpeg" alt="Woom 3" fill sizes="(max-width: 768px) 100vw, 25vw" className="object-cover" priority />
             </div>
           </div>
         </div>
