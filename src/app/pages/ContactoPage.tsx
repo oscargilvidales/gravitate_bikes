@@ -28,10 +28,15 @@ export function ContactoPage() {
               {t.contacto.header.subtitle}
             </p>
           </div>
-          {/* Hueco para foto del taller */}
-          <div className="rounded-2xl overflow-hidden h-64 bg-white/5 border-2 border-dashed border-white/20 flex flex-col items-center justify-center text-white/30">
-            <span className="text-sm font-bold uppercase tracking-widest mb-1">Foto del Taller</span>
-            <span className="text-xs">Tamaño recomendado: 1200×900 px</span>
+          {/* Foto del taller */}
+          <div className="rounded-2xl overflow-hidden border border-white/10 shadow-2xl max-w-sm mx-auto w-full">
+            <Image 
+              src="/dondeEstamos/taller.jpg" 
+              alt="Taller de bicicletas" 
+              width={1200}
+              height={900}
+              className="w-full h-auto" 
+            />
           </div>
         </div>
       </div>

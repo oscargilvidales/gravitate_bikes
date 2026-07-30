@@ -15,14 +15,14 @@ export function HomePage() {
       {/* Hero */}
       <section className="relative h-[90vh] min-h-[520px] flex items-center justify-center overflow-hidden">
         {/* Hero Image optimized */}
-        <Image src="/home/puestaDeSol.jpeg" alt="Bulevar / Paseo Marítimo" fill className="object-cover" priority />
+        <Image src="/home/puestaDeSol.jpg" alt="Bulevar / Paseo Marítimo" fill className="object-cover" priority />
         <div className="relative z-10 text-center px-4 max-w-3xl mx-auto -translate-y-[10vh]">
-          <span className="inline-block bg-[#A78BFA]/20 text-[#A78BFA] border border-[#A78BFA]/30 text-sm px-4 py-1.5 rounded-full mb-6">
+          <span className="inline-block backdrop-blur-md bg-black/30 text-white border border-white/20 text-sm px-4 py-1.5 rounded-full mb-6 font-medium shadow-sm">
             {t.home.hero.location}
           </span>
           <h1 className="text-white text-5xl sm:text-6xl font-bold leading-tight mb-6">
             {t.home.hero.title1}<br />
-            <span className="text-[#A78BFA]">{t.home.hero.title2}</span>
+            <span className="text-[#7C3AED]">{t.home.hero.title2}</span>
           </h1>
           <div className="flex flex-col sm:flex-row gap-3 justify-center">
             <Link
@@ -34,7 +34,7 @@ export function HomePage() {
             </Link>
             <Link
               href={`/${lang}/reparaciones`}
-              className="inline-flex items-center justify-center gap-2 bg-white/10 hover:bg-white/20 text-white border border-white/20 px-7 py-3.5 rounded-lg font-medium transition-colors"
+              className="inline-flex items-center justify-center gap-2 bg-white/30 hover:bg-white/40 backdrop-blur-md text-white border border-white/40 px-7 py-3.5 rounded-lg font-medium transition-colors"
             >
               <Wrench size={18} />
               {t.home.hero.btnRepair}
