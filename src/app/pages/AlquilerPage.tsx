@@ -1,6 +1,6 @@
 "use client";
 
-import { Bike, Zap, Clock, Info } from "lucide-react";
+import { Bike, Zap, Clock } from "lucide-react";
 import Image from "next/image";
 import { useTranslation } from "@/i18n/useTranslation";
 
@@ -78,7 +78,7 @@ export function AlquilerPage() {
             </div>
 
             <div className="flex items-start gap-2 bg-[#A78BFA]/8 rounded-lg p-3">
-              <Info size={14} className="text-[#A78BFA] mt-0.5 shrink-0" />
+              <span className="text-[#A78BFA] text-base mt-0.5 shrink-0">ℹ</span>
               <p className="text-sm text-gray-500">
                 {t.alquiler.paseo.note}
               </p>
@@ -102,14 +102,6 @@ export function AlquilerPage() {
           <div className="flex items-center gap-2 mb-6">
             <Zap size={24} className="text-[#A78BFA]" />
             <h2 className="text-[#0E0E12] text-2xl font-bold">{t.alquiler.ebike.title}</h2>
-          </div>
-
-          {/* Disclaimer Ebikes */}
-          <div className="bg-orange-50 border border-orange-200 rounded-xl p-4 mb-8 flex items-start gap-3">
-            <Info className="text-orange-600 shrink-0 mt-0.5" size={20} />
-            <p className="text-orange-800 text-sm">
-              <strong className="font-semibold">{t.alquiler.ebike.aviso}</strong> {t.alquiler.ebike.warning}
-            </p>
           </div>
 
           <div className="space-y-12">
@@ -219,7 +211,7 @@ export function AlquilerPage() {
                 </div>
 
                 <div className="flex items-start gap-2 bg-[#A78BFA]/8 rounded-lg p-3">
-                  <Info size={14} className="text-[#A78BFA] mt-0.5 shrink-0" />
+                  <span className="text-[#A78BFA] text-base mt-0.5 shrink-0">ℹ</span>
                   <p className="text-sm text-gray-500">
                     {t.alquiler.ebike.models.premium.includes}
                   </p>
@@ -244,8 +236,9 @@ export function AlquilerPage() {
         <div className="mt-12 bg-[#0E0E12] rounded-2xl p-8 text-white">
           <h3 className="text-xl font-semibold mb-4">{t.alquiler.info.title}</h3>
           <ul className="space-y-2 text-white/60 text-sm">
+            <li className="flex gap-2"><span className="text-[#A78BFA]">•</span> {t.alquiler.aviso.horario}</li>
+            <li className="flex gap-2"><span className="text-[#A78BFA]">•</span> {t.alquiler.aviso.ebikeRetorno}</li>
             <li className="flex gap-2"><span className="text-[#A78BFA]">•</span> {t.alquiler.info.id}</li>
-            <li className="flex gap-2"><span className="text-[#A78BFA]">•</span> {t.alquiler.info.deposit}</li>
             <li className="flex gap-2"><span className="text-[#A78BFA]">•</span> {t.alquiler.info.minors}</li>
             <li className="flex gap-2"><span className="text-[#A78BFA]">•</span> {t.alquiler.info.rain}</li>
           </ul>

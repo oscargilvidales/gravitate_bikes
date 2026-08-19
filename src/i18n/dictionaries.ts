@@ -77,7 +77,13 @@ export const dictionaries = {
         }
       },
       info: { title: "Información importante", id: "Se requiere un documento de identidad (DNI o pasaporte) para el alquiler.", deposit: "Depósito reembolsable en efectivo o tarjeta al recoger la bici.", minors: "Los menores de 14 años deben ir acompañados de un adulto.", rain: "En caso de lluvia, consulta disponibilidad y condiciones." },
-      btnWa: "Reservar por WhatsApp"
+      btnWa: "Reservar por WhatsApp",
+      aviso: {
+        title: "Condiciones generales de alquiler",
+        horario: "El período de alquiler abarca siempre de las 10:00 h a las 19:00 h, con independencia de la hora de recogida. Esto aplica tanto a bicicletas de paseo como a eléctricas. Por ejemplo, una bicicleta de paseo alquilada un miércoles por 7 días podrá devolverse el martes siguiente antes de las 19:00 h, o bien el miércoles a las 10:00 h. Cualquier devolución fuera de estos horarios conllevará el cargo automático de un día adicional.",
+        ebike: "Para alquilar bicicletas eléctricas es imprescindible presentar DNI o Pasaporte original en vigor, así como una tarjeta de crédito física. No se aceptan tarjetas virtuales ni de prepago.",
+        ebikeRetorno: "Las bicicletas eléctricas deben devolverse obligatoriamente el último día contratado antes de las 19:00 h, ya que necesitan cargarse durante la noche. A diferencia de las bicicletas de paseo, no es posible la devolución a la mañana siguiente. El incumplimiento de este horario conllevará el cargo de un día adicional de alquiler."
+      }
     },
     reparaciones: {
       header: { title: "Reparaciones", subtitle: "Taller especializado en todo tipo de bicicletas. Cada reparación se hace con rigor, experiencia y recambios originales." },
@@ -145,6 +151,7 @@ export const dictionaries = {
     },
     footer: "© 2026 Gravitate Bikes · Av. Lopez de Mena nº 14, San Pedro Alcántara · Todos los derechos reservados",
     footerPrivacy: "Política de Privacidad",
+    footerTerms: "Términos y Condiciones",
     privacidad: {
       breadcrumb: "Legal",
       title: "Política de Privacidad",
@@ -187,6 +194,52 @@ export const dictionaries = {
       s6: {
         title: "6. Cambios en esta política",
         body: "Nos reservamos el derecho de actualizar esta política de privacidad en cualquier momento. Cualquier modificación se publicará en esta misma página con la fecha de última actualización indicada al inicio."
+      },
+      footer: "Gravitate Bikes · San Pedro Alcántara, Marbella"
+    },
+    terminos: {
+      breadcrumb: "Legal",
+      title: "Términos y Condiciones de Alquiler",
+      lastUpdated: "Última actualización: agosto de 2026",
+      intro: "El presente documento recoge las condiciones generales que regulan el servicio de alquiler de bicicletas ofrecido por Gravitate Bikes. Al formalizar un alquiler, el cliente acepta íntegramente las condiciones aquí descritas.",
+      s1: {
+        title: "1. Horario del servicio",
+        body: "El período de alquiler cubre siempre de las 10:00 h a las 19:00 h, con independencia de la hora a la que se efectúe la recogida de la bicicleta. A efectos de cómputo de días, cada día de alquiler comienza a las 10:00 h y finaliza a las 19:00 h del mismo día.",
+        example: "Ejemplo: si un cliente recoge la bicicleta un miércoles a las 17:00 h y contrata 7 días de alquiler, el último día de uso es el martes siguiente. La devolución deberá realizarse antes de las 19:00 h de ese martes, o bien a partir de las 10:00 h del miércoles siguiente, según convenga al cliente y esté previamente acordado con el establecimiento."
+      },
+      s2: {
+        title: "2. Requisitos para el alquiler de bicicletas eléctricas",
+        body: "Para el alquiler de bicicletas eléctricas (e-bikes) es imprescindible cumplir los siguientes requisitos:",
+        bullets: [
+          "Presentar DNI o Pasaporte original en vigor. No se aceptarán fotocopias ni documentos caducados.",
+          "Disponer de una tarjeta de crédito física a nombre del titular del alquiler. No se aceptan tarjetas virtuales, monederos electrónicos ni tarjetas de prepago.",
+          "Dejar un depósito de garantía reembolsable, cuyo importe se comunicará en el momento de la reserva."
+        ]
+      },
+      s3: {
+        title: "3. Devolución y penalizaciones por retraso",
+        body: "La bicicleta deberá devolverse en el plazo acordado. La devolución fuera del horario establecido (después de las 19:00 h) implicará el cargo automático de un día adicional de alquiler. En caso de no devolución o extravío, el cliente será responsable del valor de reposición de la bicicleta."
+      },
+      s4: {
+        title: "4. Estado de la bicicleta y responsabilidades",
+        body: "El cliente recibirá la bicicleta en perfecto estado de funcionamiento y será responsable de su cuidado durante el período de alquiler. Cualquier daño, deterioro anormal o pérdida de accesorios (casco, candado, etc.) será imputado al cliente. Se realizará una revisión del estado de la bicicleta en el momento de la recogida y de la devolución."
+      },
+      s5: {
+        title: "5. Uso de la bicicleta",
+        body: "Las bicicletas alquiladas están destinadas al uso personal y recreativo del cliente. Queda expresamente prohibido:",
+        bullets: [
+          "Subalquilar o ceder la bicicleta a terceros.",
+          "Utilizarla en competiciones, pruebas deportivas o actividades de alto riesgo.",
+          "Realizar modificaciones en la bicicleta."
+        ]
+      },
+      s6: {
+        title: "6. Cancelaciones",
+        body: "Las condiciones de cancelación se acordarán en el momento de la reserva. Gravitate Bikes se reserva el derecho de cancelar o modificar el servicio en circunstancias excepcionales (condiciones meteorológicas adversas, causas de fuerza mayor, etc.), informando al cliente con la mayor antelación posible."
+      },
+      s7: {
+        title: "7. Modificaciones",
+        body: "Gravitate Bikes se reserva el derecho de actualizar estas condiciones en cualquier momento. La versión vigente estará siempre disponible en esta página."
       },
       footer: "Gravitate Bikes · San Pedro Alcántara, Marbella"
     }
@@ -269,7 +322,13 @@ export const dictionaries = {
         }
       },
       info: { title: "Important Information", id: "An ID document (ID card or Passport) is required for rental.", deposit: "Refundable deposit in cash or card when picking up the bike.", minors: "Children under 14 must be accompanied by an adult.", rain: "In case of rain, please check availability and conditions." },
-      btnWa: "Book via WhatsApp"
+      btnWa: "Book via WhatsApp",
+      aviso: {
+        title: "General Rental Conditions",
+        horario: "The rental period always runs from 10:00 to 19:00, regardless of the pick-up time. This applies to both regular and electric bicycles. For example, a regular bike rented on a Wednesday for 7 days may be returned the following Tuesday before 19:00, or on Wednesday at 10:00. Any return outside these hours will automatically incur a charge for an additional day.",
+        ebike: "To rent electric bicycles, an original, valid ID card or Passport must be presented, along with a physical credit card. Virtual and prepaid cards are not accepted.",
+        ebikeRetorno: "Electric bicycles must be returned on the last contracted day before 19:00, as they need to charge overnight. Unlike regular bikes, the next-morning return option is not available for e-bikes. Failure to comply with this return time will result in a charge for an additional rental day."
+      }
     },
     reparaciones: {
       header: { title: "Repairs", subtitle: "Specialized workshop for all types of bicycles. Every repair is done with precision, experience and original spare parts." },
@@ -337,6 +396,7 @@ export const dictionaries = {
     },
     footer: "© 2026 Gravitate Bikes · Av. Lopez de Mena 14, San Pedro Alcántara · All rights reserved",
     footerPrivacy: "Privacy Policy",
+    footerTerms: "Terms & Conditions",
     privacidad: {
       breadcrumb: "Legal",
       title: "Privacy Policy",
@@ -379,6 +439,52 @@ export const dictionaries = {
       s6: {
         title: "6. Changes to this policy",
         body: "We reserve the right to update this privacy policy at any time. Any changes will be published on this same page with the date of the last update shown at the top."
+      },
+      footer: "Gravitate Bikes · San Pedro Alcántara, Marbella"
+    },
+    terminos: {
+      breadcrumb: "Legal",
+      title: "Rental Terms & Conditions",
+      lastUpdated: "Last updated: August 2026",
+      intro: "This document sets out the general conditions governing the bicycle rental service offered by Gravitate Bikes. By completing a rental, the customer fully accepts the conditions described herein.",
+      s1: {
+        title: "1. Service Hours",
+        body: "The rental period always covers from 10:00 to 19:00, regardless of the time the bicycle is collected. For billing purposes, each rental day begins at 10:00 and ends at 19:00 on the same day.",
+        example: "Example: if a customer picks up the bicycle on a Wednesday at 17:00 and rents it for 7 days, the last day of use is the following Tuesday. The return must be made before 19:00 on that Tuesday, or from 10:00 on the following Wednesday, as agreed with the establishment."
+      },
+      s2: {
+        title: "2. Requirements for Electric Bicycle Rental",
+        body: "To rent electric bicycles (e-bikes), the following requirements must be met:",
+        bullets: [
+          "Present an original, valid ID card or Passport. Photocopies and expired documents will not be accepted.",
+          "Provide a physical credit card in the name of the rental holder. Virtual wallets, e-money accounts, and prepaid cards are not accepted.",
+          "Leave a refundable security deposit, the amount of which will be communicated at the time of booking."
+        ]
+      },
+      s3: {
+        title: "3. Return and Late Fees",
+        body: "The bicycle must be returned within the agreed timeframe. A return outside the established hours (after 19:00) will automatically incur a charge for an additional rental day. In the event of non-return or loss, the customer will be liable for the replacement value of the bicycle."
+      },
+      s4: {
+        title: "4. Bicycle Condition and Liability",
+        body: "The customer will receive the bicycle in perfect working order and will be responsible for its care during the rental period. Any damage, abnormal wear, or loss of accessories (helmet, lock, etc.) will be charged to the customer. A condition check will be carried out at the time of collection and return."
+      },
+      s5: {
+        title: "5. Use of the Bicycle",
+        body: "Rented bicycles are intended for the customer's personal and recreational use. The following is expressly prohibited:",
+        bullets: [
+          "Subletting or transferring the bicycle to third parties.",
+          "Using it in competitions, sporting events, or high-risk activities.",
+          "Making modifications to the bicycle."
+        ]
+      },
+      s6: {
+        title: "6. Cancellations",
+        body: "Cancellation conditions will be agreed at the time of booking. Gravitate Bikes reserves the right to cancel or modify the service under exceptional circumstances (adverse weather, force majeure, etc.), informing the customer as far in advance as possible."
+      },
+      s7: {
+        title: "7. Amendments",
+        body: "Gravitate Bikes reserves the right to update these conditions at any time. The current version will always be available on this page."
       },
       footer: "Gravitate Bikes · San Pedro Alcántara, Marbella"
     }
@@ -461,7 +567,13 @@ export const dictionaries = {
         }
       },
       info: { title: "Informations importantes", id: "Une pièce d'identité (Carte d'identité ou Passeport) est requise pour la location.", deposit: "Caution remboursable en espèces ou par carte lors de la récupération du vélo.", minors: "Les enfants de moins de 14 ans doivent être accompagnés d'un adulte.", rain: "En cas de pluie, veuillez vérifier les disponibilités et les conditions." },
-      btnWa: "Réserver via WhatsApp"
+      btnWa: "Réserver via WhatsApp",
+      aviso: {
+        title: "Conditions générales de location",
+        horario: "La période de location court toujours de 10h00 à 19h00, quelle que soit l'heure de prise en charge. Cela s'applique aussi bien aux vélos de ville qu'aux vélos électriques. Par exemple, un vélo de ville loué un mercredi pour 7 jours pourra être restitué le mardi suivant avant 19h00, ou le mercredi à 10h00. Toute restitution en dehors de ces horaires entraînera la facturation automatique d'un jour supplémentaire.",
+        ebike: "Pour louer des vélos électriques, une pièce d'identité originale en cours de validité (carte d'identité ou passeport) ainsi qu'une carte de crédit physique sont obligatoires. Les cartes virtuelles et les cartes prépayées ne sont pas acceptées.",
+        ebikeRetorno: "Les vélos électriques doivent impérativement être restituer le dernier jour contracté avant 19h00, car ils doivent être rechargés pendant la nuit. Contrairement aux vélos classiques, la restitution le lendemain matin n'est pas possible. Le non-respect de cet horaire entraînera la facturation d'un jour de location supplémentaire."
+      }
     },
     reparaciones: {
       header: { title: "Réparations", subtitle: "Atelier spécialisé pour tous types de vélos. Chaque réparation est effectuée avec rigueur, expérience et des pièces de rechange d'origine." },
@@ -529,6 +641,7 @@ export const dictionaries = {
     },
     footer: "© 2026 Gravitate Bikes · Av. Lopez de Mena 14, San Pedro Alcántara · Tous droits réservés",
     footerPrivacy: "Politique de Confidentialité",
+    footerTerms: "Conditions Générales",
     privacidad: {
       breadcrumb: "Mentions légales",
       title: "Politique de Confidentialité",
@@ -571,6 +684,52 @@ export const dictionaries = {
       s6: {
         title: "6. Modifications de cette politique",
         body: "Nous nous réservons le droit de mettre à jour cette politique de confidentialité à tout moment. Toute modification sera publiée sur cette même page avec la date de dernière mise à jour indiquée en haut."
+      },
+      footer: "Gravitate Bikes · San Pedro Alcántara, Marbella"
+    },
+    terminos: {
+      breadcrumb: "Mentions légales",
+      title: "Conditions Générales de Location",
+      lastUpdated: "Dernière mise à jour : août 2026",
+      intro: "Le présent document définit les conditions générales régissant le service de location de vélos proposé par Gravitate Bikes. En finalisant une location, le client accepte pleinement les conditions décrites ci-après.",
+      s1: {
+        title: "1. Horaires du service",
+        body: "La période de location couvre toujours de 10h00 à 19h00, indépendamment de l'heure à laquelle le vélo est retiré. Pour le calcul des jours, chaque jour de location commence à 10h00 et se termine à 19h00 le même jour.",
+        example: "Exemple : si un client prend son vélo un mercredi à 17h00 pour 7 jours, le dernier jour d'utilisation est le mardi suivant. La restitution doit être effectuée avant 19h00 ce mardi-là, ou à partir de 10h00 le mercredi suivant, selon l'accord préalable avec l'établissement."
+      },
+      s2: {
+        title: "2. Conditions requises pour la location de vélos électriques",
+        body: "Pour louer des vélos électriques (e-bikes), les conditions suivantes doivent être remplies :",
+        bullets: [
+          "Présenter une pièce d'identité originale en cours de validité (carte d'identité ou passeport). Les photocopies et les documents périmés ne sont pas acceptés.",
+          "Fournir une carte de crédit physique au nom du titulaire de la location. Les portefeuilles virtuels, les comptes de monnaie électronique et les cartes prépayées ne sont pas acceptés.",
+          "Laisser une caution remboursable, dont le montant sera communiqué au moment de la réservation."
+        ]
+      },
+      s3: {
+        title: "3. Restitution et pénalités de retard",
+        body: "Le vélo doit être restitué dans les délais convenus. Une restitution en dehors des horaires établis (après 19h00) entraînera automatiquement la facturation d'un jour de location supplémentaire. En cas de non-restitution ou de perte, le client sera tenu responsable de la valeur de remplacement du vélo."
+      },
+      s4: {
+        title: "4. État du vélo et responsabilités",
+        body: "Le client recevra le vélo en parfait état de fonctionnement et sera responsable de son entretien pendant la durée de la location. Tout dommage, usure anormale ou perte d'accessoires (casque, cadenas, etc.) sera imputé au client. Un contrôle de l'état du vélo sera effectué au moment du retrait et de la restitution."
+      },
+      s5: {
+        title: "5. Utilisation du vélo",
+        body: "Les vélos loués sont destinés à un usage personnel et récréatif. Il est expressément interdit de :",
+        bullets: [
+          "Sous-louer ou céder le vélo à des tiers.",
+          "L'utiliser dans des compétitions, épreuves sportives ou activités à haut risque.",
+          "Apporter des modifications au vélo."
+        ]
+      },
+      s6: {
+        title: "6. Annulations",
+        body: "Les conditions d'annulation seront convenues au moment de la réservation. Gravitate Bikes se réserve le droit d'annuler ou de modifier le service dans des circonstances exceptionnelles (conditions météorologiques défavorables, cas de force majeure, etc.), en informant le client dans les meilleurs délais."
+      },
+      s7: {
+        title: "7. Modifications",
+        body: "Gravitate Bikes se réserve le droit de mettre à jour ces conditions à tout moment. La version en vigueur sera toujours disponible sur cette page."
       },
       footer: "Gravitate Bikes · San Pedro Alcántara, Marbella"
     }
@@ -653,7 +812,13 @@ export const dictionaries = {
         }
       },
       info: { title: "Wichtige Informationen", id: "Für die Miete ist ein Ausweisdokument (Personalausweis oder Reisepass) erforderlich.", deposit: "Kaution (in bar oder per Karte) ist bei Abholung zu hinterlegen.", minors: "Kinder unter 14 Jahren müssen von einem Erwachsenen begleitet werden.", rain: "Bei Regen bitte Verfügbarkeit und Bedingungen erfragen." },
-      btnWa: "Per WhatsApp buchen"
+      btnWa: "Per WhatsApp buchen",
+      aviso: {
+        title: "Allgemeine Mietbedingungen",
+        horario: "Der Mietzeitraum läuft stets von 10:00 bis 19:00 Uhr, unabhängig von der Abholzeit. Dies gilt sowohl für Stadträder als auch für Elektrofahrräder. Ein Stadtrad, das zum Beispiel an einem Mittwoch für 7 Tage gemietet wird, kann am darauffolgenden Dienstag bis 19:00 Uhr oder am Mittwoch ab 10:00 Uhr zurückgegeben werden. Jede Rückgabe außerhalb dieser Zeiten führt automatisch zur Berechnung eines zusätzlichen Miettages.",
+        ebike: "Für die Miete von Elektrofahrrädern sind ein gültiger Personalausweis oder Reisepass im Original sowie eine physische Kreditkarte erforderlich. Virtuelle Karten und Prepaid-Karten werden nicht akzeptiert.",
+        ebikeRetorno: "Elektrofahrräder müssen zwingend am letzten gebuchten Miettag bis 19:00 Uhr zurückgegeben werden, da sie über Nacht aufgeladen werden müssen. Anders als bei normalen Fahrrädern ist eine Rückgabe am nächsten Morgen nicht möglich. Bei Nichteinhaltung dieser Rückgabezeit wird ein zusätzlicher Miettag berechnet."
+      }
     },
     reparaciones: {
       header: { title: "Reparaturen", subtitle: "Spezialisierte Werkstatt für alle Fahrradtypen. Jede Reparatur wird mit Sorgfalt, Erfahrung und Originalersatzteilen durchgeführt." },
@@ -721,6 +886,7 @@ export const dictionaries = {
     },
     footer: "© 2026 Gravitate Bikes · Av. Lopez de Mena 14, San Pedro Alcántara · Alle Rechte vorbehalten",
     footerPrivacy: "Datenschutzerklärung",
+    footerTerms: "Allgemeine Mietbedingungen",
     privacidad: {
       breadcrumb: "Rechtliches",
       title: "Datenschutzerklärung",
@@ -763,6 +929,52 @@ export const dictionaries = {
       s6: {
         title: "6. Änderungen dieser Richtlinie",
         body: "Wir behalten uns das Recht vor, diese Datenschutzerklärung jederzeit zu aktualisieren. Alle Änderungen werden auf dieser Seite veröffentlicht, mit dem oben angegebenen Datum der letzten Aktualisierung."
+      },
+      footer: "Gravitate Bikes · San Pedro Alcántara, Marbella"
+    },
+    terminos: {
+      breadcrumb: "Rechtliches",
+      title: "Allgemeine Mietbedingungen",
+      lastUpdated: "Letzte Aktualisierung: August 2026",
+      intro: "Dieses Dokument legt die allgemeinen Bedingungen fest, die für den von Gravitate Bikes angebotenen Fahrradverleih gelten. Mit dem Abschluss einer Miete akzeptiert der Kunde die hier beschriebenen Bedingungen vollständig.",
+      s1: {
+        title: "1. Servicezeiten",
+        body: "Der Mietzeitraum umfasst stets von 10:00 bis 19:00 Uhr, unabhängig von der Abholzeit des Fahrrads. Für die Berechnung der Miettage beginnt jeder Miettag um 10:00 Uhr und endet um 19:00 Uhr desselben Tages.",
+        example: "Beispiel: Holt ein Kunde das Fahrrad an einem Mittwoch um 17:00 Uhr ab und mietet es für 7 Tage, so ist der letzte Nutzungstag der darauffolgende Dienstag. Die Rückgabe muss bis 19:00 Uhr dieses Dienstags erfolgen, oder ab 10:00 Uhr des darauffolgenden Mittwochs, wie zuvor mit dem Verleih vereinbart."
+      },
+      s2: {
+        title: "2. Voraussetzungen für den Verleih von Elektrofahrrädern",
+        body: "Für die Miete von Elektrofahrrädern (E-Bikes) müssen folgende Voraussetzungen erfüllt sein:",
+        bullets: [
+          "Vorlage eines gültigen Personalausweises oder Reisepasses im Original. Kopien und abgelaufene Dokumente werden nicht akzeptiert.",
+          "Vorlage einer physischen Kreditkarte auf den Namen des Mieters. Virtuelle Geldbörsen, E-Geld-Konten und Prepaid-Karten werden nicht akzeptiert.",
+          "Hinterlegung einer rückerstattbaren Kaution, deren Betrag zum Zeitpunkt der Reservierung mitgeteilt wird."
+        ]
+      },
+      s3: {
+        title: "3. Rückgabe und Verspätungsgebühren",
+        body: "Das Fahrrad muss innerhalb des vereinbarten Zeitraums zurückgegeben werden. Eine Rückgabe außerhalb der festgelegten Zeiten (nach 19:00 Uhr) führt automatisch zur Berechnung eines zusätzlichen Miettages. Bei Nichtrückgabe oder Verlust haftet der Kunde für den Wiederbeschaffungswert des Fahrrads."
+      },
+      s4: {
+        title: "4. Zustand des Fahrrads und Haftung",
+        body: "Der Kunde erhält das Fahrrad in einwandfreiem Zustand und ist während der Mietdauer für dessen Pflege verantwortlich. Jegliche Beschädigung, ungewöhnliche Abnutzung oder der Verlust von Zubehör (Helm, Schloss usw.) wird dem Kunden in Rechnung gestellt. Der Zustand des Fahrrads wird bei der Abholung und bei der Rückgabe überprüft."
+      },
+      s5: {
+        title: "5. Nutzung des Fahrrads",
+        body: "Die gemieteten Fahrräder sind für den persönlichen und freizeitlichen Gebrauch des Kunden bestimmt. Ausdrücklich untersagt ist:",
+        bullets: [
+          "Die Untervermietung oder Überlassung des Fahrrads an Dritte.",
+          "Die Nutzung bei Wettkämpfen, Sportveranstaltungen oder Hochrisiko-Aktivitäten.",
+          "Jegliche Modifikationen am Fahrrad."
+        ]
+      },
+      s6: {
+        title: "6. Stornierungen",
+        body: "Die Stornierungsbedingungen werden zum Zeitpunkt der Reservierung vereinbart. Gravitate Bikes behält sich das Recht vor, den Service unter außergewöhnlichen Umständen (widrige Witterungsbedingungen, höhere Gewalt usw.) zu stornieren oder zu ändern, wobei der Kunde so früh wie möglich informiert wird."
+      },
+      s7: {
+        title: "7. Änderungen",
+        body: "Gravitate Bikes behält sich das Recht vor, diese Bedingungen jederzeit zu aktualisieren. Die jeweils gültige Fassung ist stets auf dieser Seite verfügbar."
       },
       footer: "Gravitate Bikes · San Pedro Alcántara, Marbella"
     }
