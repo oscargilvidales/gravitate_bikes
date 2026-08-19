@@ -113,7 +113,7 @@ export function AlquilerPage() {
           </div>
 
           <div className="space-y-12">
-            {/* E-bike Básica */}
+            {/* E-bike Básica
             <div className="grid md:grid-cols-2 gap-8 items-start">
               <div className="rounded-3xl overflow-hidden h-72 md:h-80 flex items-center justify-center p-6 relative bg-gradient-to-br from-white to-gray-50 border border-gray-100 shadow-sm">
                 <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(167,139,250,0.05)_0%,transparent_70%)]" />
@@ -148,7 +148,7 @@ export function AlquilerPage() {
                   <p className="text-sm text-gray-500">{t.alquiler.ebike.models.basica.includes}</p>
                 </div>
 
-                {/* Botón WhatsApp Ebike Básica */}
+                {/* Botón WhatsApp Ebike Básica 
                 <a
                   href="https://wa.me/34612477841"
                   target="_blank"
@@ -159,7 +159,7 @@ export function AlquilerPage() {
                   {t.alquiler.ebike.models.basica.btn}
                 </a>
               </div>
-            </div>
+            </div>*/}
 
             {/* E-bike Bosch */}
             <div className="grid md:grid-cols-2 gap-8 items-start pt-8 border-t border-gray-100">
