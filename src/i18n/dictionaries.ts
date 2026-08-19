@@ -91,8 +91,8 @@ export const dictionaries = {
       plans: { title: "Planes de mantenimiento", btnProcess: "Ver proceso de reparación", btnClose: "Cerrar", note: "* No se incluyen retenes ni componentes de reemplazo.", btnWa: "Solicitar cita para taller" },
       packages: {
         bronce: { name: "Bronze", features: ["Ajuste total de la bicicleta", "Checkeo de seguridad"] },
-        plata: { name: "Silver", features: ["Incluye paquete Bronce", "Limpieza de transmisión"] },
-        gold: { name: "Gold", features: ["Incluye paquete Plata", "Limpieza total de la bici", "Sustitución de cables de cambios (si fuera necesario)", "Checkeo de pedalier, dirección y bujes"] },
+        plata: { name: "Silver", features: ["Incluye paquete Bronze", "Limpieza de transmisión"] },
+        gold: { name: "Gold", features: ["Incluye paquete Silver", "Limpieza total de la bici", "Sustitución de cables de cambios (si fuera necesario)", "Checkeo de pedalier, dirección y bujes"] },
         platinum: { name: "Platinum", features: ["Incluye paquete Gold", "Revisión de suspensiones", "Revisión de basculante", "Sangrado de frenos"], note: "* No se incluyen retenes ni componentes de reemplazo." }
       },
       expandedView: {
