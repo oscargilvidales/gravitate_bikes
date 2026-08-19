@@ -90,8 +90,8 @@ export const dictionaries = {
       workshop: { title: "Servicio fiable y profesional", desc: "En nuestro taller trabajamos con todo tipo de bicicletas: de paseo, montaña, carretera y eléctricas. Cada trabajo se revisa antes de salir del taller y siempre te informamos antes de hacer nada.", points: ["Diagnóstico honesto y sin sorpresas", "Presupuesto previo y sin compromiso", "Componentes de calidad contrastada", "Técnicos con años de experiencia en todo tipo de bicis"] },
       plans: { title: "Planes de mantenimiento", btnProcess: "Ver proceso de reparación", btnClose: "Cerrar", note: "* No se incluyen retenes ni componentes de reemplazo.", btnWa: "Solicitar cita para taller" },
       packages: {
-        bronce: { name: "Bronce", features: ["Ajuste total de la bicicleta", "Checkeo de seguridad"] },
-        plata: { name: "Plata", features: ["Incluye paquete Bronce", "Limpieza de transmisión"] },
+        bronce: { name: "Bronze", features: ["Ajuste total de la bicicleta", "Checkeo de seguridad"] },
+        plata: { name: "Silver", features: ["Incluye paquete Bronce", "Limpieza de transmisión"] },
         gold: { name: "Gold", features: ["Incluye paquete Plata", "Limpieza total de la bici", "Sustitución de cables de cambios (si fuera necesario)", "Checkeo de pedalier, dirección y bujes"] },
         platinum: { name: "Platinum", features: ["Incluye paquete Gold", "Revisión de suspensiones", "Revisión de basculante", "Sangrado de frenos"], note: "* No se incluyen retenes ni componentes de reemplazo." }
       },
