@@ -77,10 +77,10 @@ export function PrivacidadPage() {
           <Section title={p.s5.title}>
             <p className="text-gray-600 leading-relaxed mb-3">{p.s5.body}</p>
             <a
-              href={`mailto:info@gravitatebikes.es`}
+              href={`mailto:gravitatebikes@gmail.com`}
               className="inline-flex items-center gap-1.5 text-[#A78BFA] font-medium text-sm hover:underline"
             >
-              info@gravitatebikes.es
+              gravitatebikes@gmail.com
             </a>
           </Section>
 

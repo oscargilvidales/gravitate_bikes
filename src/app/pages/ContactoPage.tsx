@@ -69,8 +69,8 @@ export function ContactoPage() {
               icon={<Mail size={20} />}
               title={t.contacto.email}
               content={
-                <a href="mailto:info@gravitatebikes.es" className="hover:text-[#A78BFA] transition-colors">
-                  info@gravitatebikes.es
+                <a href="mailto:gravitatebikes@gmail.com" className="hover:text-[#A78BFA] transition-colors">
+                  gravitatebikes@gmail.com
                 </a>
               }
             />
