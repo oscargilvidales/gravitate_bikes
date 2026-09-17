@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import "../../src/styles/index.css";
 import { Navbar } from "@/app/components/Navbar";
+import { CookieConsent } from "@/app/components/CookieConsent";
 import { dictionaries } from "@/i18n/dictionaries";
 
 export const metadata: Metadata = {
@@ -48,6 +49,7 @@ export default async function RootLayout({
             </p>
           </footer>
         </div>
+        <CookieConsent copy={dict.cookieConsent} />
       </body>
     </html>
   );
