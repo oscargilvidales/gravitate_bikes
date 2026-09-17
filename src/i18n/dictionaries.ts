@@ -127,7 +127,11 @@ export const dictionaries = {
       waBtn: "Escríbenos por WhatsApp",
       weekdays: "Lunes – Viernes",
       saturday: "Sábados",
-      sunday: "Domingos y festivos"
+      sunday: "Domingos y festivos",
+      mapConsentTitle: "Mapa de Google Maps bloqueado",
+      mapConsentDescription: "Este mapa utiliza cookies externas de terceros. Acepta las cookies para cargarlo.",
+      mapConsentAccept: "Puedes aceptar las cookies desde el aviso inferior.",
+      mapTitle: "Mapa de ubicación de la tienda"
     },
     woom: {
       header: { title: "Bicis Woom", subtitle: "Las mejores bicicletas ultraligeras para niños. Diseñadas para que aprender a pedalear sea fácil, seguro y divertido.", cta: "Preguntar por WhatsApp" },
@@ -152,6 +156,12 @@ export const dictionaries = {
     footer: "© 2026 Gravitate Bikes · Av. Lopez de Mena nº 14, San Pedro Alcántara · Todos los derechos reservados",
     footerPrivacy: "Política de Privacidad",
     footerTerms: "Términos y Condiciones",
+    cookieConsent: {
+      title: "Cookies externas",
+      description: "Este sitio utiliza contenido externo que puede instalar cookies de terceros. Puedes aceptar o rechazar su carga.",
+      accept: "Aceptar",
+      reject: "Rechazar"
+    },
     privacidad: {
       breadcrumb: "Legal",
       title: "Política de Privacidad",
@@ -372,7 +382,11 @@ export const dictionaries = {
       waBtn: "Message us on WhatsApp",
       weekdays: "Monday – Friday",
       saturday: "Saturdays",
-      sunday: "Sundays & Holidays"
+      sunday: "Sundays & Holidays",
+      mapConsentTitle: "Google Maps is blocked",
+      mapConsentDescription: "This map uses external third-party cookies. Accept cookies to load it.",
+      mapConsentAccept: "You can accept cookies from the notice at the bottom.",
+      mapTitle: "Shop location map"
     },
     woom: {
       header: { title: "Woom Bikes", subtitle: "The best ultralight bicycles for children. Designed to make learning to ride easy, safe, and fun.", cta: "Ask via WhatsApp" },
@@ -397,6 +411,12 @@ export const dictionaries = {
     footer: "© 2026 Gravitate Bikes · Av. Lopez de Mena 14, San Pedro Alcántara · All rights reserved",
     footerPrivacy: "Privacy Policy",
     footerTerms: "Terms & Conditions",
+    cookieConsent: {
+      title: "External cookies",
+      description: "This website uses external content that may set third-party cookies. You can accept or reject its loading.",
+      accept: "Accept",
+      reject: "Reject"
+    },
     privacidad: {
       breadcrumb: "Legal",
       title: "Privacy Policy",
@@ -617,7 +637,11 @@ export const dictionaries = {
       waBtn: "Écrivez-nous sur WhatsApp",
       weekdays: "Lundi – Vendredi",
       saturday: "Samedis",
-      sunday: "Dimanches et jours fériés"
+      sunday: "Dimanches et jours fériés",
+      mapConsentTitle: "Google Maps est bloqué",
+      mapConsentDescription: "Cette carte utilise des cookies externes de tiers. Acceptez les cookies pour la charger.",
+      mapConsentAccept: "Vous pouvez accepter les cookies depuis l'avis en bas de page.",
+      mapTitle: "Carte de localisation de la boutique"
     },
     woom: {
       header: { title: "Vélos Woom", subtitle: "Les meilleurs vélos ultra-légers pour enfants. Conçus pour rendre l'apprentissage du vélo facile, sûr et amusant.", cta: "Demander via WhatsApp" },
@@ -642,6 +666,12 @@ export const dictionaries = {
     footer: "© 2026 Gravitate Bikes · Av. Lopez de Mena 14, San Pedro Alcántara · Tous droits réservés",
     footerPrivacy: "Politique de Confidentialité",
     footerTerms: "Conditions Générales",
+    cookieConsent: {
+      title: "Cookies externes",
+      description: "Ce site utilise du contenu externe qui peut installer des cookies tiers. Vous pouvez accepter ou refuser son chargement.",
+      accept: "Accepter",
+      reject: "Refuser"
+    },
     privacidad: {
       breadcrumb: "Mentions légales",
       title: "Politique de Confidentialité",
@@ -862,7 +892,11 @@ export const dictionaries = {
       waBtn: "WhatsApp schreiben",
       weekdays: "Montag – Freitag",
       saturday: "Samstag",
-      sunday: "Sonn- und Feiertage"
+      sunday: "Sonn- und Feiertage",
+      mapConsentTitle: "Google Maps ist blockiert",
+      mapConsentDescription: "Diese Karte verwendet externe Drittanbieter-Cookies. Akzeptieren Sie Cookies, um sie zu laden.",
+      mapConsentAccept: "Sie können Cookies über den Hinweis unten akzeptieren.",
+      mapTitle: "Karte des Geschäftsstandorts"
     },
     woom: {
       header: { title: "Woom Fahrräder", subtitle: "Die besten ultraleichten Fahrräder für Kinder. Entwickelt, um das Fahrradfahren lernen einfach, sicher und spaßig zu machen.", cta: "Per WhatsApp anfragen" },
@@ -887,6 +921,12 @@ export const dictionaries = {
     footer: "© 2026 Gravitate Bikes · Av. Lopez de Mena 14, San Pedro Alcántara · Alle Rechte vorbehalten",
     footerPrivacy: "Datenschutzerklärung",
     footerTerms: "Allgemeine Mietbedingungen",
+    cookieConsent: {
+      title: "Externe Cookies",
+      description: "Diese Website verwendet externe Inhalte, die Drittanbieter-Cookies setzen können. Sie können das Laden akzeptieren oder ablehnen.",
+      accept: "Akzeptieren",
+      reject: "Ablehnen"
+    },
     privacidad: {
       breadcrumb: "Rechtliches",
       title: "Datenschutzerklärung",

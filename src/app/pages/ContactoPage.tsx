@@ -3,6 +3,7 @@
 import { MapPin, Phone, Clock, Mail, Instagram, Facebook } from "lucide-react";
 import Image from "next/image";
 import { useTranslation } from "@/i18n/useTranslation";
+import { GoogleMapsConsent } from "@/app/components/GoogleMapsConsent";
 
 export function ContactoPage() {
   const { t } = useTranslation();
@@ -104,16 +105,12 @@ export function ContactoPage() {
 
           {/* Mapa Interactivo */}
           <div className="rounded-2xl overflow-hidden border border-gray-100 h-full min-h-[400px] bg-gray-50 relative">
-            <iframe
-              src="https://maps.google.com/maps?q=Avenida%20Lopez%20de%20Mena%2014,%20San%20Pedro%20Alcantara,%20Marbella&t=&z=16&ie=UTF8&iwloc=&output=embed"
-              width="100%"
-              height="100%"
-              style={{ border: 0, position: 'absolute', top: 0, left: 0 }}
-              allowFullScreen={false}
-              loading="lazy"
-              referrerPolicy="no-referrer-when-downgrade"
-              title="Mapa de ubicación de la tienda"
-            ></iframe>
+            <GoogleMapsConsent
+              title={t.contacto.mapConsentTitle}
+              description={t.contacto.mapConsentDescription}
+              acceptCookies={t.contacto.mapConsentAccept}
+              mapTitle={t.contacto.mapTitle}
+            />
           </div>
         </div>
       </div>
