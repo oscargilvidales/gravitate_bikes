@@ -101,6 +101,19 @@ export function ContactoPage() {
                 {t.contacto.waBtn}
               </a>
             </div>
+
+            <a
+              href="https://instagram.com/gravitatebikes"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="group inline-flex w-full items-center justify-center gap-3 rounded-2xl border border-[#A78BFA]/30 bg-[#111827] px-5 py-3.5 text-white shadow-sm transition-all duration-200 hover:-translate-y-0.5 hover:bg-[#1f2937] hover:shadow-md focus:outline-none focus:ring-2 focus:ring-[#A78BFA]/60"
+              aria-label="Instagram de Gravitate Bikes"
+            >
+              <span className="flex h-10 w-10 items-center justify-center rounded-xl bg-gradient-to-br from-[#F58529] via-[#DD2A7B] to-[#8134AF] text-white shadow-sm transition-transform duration-200 group-hover:scale-105">
+                <Instagram size={18} />
+              </span>
+              <span className="text-base font-semibold tracking-wide">@GRAVITATEBIKES</span>
+            </a>
           </div>
 
           {/* Mapa Interactivo */}
