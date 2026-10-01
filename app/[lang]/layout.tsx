@@ -3,6 +3,7 @@ import "../../src/styles/index.css";
 import { Navbar } from "@/app/components/Navbar";
 import { CookieConsent } from "@/app/components/CookieConsent";
 import { dictionaries } from "@/i18n/dictionaries";
+import { SpeedInsights } from '@vercel/speed-insights/next';
 
 export const metadata: Metadata = {
   title: {
@@ -50,6 +51,7 @@ export default async function RootLayout({
           </footer>
         </div>
         <CookieConsent copy={dict.cookieConsent} />
+        <SpeedInsights />
       </body>
     </html>
   );
