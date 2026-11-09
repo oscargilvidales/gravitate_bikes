@@ -35,7 +35,7 @@ export function CookieConsent({ copy }: { copy: CookieConsentCopy }) {
   if (status) return null;
 
   return (
-    <aside
+    <div
       role="dialog"
       aria-label={copy.title}
       className="fixed inset-x-4 bottom-4 z-50 mx-auto max-w-3xl rounded-xl border border-gray-200 bg-white p-5 shadow-xl sm:inset-x-6 sm:p-6"
@@ -62,6 +62,6 @@ export function CookieConsent({ copy }: { copy: CookieConsentCopy }) {
           </button>
         </div>
       </div>
-    </aside>
+    </div>
   );
 }

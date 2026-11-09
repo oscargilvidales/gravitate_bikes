@@ -1,11 +1,10 @@
-"use client";
-
 import { Heart, Wrench, Bike, Sun, Users, MapPin } from "lucide-react";
 import Image from "next/image";
-import { useTranslation } from "@/i18n/useTranslation";
+import { getDictionary, type Locale } from "@/i18n/server";
+import { imageAlts } from "@/i18n/alts";
 
-export function QuienesSomosPage() {
-  const { t, lang } = useTranslation();
+export function QuienesSomosPage({ lang }: { lang: Locale }) {
+  const t = getDictionary(lang);
 
   const values = [
     {
@@ -32,7 +31,7 @@ export function QuienesSomosPage() {
       <section className="py-16 px-4 max-w-6xl mx-auto">
         <div className="grid md:grid-cols-2 gap-12 items-center">
           <div>
-            <h2 className="text-[#0E0E12] text-3xl font-bold mb-5">{t.quienesSomos.bio.title}</h2>
+            <h1 className="text-[#0E0E12] text-3xl font-bold mb-5">{t.quienesSomos.bio.title}</h1>
             <div className="space-y-4 text-gray-600 leading-relaxed">
               <p>{t.quienesSomos.bio.desc1}</p>
               <p>{t.quienesSomos.bio.desc2}</p>
@@ -40,7 +39,7 @@ export function QuienesSomosPage() {
           </div>
           <div className="rounded-2xl overflow-hidden h-80 md:h-96 shadow-xl flex items-center justify-center relative">
             {/* Image optimized */}
-            <Image src="/about/Sin Título.jpg" alt="Gab haciendo Plegada" fill className="object-cover" />
+            <Image src="/about/gabriel-sarria.jpg" alt={imageAlts[lang].about} fill sizes="(max-width: 768px) 100vw, 576px" className="object-cover" />
           </div>
         </div>
       </section>

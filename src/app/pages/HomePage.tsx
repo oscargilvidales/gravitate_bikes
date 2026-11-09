@@ -1,13 +1,12 @@
-"use client";
-
 import Link from "next/link";
 import Image from "next/image";
 import { Wrench, Bike, Zap, MapPin, Clock, Phone, Sparkles } from "lucide-react";
-import { useTranslation } from "@/i18n/useTranslation";
+import { getDictionary, type Locale } from "@/i18n/server";
+import { imageAlts } from "@/i18n/alts";
 import { BrandCarousel } from "../components/BrandCarousel";
 
-export function HomePage() {
-  const { t, lang } = useTranslation();
+export function HomePage({ lang }: { lang: Locale }) {
+  const t = getDictionary(lang);
 
   return (
     <div>
@@ -15,7 +14,7 @@ export function HomePage() {
       {/* Hero */}
       <section className="relative h-[90vh] min-h-[520px] flex items-center justify-center overflow-hidden">
         {/* Hero Image optimized */}
-        <Image src="/home/puestaDeSol.jpg" alt="Bulevar / Paseo Marítimo" fill className="object-cover" priority />
+        <Image src="/home/puestaDeSol.jpg" alt={imageAlts[lang].home} fill sizes="100vw" className="object-cover" preload fetchPriority="high" />
         <div className="relative z-10 text-center px-4 max-w-3xl mx-auto -translate-y-[10vh]">
           <span className="inline-block backdrop-blur-md bg-black/30 text-white border border-white/20 text-sm px-4 py-1.5 rounded-full mb-6 font-medium shadow-sm">
             {t.home.hero.location}
@@ -84,7 +83,7 @@ export function HomePage() {
               className="inline-flex items-center justify-center gap-2 bg-[#25D366] hover:bg-[#20bd5a] text-[#0E0E12] px-8 py-4 rounded-lg font-medium transition-colors shadow-md hover:shadow-lg"
             >
               {/* WhatsApp Icon optimized */}
-              <Image src="/whatsapp-glyph-black.svg" alt="WhatsApp" width={20} height={20} />
+              <Image src="/whatsapp-glyph-black.svg" alt="" width={20} height={20} />
               {t.home.cta.btnWa}
             </a>
             <Link

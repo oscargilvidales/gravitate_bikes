@@ -1,11 +1,9 @@
-"use client";
-
 import { Bike, Zap, Clock } from "lucide-react";
 import Image from "next/image";
-import { useTranslation } from "@/i18n/useTranslation";
+import { getDictionary, type Locale } from "@/i18n/server";
 
-export function AlquilerPage() {
-  const { t } = useTranslation();
+export function AlquilerPage({ lang }: { lang: Locale }) {
+  const t = getDictionary(lang);
 
   return (
     <div>
@@ -31,7 +29,7 @@ export function AlquilerPage() {
           {/* Foto */}
           <div className="rounded-3xl overflow-hidden h-72 md:h-80 flex items-center justify-center p-6 relative bg-gradient-to-br from-white to-gray-50 border border-gray-100 shadow-sm">
             <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(167,139,250,0.05)_0%,transparent_70%)]" />
-            <Image src="/bikes/bici_paseo.svg" alt="Bicicleta de paseo" fill className="object-contain p-8 drop-shadow-2xl" />
+            <Image src="/bikes/bici_paseo.svg" alt="Bicicleta de paseo" fill sizes="(max-width: 768px) 100vw, 560px" className="object-contain p-8 drop-shadow-2xl" />
           </div>
 
           {/* Tarifas */}
@@ -60,25 +58,25 @@ export function AlquilerPage() {
             <div className="border-2 border-[#A78BFA] rounded-2xl overflow-hidden relative">
               <div className="bg-[#A78BFA]/10 px-5 py-3.5 flex items-center gap-2">
                 <Bike size={15} className="text-[#A78BFA]" />
-                <span className="text-[#A78BFA] font-medium text-sm">{t.alquiler.paseo.priceWeek}</span>
+                <span className="text-[#7C3AED] font-medium text-sm">{t.alquiler.paseo.priceWeek}</span>
               </div>
               <div className="p-5 flex items-center justify-between">
                 <div>
-                  <p className="text-xs text-gray-400 mt-0.5">
+                  <p className="text-xs text-gray-500 mt-0.5">
                     <span className="text-green-600 font-medium">{t.alquiler.paseo.priceWeekDesc}</span>
                   </p>
                 </div>
                 <div className="text-right">
                   <div className="flex items-baseline gap-1.5 justify-end">
-                    <span className="text-gray-300 text-base line-through">15 €</span>
-                    <span className="text-3xl font-bold text-[#A78BFA]">10 €</span>
+                    <span className="text-gray-500 text-base line-through">15 €</span>
+                    <span className="text-3xl font-bold text-[#7C3AED]">10 €</span>
                   </div>
                 </div>
               </div>
             </div>
 
             <div className="flex items-start gap-2 bg-[#A78BFA]/8 rounded-lg p-3">
-              <span className="text-[#A78BFA] text-base mt-0.5 shrink-0">ℹ</span>
+              <span className="text-[#7C3AED] text-base mt-0.5 shrink-0">ℹ</span>
               <p className="text-sm text-gray-500">
                 {t.alquiler.paseo.note}
               </p>
@@ -91,7 +89,7 @@ export function AlquilerPage() {
               rel="noopener noreferrer"
               className="flex items-center justify-center gap-2 w-full bg-[#25D366] hover:bg-[#20bd5a] text-[#0E0E12] py-3.5 rounded-xl font-medium transition-all shadow-md hover:shadow-lg mt-2"
             >
-              <Image src="/whatsapp-glyph-black.svg" alt="WhatsApp" width={20} height={20} />
+              <Image src="/whatsapp-glyph-black.svg" alt="" width={20} height={20} />
               {t.alquiler.btnWa}
             </a>
           </div>
@@ -109,7 +107,7 @@ export function AlquilerPage() {
             <div className="grid md:grid-cols-2 gap-8 items-start">
               <div className="rounded-3xl overflow-hidden h-72 md:h-80 flex items-center justify-center p-6 relative bg-gradient-to-br from-white to-gray-50 border border-gray-100 shadow-sm">
                 <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(167,139,250,0.05)_0%,transparent_70%)]" />
-                <Image src="/bikes/bici_electrica.svg" alt="E-Bike basica" fill className="object-contain p-8 drop-shadow-2xl" />
+                <Image src="/bikes/bici_electrica.svg" alt="E-Bike basica" fill sizes="(max-width: 768px) 100vw, 560px" className="object-contain p-8 drop-shadow-2xl" />
               </div>
 
               <div className="space-y-4">
@@ -126,11 +124,11 @@ export function AlquilerPage() {
                   <div className="p-5 flex items-center justify-between">
                     <div>
                       <p className="text-gray-600 text-sm">{t.alquiler.ebike.models.basica.priceStd}</p>
-                      <p className="text-xs text-gray-400 mt-0.5">{t.alquiler.ebike.models.basica.perDay}</p>
+                      <p className="text-xs text-gray-500 mt-0.5">{t.alquiler.ebike.models.basica.perDay}</p>
                     </div>
                     <div className="text-right">
                       <span className="text-3xl font-bold text-[#0E0E12]">25 €</span>
-                      <span className="text-gray-400 text-sm"> {t.alquiler.ebike.models.basica.day}</span>
+                      <span className="text-gray-500 text-sm"> {t.alquiler.ebike.models.basica.day}</span>
                     </div>
                   </div>
                 </div>
@@ -147,7 +145,7 @@ export function AlquilerPage() {
                   rel="noopener noreferrer"
                   className="flex items-center justify-center gap-2 w-full bg-[#25D366] hover:bg-[#20bd5a] text-[#0E0E12] py-3.5 rounded-xl font-medium transition-all shadow-md hover:shadow-lg mt-2"
                 >
-                  <Image src="/whatsapp-glyph-black.svg" alt="WhatsApp" width={20} height={20} />
+                  <Image src="/whatsapp-glyph-black.svg" alt="" width={20} height={20} />
                   {t.alquiler.ebike.models.basica.btn}
                 </a>
               </div>
@@ -157,7 +155,7 @@ export function AlquilerPage() {
             <div className="grid md:grid-cols-2 gap-8 items-start pt-8 border-t border-gray-100">
               <div className="rounded-3xl overflow-hidden h-72 md:h-80 flex items-center justify-center p-6 relative bg-gradient-to-br from-white to-gray-50 border border-gray-100 shadow-sm">
                 <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(167,139,250,0.05)_0%,transparent_70%)]" />
-                <Image src="/bikes/bici_electrica_premium.svg" alt="E-bike premium Bosch" fill className="object-contain p-8 drop-shadow-2xl" />
+                <Image src="/bikes/bici_electrica_premium.svg" alt="E-bike premium Bosch" fill sizes="(max-width: 768px) 100vw, 560px" className="object-contain p-8 drop-shadow-2xl" />
               </div>
 
               <div className="space-y-4">
@@ -175,11 +173,11 @@ export function AlquilerPage() {
                   <div className="p-5 flex items-center justify-between">
                     <div>
                       <p className="text-gray-600 text-sm">{t.alquiler.ebike.models.premium.rent1to4}</p>
-                      <p className="text-xs text-gray-400 mt-0.5">{t.alquiler.ebike.models.premium.priceStd}</p>
+                      <p className="text-xs text-gray-500 mt-0.5">{t.alquiler.ebike.models.premium.priceStd}</p>
                     </div>
                     <div className="text-right">
                       <span className="text-3xl font-bold text-[#0E0E12]">35 €</span>
-                      <span className="text-gray-400 text-sm"> {t.alquiler.ebike.models.premium.day}</span>
+                      <span className="text-gray-500 text-sm"> {t.alquiler.ebike.models.premium.day}</span>
                     </div>
                   </div>
                 </div>
@@ -191,27 +189,27 @@ export function AlquilerPage() {
                   </div>
                   <div className="bg-[#A78BFA]/10 px-5 py-3.5 flex items-center gap-2">
                     <Zap size={15} className="text-[#A78BFA]" />
-                    <span className="text-[#A78BFA] font-medium text-sm">{t.alquiler.ebike.models.premium.rateReduced}</span>
+                    <span className="text-[#7C3AED] font-medium text-sm">{t.alquiler.ebike.models.premium.rateReduced}</span>
                   </div>
                   <div className="p-5 flex items-center justify-between">
                     <div>
                       <p className="text-gray-600 text-sm">{t.alquiler.ebike.models.premium.rent5plus}</p>
-                      <p className="text-xs text-gray-400 mt-0.5">
+                      <p className="text-xs text-gray-500 mt-0.5">
                         {t.alquiler.ebike.models.premium.pricePerDay} · <span className="text-green-600 font-medium">{t.alquiler.ebike.models.premium.save} 14%</span>
                       </p>
                     </div>
                     <div className="text-right">
                       <div className="flex items-baseline gap-1.5 justify-end">
-                        <span className="text-gray-300 text-base line-through">35 €</span>
-                        <span className="text-3xl font-bold text-[#A78BFA]">30 €</span>
+                        <span className="text-gray-500 text-base line-through">35 €</span>
+                        <span className="text-3xl font-bold text-[#7C3AED]">30 €</span>
                       </div>
-                      <span className="text-gray-400 text-sm"> {t.alquiler.ebike.models.premium.day}</span>
+                      <span className="text-gray-500 text-sm"> {t.alquiler.ebike.models.premium.day}</span>
                     </div>
                   </div>
                 </div>
 
                 <div className="flex items-start gap-2 bg-[#A78BFA]/8 rounded-lg p-3">
-                  <span className="text-[#A78BFA] text-base mt-0.5 shrink-0">ℹ</span>
+                  <span className="text-[#7C3AED] text-base mt-0.5 shrink-0">ℹ</span>
                   <p className="text-sm text-gray-500">
                     {t.alquiler.ebike.models.premium.includes}
                   </p>
@@ -224,7 +222,7 @@ export function AlquilerPage() {
                   rel="noopener noreferrer"
                   className="flex items-center justify-center gap-2 w-full bg-[#25D366] hover:bg-[#20bd5a] text-[#0E0E12] py-3.5 rounded-xl font-medium transition-all shadow-md hover:shadow-lg mt-2"
                 >
-                  <Image src="/whatsapp-glyph-black.svg" alt="WhatsApp" width={20} height={20} />
+                  <Image src="/whatsapp-glyph-black.svg" alt="" width={20} height={20} />
                   {t.alquiler.ebike.models.premium.btn}
                 </a>
               </div>

@@ -1,0 +1,61 @@
+# Gravitate Bikes
+
+> Tienda y taller de bicicletas familiar en San Pedro Alcántara (Marbella, España), junto al bulevar y el paseo marítimo. Alquiler de bicicletas de paseo y eléctricas, taller de reparaciones, limpieza de bicicletas y distribuidor de bicicletas infantiles woom. Web disponible en español, inglés, francés y alemán.
+
+- Dirección: Avenida Lopez de Mena nº 14, 29670 San Pedro Alcántara, Marbella
+- Teléfono y WhatsApp: +34 612 47 78 41 (https://wa.me/34612477841)
+- Email: gravitatebikes@gmail.com
+- Instagram: https://instagram.com/gravitatebikes
+- Horario: lunes a viernes 09:00–20:00; sábados 09:00–21:00; domingos y festivos 10:00–20:00
+- Las reservas y consultas se hacen por WhatsApp; la web no tiene tienda online ni formulario de reserva.
+
+## Servicios y precios publicados
+
+- Bicicleta de paseo: 15 €/día (1 a 6 días); 10 €/día con tarifa semanal (7 días o más). Incluye casco y candado.
+- E-bike básica: 25 €/día. Incluye casco y candado.
+- E-bike premium (motor Bosch): 35 €/día (1 a 4 días); 30 €/día alquilando 5 días o más.
+- Alquiler de bicicletas woom: 18 €/día.
+- Planes de mantenimiento en el taller: Bronze 35 €, Silver 50 €, Gold 100 €, Platinum 300 €.
+- Limpieza: transmisión 15 €; bicicleta completa 20 €.
+- Condiciones: documento de identidad para alquilar; para e-bikes, DNI o pasaporte original y tarjeta de crédito física. El periodo de alquiler es de 10:00 a 19:00. Los menores de 14 años deben ir acompañados de un adulto.
+
+## Español
+
+- [Inicio](https://gravitatebikes.com/es)
+- [Alquiler de bicicletas](https://gravitatebikes.com/es/alquiler): tarifas de bicis de paseo y eléctricas
+- [Taller de reparaciones](https://gravitatebikes.com/es/reparaciones): planes de mantenimiento y limpieza
+- [Bicicletas woom](https://gravitatebikes.com/es/woom): bicis infantiles por edades
+- [Quiénes somos](https://gravitatebikes.com/es/quienes-somos)
+- [Contacto y ubicación](https://gravitatebikes.com/es/contacto): dirección, horario y mapa
+
+## English
+
+- [Home](https://gravitatebikes.com/en)
+- [Bike rental](https://gravitatebikes.com/en/alquiler)
+- [Repair workshop](https://gravitatebikes.com/en/reparaciones)
+- [woom kids' bikes](https://gravitatebikes.com/en/woom)
+- [About us](https://gravitatebikes.com/en/quienes-somos)
+- [Contact and location](https://gravitatebikes.com/en/contacto)
+
+## Français
+
+- [Accueil](https://gravitatebikes.com/fr)
+- [Location de vélos](https://gravitatebikes.com/fr/alquiler)
+- [Atelier de réparation](https://gravitatebikes.com/fr/reparaciones)
+- [Vélos enfants woom](https://gravitatebikes.com/fr/woom)
+- [Qui sommes-nous](https://gravitatebikes.com/fr/quienes-somos)
+- [Contact et adresse](https://gravitatebikes.com/fr/contacto)
+
+## Deutsch
+
+- [Startseite](https://gravitatebikes.com/de)
+- [Fahrradverleih](https://gravitatebikes.com/de/alquiler)
+- [Reparaturwerkstatt](https://gravitatebikes.com/de/reparaciones)
+- [woom Kinderfahrräder](https://gravitatebikes.com/de/woom)
+- [Über uns](https://gravitatebikes.com/de/quienes-somos)
+- [Kontakt und Anfahrt](https://gravitatebikes.com/de/contacto)
+
+## Optional
+
+- [Política de privacidad](https://gravitatebikes.com/es/privacidad)
+- [Sitemap](https://gravitatebikes.com/sitemap.xml)

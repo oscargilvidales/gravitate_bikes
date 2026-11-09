@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://gravitatebikes.es/sitemap.xml
+Sitemap: https://gravitatebikes.com/sitemap.xml

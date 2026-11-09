@@ -5,27 +5,37 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import Image from "next/image";
 import { Menu, X, Globe } from "lucide-react";
-import { useTranslation, Locale } from "@/i18n/useTranslation";
 
 const availableLocales = [
-  { code: "es", label: "ES" },
-  { code: "en", label: "EN" },
-  { code: "fr", label: "FR" },
-  { code: "de", label: "DE" },
+  { code: "es", label: "ES", name: "Español" },
+  { code: "en", label: "EN", name: "English" },
+  { code: "fr", label: "FR", name: "Français" },
+  { code: "de", label: "DE", name: "Deutsch" },
 ];
 
-export function Navbar() {
+type NavLabels = {
+  inicio: string;
+  alquiler: string;
+  reparaciones: string;
+  woom: string;
+  quienesSomos: string;
+  contacto: string;
+};
+
+type NavA11y = { menuOpen: string; menuClose: string; language: string; mainNav: string };
+
+// Recibe solo los textos que necesita desde el layout (servidor), para no enviar los diccionarios completos al navegador.
+export function Navbar({ lang, labels, a11y }: { lang: string; labels: NavLabels; a11y: NavA11y }) {
   const [open, setOpen] = useState(false);
   const pathname = usePathname();
-  const { t, lang } = useTranslation();
 
   const links = [
-    { href: `/${lang}`, label: t.nav.inicio },
-    { href: `/${lang}/alquiler`, label: t.nav.alquiler },
-    { href: `/${lang}/reparaciones`, label: t.nav.reparaciones },
-    { href: `/${lang}/woom`, label: t.nav.woom },
-    { href: `/${lang}/quienes-somos`, label: t.nav.quienesSomos },
-    { href: `/${lang}/contacto`, label: t.nav.contacto },
+    { href: `/${lang}`, label: labels.inicio },
+    { href: `/${lang}/alquiler`, label: labels.alquiler },
+    { href: `/${lang}/reparaciones`, label: labels.reparaciones },
+    { href: `/${lang}/woom`, label: labels.woom },
+    { href: `/${lang}/quienes-somos`, label: labels.quienesSomos },
+    { href: `/${lang}/contacto`, label: labels.contacto },
   ];
 
   const isActive = (href: string) =>
@@ -42,19 +52,23 @@ export function Navbar() {
           onClick={() => setOpen(false)}
         >
           {/* Logo */}
-          <img
+          <Image
             src="/logo.png"
             alt="Gravitate Bikes – San Pedro"
+            width={221}
+            height={64}
+            loading="eager"
             className="h-16 w-auto object-contain"
           />
         </Link>
 
         {/* Desktop nav */}
-        <nav className="hidden md:flex items-center gap-1">
+        <nav aria-label={a11y.mainNav} className="hidden md:flex items-center gap-1">
           {links.map(({ href, label }) => (
             <Link
               key={href}
               href={href}
+              aria-current={isActive(href) ? "page" : undefined}
               className={`px-4 py-2 rounded-md text-sm font-medium transition-colors ${isActive(href)
                 ? "bg-[#A78BFA]/20 text-[#A78BFA]"
                 : "text-white/70 hover:text-white hover:bg-white/5"
@@ -66,7 +80,7 @@ export function Navbar() {
         </nav>
 
         {/* Desktop Language Switcher */}
-        <div className="hidden md:flex items-center gap-2 border-l border-white/20 pl-4 ml-2">
+        <div role="group" aria-label={a11y.language} className="hidden md:flex items-center gap-2 border-l border-white/20 pl-4 ml-2">
           {availableLocales.map((l) => {
             // Generate path for the language (replace /es with /en, etc.)
             const parts = pathname.split('/');
@@ -76,7 +90,11 @@ export function Navbar() {
               <Link
                 key={l.code}
                 href={newPath || `/${l.code}`}
-                className={`text-xs font-bold px-2 py-1 rounded transition-colors ${lang === l.code ? "bg-[#A78BFA] text-white" : "text-white/50 hover:text-white"
+                hrefLang={l.code}
+                lang={l.code}
+                title={l.name}
+                aria-current={lang === l.code ? "true" : undefined}
+                className={`text-xs font-bold px-2 py-1 rounded transition-colors ${lang === l.code ? "bg-[#7C3AED] text-white" : "text-white/50 hover:text-white"
                   }`}
               >
                 {l.label}
@@ -89,7 +107,9 @@ export function Navbar() {
         <button
           className="md:hidden text-white/80 hover:text-white p-2 rounded-md hover:bg-white/5 transition-colors"
           onClick={() => setOpen(!open)}
-          aria-label="Toggle menu"
+          aria-label={open ? a11y.menuClose : a11y.menuOpen}
+          aria-expanded={open}
+          aria-controls="mobile-menu"
         >
           {open ? <X size={24} /> : <Menu size={24} />}
         </button>
@@ -97,12 +117,13 @@ export function Navbar() {
 
       {/* Mobile menu */}
       {open && (
-        <div className="md:hidden bg-[#0E0E12] border-t border-white/10 px-4 pb-4 pt-2">
+        <nav id="mobile-menu" aria-label={a11y.mainNav} className="md:hidden bg-[#0E0E12] border-t border-white/10 px-4 pb-4 pt-2">
           {links.map(({ href, label }) => (
             <Link
               key={href}
               href={href}
               onClick={() => setOpen(false)}
+              aria-current={isActive(href) ? "page" : undefined}
               className={`block px-4 py-3 rounded-md text-sm font-medium transition-colors ${isActive(href)
                 ? "bg-[#A78BFA]/20 text-[#A78BFA]"
                 : "text-white/70 hover:text-white hover:bg-white/5"
@@ -113,8 +134,8 @@ export function Navbar() {
           ))}
           {/* Mobile Language Switcher */}
           <div className="flex items-center gap-4 px-4 py-4 mt-2 border-t border-white/10">
-            <Globe size={18} className="text-white/50" />
-            <div className="flex gap-2">
+            <Globe size={18} className="text-white/50" aria-hidden="true" />
+            <div role="group" aria-label={a11y.language} className="flex gap-2">
               {availableLocales.map((l) => {
                 const parts = pathname.split('/');
                 parts[1] = l.code;
@@ -123,8 +144,12 @@ export function Navbar() {
                   <Link
                     key={l.code}
                     href={newPath || `/${l.code}`}
+                    hrefLang={l.code}
+                    lang={l.code}
+                    title={l.name}
+                    aria-current={lang === l.code ? "true" : undefined}
                     onClick={() => setOpen(false)}
-                    className={`text-sm font-bold px-3 py-1.5 rounded transition-colors ${lang === l.code ? "bg-[#A78BFA] text-white" : "bg-white/10 text-white/70"
+                    className={`text-sm font-bold px-3 py-1.5 rounded transition-colors ${lang === l.code ? "bg-[#7C3AED] text-white" : "bg-white/10 text-white/70"
                       }`}
                   >
                     {l.label}
@@ -133,7 +158,7 @@ export function Navbar() {
               })}
             </div>
           </div>
-        </div>
+        </nav>
       )}
     </header>
   );

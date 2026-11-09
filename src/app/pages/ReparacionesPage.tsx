@@ -1,15 +1,13 @@
-"use client";
-
-import { useState, useRef, useEffect } from "react";
 import { Wrench, CheckCircle, Clock } from "lucide-react";
 import Image from "next/image";
-import { useTranslation } from "@/i18n/useTranslation";
+import { getDictionary, type Locale } from "@/i18n/server";
 
 const maintenancePackages = [
   {
     id: "bronce",
     price: "35 €",
     color: "text-[#CD7F32]",
+    textColor: "text-[#A0612A]",
     bgColor: "bg-[#CD7F32]",
     borderColor: "border-[#CD7F32]",
   },
@@ -17,6 +15,7 @@ const maintenancePackages = [
     id: "plata",
     price: "50 €",
     color: "text-slate-500",
+    textColor: "text-slate-500",
     bgColor: "bg-slate-500",
     borderColor: "border-slate-500",
   },
@@ -24,6 +23,7 @@ const maintenancePackages = [
     id: "gold",
     price: "100€",
     color: "text-amber-500",
+    textColor: "text-amber-700",
     bgColor: "bg-amber-500",
     borderColor: "border-amber-500",
   },
@@ -31,6 +31,7 @@ const maintenancePackages = [
     id: "platinum",
     price: "300€",
     color: "text-gray-800",
+    textColor: "text-gray-800",
     bgColor: "bg-gray-800",
     borderColor: "border-gray-800",
   },
@@ -41,6 +42,7 @@ const cleaningPackages = [
     id: "transmision",
     price: "15 €",
     color: "text-blue-500",
+    textColor: "text-blue-600",
     bgColor: "bg-blue-500",
     borderColor: "border-blue-500",
   },
@@ -48,34 +50,16 @@ const cleaningPackages = [
     id: "completa",
     price: "20 €",
     color: "text-emerald-500",
+    textColor: "text-emerald-700",
     bgColor: "bg-emerald-500",
     borderColor: "border-emerald-500",
   },
 ];
 
-export function ReparacionesPage() {
-  const { t } = useTranslation();
-  const [selectedTier, setSelectedTier] = useState<string | null>(null);
-  const panelRef = useRef<HTMLDivElement>(null);
-
-  const [selectedCleaning, setSelectedCleaning] = useState<string | null>(null);
-  const cleaningPanelRef = useRef<HTMLDivElement>(null);
-
-  useEffect(() => {
-    if (selectedTier && panelRef.current) {
-      setTimeout(() => {
-        panelRef.current?.scrollIntoView({ behavior: "smooth", block: "start" });
-      }, 50);
-    }
-  }, [selectedTier]);
-
-  useEffect(() => {
-    if (selectedCleaning && cleaningPanelRef.current) {
-      setTimeout(() => {
-        cleaningPanelRef.current?.scrollIntoView({ behavior: "smooth", block: "start" });
-      }, 50);
-    }
-  }, [selectedCleaning]);
+export function ReparacionesPage({ lang }: { lang: Locale }) {
+  const t = getDictionary(lang);
+  // Nota: los bloques «VERSIÓN FUTURA» comentados usan estado (selectedTier, selectedCleaning);
+  // al reactivarlos, muévelos a un componente hijo con "use client".
 
   return (
     <div>
@@ -105,7 +89,7 @@ export function ReparacionesPage() {
                 className="flex flex-col border border-gray-100 rounded-2xl overflow-hidden hover:shadow-lg transition-shadow bg-white"
               >
                 <div className={`px-5 py-4 flex items-center justify-between border-b ${pkg.borderColor} border-opacity-30`}>
-                  <span className={`font-bold text-lg ${pkg.color}`}>{pkgData.name}</span>
+                  <span className={`font-bold text-lg ${pkg.textColor}`}>{pkgData.name}</span>
                   <span className="font-bold text-[#0E0E12] text-xl">{pkg.price}</span>
                 </div>
                 <div className="p-5 flex-1 flex flex-col">
@@ -119,7 +103,7 @@ export function ReparacionesPage() {
                   </ul>
                   {'note' in pkgData && pkgData.note && (
                     <div className="mt-6 pt-4 border-t border-gray-100">
-                      <p className="text-xs text-gray-400 leading-relaxed">{pkgData.note}</p>
+                      <p className="text-xs text-gray-500 leading-relaxed">{pkgData.note}</p>
                     </div>
                   )}
 
@@ -158,7 +142,7 @@ export function ReparacionesPage() {
                       </div>
                       <button
                         onClick={() => setSelectedTier(null)}
-                        className="text-gray-400 hover:text-gray-700 text-sm font-medium transition-colors"
+                        className="text-gray-500 hover:text-gray-700 text-sm font-medium transition-colors"
                       >
                         {t.reparaciones.expandedView.closePanel}
                       </button>
@@ -166,7 +150,7 @@ export function ReparacionesPage() {
                     <div className="space-y-16">
                       {[1, 2, 3, 4, 5].map((step) => (
                         <div key={step} className="grid md:grid-cols-2 gap-8 lg:gap-16 items-center">
-                          <div className={`aspect-[4/3] rounded-2xl bg-gray-50 border-2 border-dashed border-gray-200 flex flex-col items-center justify-center text-gray-400 shadow-inner ${step % 2 === 0 ? 'md:order-last' : ''}`}>
+                          <div className={`aspect-[4/3] rounded-2xl bg-gray-50 border-2 border-dashed border-gray-200 flex flex-col items-center justify-center text-gray-500 shadow-inner ${step % 2 === 0 ? 'md:order-last' : ''}`}>
                             <span className="text-lg font-bold uppercase tracking-widest mb-2">{t.reparaciones.expandedView.photo} {step}</span>
                             <span className="text-sm">{t.reparaciones.expandedView.size}</span>
                           </div>
@@ -198,7 +182,7 @@ export function ReparacionesPage() {
             rel="noopener noreferrer"
             className="flex items-center justify-center gap-2 bg-[#25D366] hover:bg-[#20bd5a] text-[#0E0E12] px-8 py-3.5 rounded-xl font-bold transition-all shadow-md hover:shadow-lg"
           >
-            <Image src="/whatsapp-glyph-black.svg" alt="WhatsApp" width={20} height={20} />
+            <Image src="/whatsapp-glyph-black.svg" alt="" width={20} height={20} />
             {t.reparaciones.plans.btnWa}
           </a>
         </div>
@@ -215,7 +199,7 @@ export function ReparacionesPage() {
                   className="flex flex-col border border-gray-100 rounded-2xl overflow-hidden hover:shadow-lg transition-shadow bg-white"
                 >
                   <div className={`px-5 py-4 flex items-center justify-between border-b ${pkg.borderColor} border-opacity-30`}>
-                    <span className={`font-bold text-lg ${pkg.color}`}>{pkgData.name}</span>
+                    <span className={`font-bold text-lg ${pkg.textColor}`}>{pkgData.name}</span>
                     <span className="font-bold text-[#0E0E12] text-xl">{pkg.price}</span>
                   </div>
                   <div className="p-5 flex-1 flex flex-col">
@@ -263,7 +247,7 @@ export function ReparacionesPage() {
                         </div>
                         <button
                           onClick={() => setSelectedCleaning(null)}
-                          className="text-gray-400 hover:text-gray-700 text-sm font-medium transition-colors cursor-pointer"
+                          className="text-gray-500 hover:text-gray-700 text-sm font-medium transition-colors cursor-pointer"
                         >
                           {t.reparaciones.expandedView.closePanel}
                         </button>
@@ -271,7 +255,7 @@ export function ReparacionesPage() {
                       <div className="space-y-16">
                         {[1, 2, 3].map((step) => (
                           <div key={step} className="grid md:grid-cols-2 gap-8 lg:gap-16 items-center">
-                            <div className={`aspect-[4/3] rounded-2xl bg-gray-50 border-2 border-dashed border-gray-200 flex flex-col items-center justify-center text-gray-400 shadow-inner ${step % 2 === 0 ? 'md:order-last' : ''}`}>
+                            <div className={`aspect-[4/3] rounded-2xl bg-gray-50 border-2 border-dashed border-gray-200 flex flex-col items-center justify-center text-gray-500 shadow-inner ${step % 2 === 0 ? 'md:order-last' : ''}`}>
                               <span className="text-lg font-bold uppercase tracking-widest mb-2">{t.reparaciones.expandedView.photo} {step}</span>
                               <span className="text-sm">{t.reparaciones.expandedView.size}</span>
                             </div>
@@ -304,7 +288,7 @@ export function ReparacionesPage() {
             rel="noopener noreferrer"
             className="flex items-center justify-center gap-2 bg-[#25D366] hover:bg-[#20bd5a] text-[#0E0E12] px-8 py-3.5 rounded-xl font-bold transition-all shadow-md hover:shadow-lg"
           >
-            <Image src="/whatsapp-glyph-black.svg" alt="WhatsApp" width={20} height={20} />
+            <Image src="/whatsapp-glyph-black.svg" alt="" width={20} height={20} />
             {t.reparaciones.plans.btnWa}
           </a>
         </div>

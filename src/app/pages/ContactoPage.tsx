@@ -1,12 +1,11 @@
-"use client";
-
 import { MapPin, Phone, Clock, Mail, Instagram, Facebook } from "lucide-react";
 import Image from "next/image";
-import { useTranslation } from "@/i18n/useTranslation";
+import { getDictionary, type Locale } from "@/i18n/server";
+import { imageAlts } from "@/i18n/alts";
 import { GoogleMapsConsent } from "@/app/components/GoogleMapsConsent";
 
-export function ContactoPage() {
-  const { t } = useTranslation();
+export function ContactoPage({ lang }: { lang: Locale }) {
+  const t = getDictionary(lang);
 
   const hours = [
     { day: t.contacto.weekdays, time: "09:00 – 20:00" },
@@ -32,11 +31,14 @@ export function ContactoPage() {
           {/* Foto del taller */}
           <div className="rounded-2xl overflow-hidden border border-white/10 shadow-2xl max-w-sm mx-auto w-full">
             <Image 
-              src="/dondeEstamos/taller.jpg" 
-              alt="Taller de bicicletas" 
+              src="/dondeEstamos/taller.jpg"
+              alt={imageAlts[lang].shop}
               width={1200}
-              height={900}
-              className="w-full h-auto" 
+              height={1600}
+              sizes="(max-width: 448px) 100vw, 384px"
+              className="w-full h-auto"
+              preload
+              fetchPriority="high"
             />
           </div>
         </div>
@@ -52,7 +54,7 @@ export function ContactoPage() {
               content={
                 <>
                   <p>Avenida Lopez de Mena nº 14</p>
-                  <p className="text-gray-400 text-sm">29670 San Pedro Alcántara, Marbella</p>
+                  <p className="text-gray-500 text-sm">29670 San Pedro Alcántara, Marbella</p>
                 </>
               }
             />
@@ -97,7 +99,7 @@ export function ContactoPage() {
                 rel="noopener noreferrer"
                 className="flex items-center justify-center gap-3 bg-[#25D366] hover:bg-[#20bd5a] text-[#0E0E12] w-full py-4 rounded-xl font-bold transition-all shadow-md hover:shadow-lg text-lg"
               >
-                <Image src="/whatsapp-glyph-black.svg" alt="WhatsApp" width={24} height={24} />
+                <Image src="/whatsapp-glyph-black.svg" alt="" width={24} height={24} />
                 {t.contacto.waBtn}
               </a>
             </div>
@@ -146,7 +148,7 @@ function InfoCard({
         {icon}
       </div>
       <div className="flex-1">
-        <p className="text-xs font-medium text-gray-400 uppercase tracking-wider mb-1.5">{title}</p>
+        <p className="text-xs font-medium text-gray-500 uppercase tracking-wider mb-1.5">{title}</p>
         <div className="text-gray-700 text-sm">{content}</div>
       </div>
     </div>

@@ -1,10 +1,9 @@
-"use client";
-
-import { Bike, ChevronRight, ChevronLeft } from "lucide-react";
-import { useTranslation } from "@/i18n/useTranslation";
+import { Bike } from "lucide-react";
+import { getDictionary, type Locale } from "@/i18n/server";
+import { imageAlts } from "@/i18n/alts";
 import Link from "next/link";
 import Image from "next/image";
-import { useState, useEffect } from "react";
+import { HoverCarousel } from "@/app/components/HoverCarousel";
 
 const models = [
   {
@@ -12,6 +11,7 @@ const models = [
     name: "Woom Go 1",
     wheel: '12"',
     color: "#EAB308",
+    textColor: "#854D0E",
     images: [
       "/woom/woom_go_1/woom_go_1_1.avif",
       "/woom/woom_go_1/woom_go_1_2.avif",
@@ -30,6 +30,7 @@ const models = [
     name: "Woom Go 2",
     wheel: '14"',
     color: "#3B82F6",
+    textColor: "#1D4ED8",
     images: [
       "/woom/woom_go_2/woom_go_2_1.avif",
       "/woom/woom_go_2/woom_go_2_2.avif",
@@ -49,6 +50,7 @@ const models = [
     name: "Woom Go 3",
     wheel: '16"',
     color: "#EC4899",
+    textColor: "#BE185D",
     images: [
       "/woom/woom_go_3/woom_go_3_1.avif",
       "/woom/woom_go_3/woom_go_3_2.avif",
@@ -70,6 +72,7 @@ const models = [
     name: "Woom Go 4",
     wheel: '20"',
     color: "#EF4444",
+    textColor: "#B91C1C",
     images: [
       "/woom/woom_go_4/woom_go_4_1.avif",
       "/woom/woom_go_4/woom_go_4_2.avif",
@@ -89,87 +92,8 @@ const models = [
   },
 ];
 
-function HoverCarousel({ images, alt }: { images: string[], alt: string }) {
-  const [currentIndex, setCurrentIndex] = useState(0);
-  const [isHovered, setIsHovered] = useState(false);
-  const [isPaused, setIsPaused] = useState(false);
-
-  useEffect(() => {
-    if (!isHovered || isPaused || images.length <= 1) return;
-
-    const interval = setInterval(() => {
-      setCurrentIndex((prev) => (prev + 1) % images.length);
-    }, 1200); // Cambia de foto cada 1.2 segundos
-
-    return () => clearInterval(interval);
-  }, [isHovered, isPaused, images.length]);
-
-  const goToPrev = (e: React.MouseEvent) => {
-    e.preventDefault();
-    e.stopPropagation();
-    setIsPaused(true);
-    setCurrentIndex((prev) => (prev - 1 + images.length) % images.length);
-  };
-
-  const goToNext = (e: React.MouseEvent) => {
-    e.preventDefault();
-    e.stopPropagation();
-    setIsPaused(true);
-    setCurrentIndex((prev) => (prev + 1) % images.length);
-  };
-
-  return (
-    <div
-      className="relative w-full h-full cursor-pointer flex items-center justify-center group/carousel"
-      onMouseEnter={() => setIsHovered(true)}
-      onMouseLeave={() => {
-        setIsHovered(false);
-        setIsPaused(false);
-        setCurrentIndex(0); // Vuelve a la primera foto al quitar el ratón
-      }}
-    >
-      <Image
-        src={images[currentIndex]}
-        alt={alt}
-        fill
-        sizes="(max-width: 768px) 100vw, 50vw"
-        className="object-contain transition-transform duration-500 hover:scale-105 drop-shadow-md p-4"
-      />
-      {images.length > 1 && (
-        <>
-          {/* Flechas */}
-          <button
-            onClick={goToPrev}
-            className="absolute left-2 md:left-4 top-1/2 -translate-y-1/2 w-8 h-8 md:w-10 md:h-10 bg-white/80 hover:bg-white rounded-full flex items-center justify-center shadow-md text-gray-800 opacity-0 group-hover/carousel:opacity-100 transition-opacity z-10"
-            aria-label="Foto anterior"
-          >
-            <ChevronLeft size={20} />
-          </button>
-          <button
-            onClick={goToNext}
-            className="absolute right-2 md:right-4 top-1/2 -translate-y-1/2 w-8 h-8 md:w-10 md:h-10 bg-white/80 hover:bg-white rounded-full flex items-center justify-center shadow-md text-gray-800 opacity-0 group-hover/carousel:opacity-100 transition-opacity z-10"
-            aria-label="Siguiente foto"
-          >
-            <ChevronRight size={20} />
-          </button>
-
-          {/* Dots */}
-          <div className="absolute bottom-4 left-0 right-0 flex justify-center gap-2">
-            {images.map((_, i) => (
-              <div
-                key={i}
-                className={`h-2 rounded-full transition-all duration-300 ${i === currentIndex ? 'w-6 bg-[#A78BFA]' : 'w-2 bg-gray-300'}`}
-              />
-            ))}
-          </div>
-        </>
-      )}
-    </div>
-  );
-}
-
-export function WoomPage() {
-  const { t } = useTranslation();
+export function WoomPage({ lang }: { lang: Locale }) {
+  const t = getDictionary(lang);
 
   return (
     <div>
@@ -195,7 +119,7 @@ export function WoomPage() {
               className="inline-flex items-center gap-2 bg-[#25D366] hover:bg-[#20bd5a] text-[#0E0E12] px-6 py-3.5 rounded-lg font-bold transition-all shadow-md hover:shadow-lg mt-2"
             >
               {/* WhatsApp Icon */}
-              <Image src="/whatsapp-glyph-black.svg" alt="WhatsApp" width={20} height={20} />
+              <Image src="/whatsapp-glyph-black.svg" alt="" width={20} height={20} />
               {t.woom.header.cta}
             </a>
           </div>
@@ -204,19 +128,19 @@ export function WoomPage() {
             {/* Imagen Principal (Izquierda, doble altura) */}
             <div className="col-span-1 row-span-2 rounded-[2rem] overflow-hidden relative shadow-lg">
               {/* Image optimized */}
-              <Image src="/woom/woom_0.jpeg" alt="Woom 1" fill sizes="(max-width: 768px) 100vw, 50vw" className="object-cover" priority />
+              <Image src="/woom/woom_0.jpeg" alt={imageAlts[lang].woom1} fill sizes="(max-width: 768px) 50vw, 288px" className="object-cover" preload fetchPriority="high" />
             </div>
 
             {/* Imagen 2 (Arriba Derecha) */}
             <div className="col-span-1 row-span-1 rounded-[2rem] overflow-hidden relative shadow-lg">
               {/* Image optimized */}
-              <Image src="/woom/woom_0_1.jpeg" alt="Woom 2" fill sizes="(max-width: 768px) 100vw, 25vw" className="object-cover" priority />
+              <Image src="/woom/woom_0_1.jpeg" alt={imageAlts[lang].woom2} fill sizes="(max-width: 768px) 50vw, 288px" className="object-cover" />
             </div>
 
             {/* Imagen 3 (Abajo Derecha) */}
             <div className="col-span-1 row-span-1 rounded-[2rem] overflow-hidden relative shadow-lg">
               {/* Image optimized */}
-              <Image src="/woom/Sin título.jpeg" alt="Woom 3" fill sizes="(max-width: 768px) 100vw, 25vw" className="object-cover" priority />
+              <Image src="/woom/woom_0_2.jpeg" alt={imageAlts[lang].woom3} fill sizes="(max-width: 768px) 50vw, 288px" className="object-cover" />
             </div>
           </div>
         </div>
@@ -248,16 +172,16 @@ export function WoomPage() {
                   <div className="flex items-center gap-3">
                     <span
                       className="inline-flex items-center justify-center px-4 py-1.5 rounded-full text-sm font-bold shadow-sm"
-                      style={{ backgroundColor: model.color + '20', color: model.color }}
+                      style={{ backgroundColor: model.color + '20', color: model.textColor }}
                     >
                       {modelData.type}
                     </span>
-                    <span className="text-sm font-semibold text-gray-400 border border-gray-200 px-3 py-1 rounded-full">
+                    <span className="text-sm font-semibold text-gray-500 border border-gray-200 px-3 py-1 rounded-full">
                       {model.wheel}
                     </span>
                   </div>
 
-                  <h2 className="text-4xl md:text-5xl font-extrabold text-[#0E0E12] tracking-tight">{model.name}</h2>
+                  <h3 className="text-4xl md:text-5xl font-extrabold text-[#0E0E12] tracking-tight">{model.name}</h3>
 
                   <div className="space-y-4">
                     <p className="text-lg font-medium text-[#0E0E12]">

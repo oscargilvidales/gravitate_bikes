@@ -1,10 +1,8 @@
-"use client";
-
 import { Shield } from "lucide-react";
-import { useTranslation } from "@/i18n/useTranslation";
+import { getDictionary, type Locale } from "@/i18n/server";
 
-export function PrivacidadPage() {
-  const { t } = useTranslation();
+export function PrivacidadPage({ lang }: { lang: Locale }) {
+  const t = getDictionary(lang);
   const p = t.privacidad;
 
   return (
@@ -48,7 +46,7 @@ export function PrivacidadPage() {
                 href="https://policies.google.com/privacy"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-sm text-[#A78BFA] hover:underline mt-2 inline-block"
+                className="text-sm text-[#7C3AED] hover:underline mt-2 inline-block"
               >
                 {p.s2.googleLink}
               </a>
@@ -78,7 +76,7 @@ export function PrivacidadPage() {
             <p className="text-gray-600 leading-relaxed mb-3">{p.s5.body}</p>
             <a
               href={`mailto:gravitatebikes@gmail.com`}
-              className="inline-flex items-center gap-1.5 text-[#A78BFA] font-medium text-sm hover:underline"
+              className="inline-flex items-center gap-1.5 text-[#7C3AED] font-medium text-sm hover:underline"
             >
               gravitatebikes@gmail.com
             </a>
@@ -91,7 +89,7 @@ export function PrivacidadPage() {
 
           {/* Divider + back link */}
           <div className="border-t border-gray-100 pt-8 text-center">
-            <p className="text-gray-400 text-sm">{p.footer}</p>
+            <p className="text-gray-500 text-sm">{p.footer}</p>
           </div>
         </div>
       </div>
@@ -131,7 +129,7 @@ function InfoTable({ rows }: { rows: { label: string; value: string }[] }) {
             i % 2 === 0 ? "bg-gray-50" : "bg-white"
           }`}
         >
-          <span className="text-xs font-semibold text-gray-400 uppercase tracking-wider sm:w-36 shrink-0">
+          <span className="text-xs font-semibold text-gray-500 uppercase tracking-wider sm:w-36 shrink-0">
             {label}
           </span>
           <span className="text-sm text-gray-700">{value}</span>
