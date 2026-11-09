@@ -9,12 +9,7 @@ export async function generateMetadata({
   params: Promise<{ lang: string }>;
 }): Promise<Metadata> {
   const { lang } = await params;
-  return {
-    title: "Alquiler de Bicicletas",
-    description:
-      "Alquila tu bicicleta de paseo o eléctrica en Gravitate Bikes. Tarifas por horas, medio día o día completo en San Pedro Alcántara.",
-    ...localizedMetadata(lang, "/alquiler"),
-  };
+  return localizedMetadata(lang, "/alquiler");
 }
 
 export default async function Page({

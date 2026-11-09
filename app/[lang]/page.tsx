@@ -9,12 +9,7 @@ export async function generateMetadata({
   params: Promise<{ lang: string }>;
 }): Promise<Metadata> {
   const { lang } = await params;
-  return {
-    title: "Inicio",
-    description:
-      "Taller con servicio de alquiler de bicicletas para pasear por Marbella.",
-    ...localizedMetadata(lang, ""),
-  };
+  return localizedMetadata(lang, "");
 }
 
 export default async function Page({

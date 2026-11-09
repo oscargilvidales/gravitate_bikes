@@ -1,4 +1,6 @@
 import type { Metadata } from "next";
+import { pageMeta } from "./meta";
+import { imageAlts } from "./alts";
 
 /** Dominio canónico: sin www, https, sin barra final en las rutas. */
 export const SITE_URL = "https://gravitatebikes.com";
@@ -42,11 +44,19 @@ export function languageAlternates(path: PagePath): Record<string, string> {
   return languages;
 }
 
-/** Canonical, hreflang y Open Graph (url + locale) para una página localizada. */
+export const OG_IMAGE = { url: "/og/gravitate-bikes.jpg", width: 1200, height: 630 };
+
+/** Título, descripción, canonical, hreflang, Open Graph y tarjeta de X para una página localizada. */
 export function localizedMetadata(lang: string, path: PagePath): Metadata {
   const locale: SiteLocale = isLocale(lang) ? lang : defaultLocale;
   const url = localizedUrl(locale, path);
+  const { title, description } = pageMeta[locale][path];
+  // La home lleva la marca en su propio título; las subpáginas usan la plantilla "%s | Gravitate Bikes".
+  const socialTitle = path === "" ? title : `${title} | Gravitate Bikes`;
+  const image = { ...OG_IMAGE, alt: imageAlts[locale].home };
   return {
+    title: path === "" ? { absolute: title } : title,
+    description,
     alternates: {
       canonical: url,
       languages: languageAlternates(path),
@@ -55,8 +65,17 @@ export function localizedMetadata(lang: string, path: PagePath): Metadata {
       siteName: "Gravitate Bikes",
       type: "website",
       url,
+      title: socialTitle,
+      description,
+      images: [image],
       locale: ogLocales[locale],
       alternateLocale: locales.filter((l) => l !== locale).map((l) => ogLocales[l]),
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: socialTitle,
+      description,
+      images: [image],
     },
   };
 }

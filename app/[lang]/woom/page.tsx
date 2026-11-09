@@ -9,12 +9,7 @@ export async function generateMetadata({
   params: Promise<{ lang: string }>;
 }): Promise<Metadata> {
   const { lang } = await params;
-  return {
-    title: "Bicicletas woom – Distribuidor Oficial",
-    description:
-      "Distribuidor oficial de bicicletas woom en San Pedro Alcántara. Las mejores bicis infantiles del mundo, ligeras y seguras para cada etapa del crecimiento.",
-    ...localizedMetadata(lang, "/woom"),
-  };
+  return localizedMetadata(lang, "/woom");
 }
 
 export default async function Page({

@@ -8,6 +8,8 @@ import { SpeedInsights } from '@vercel/speed-insights/next';
 import { Analytics } from '@vercel/analytics/next';
 import { SITE_URL, locales } from "@/i18n/seo";
 import { imageAlts } from "@/i18n/alts";
+import { bikeStoreJsonLd } from "@/i18n/structuredData";
+import { toLocale } from "@/i18n/server";
 
 // Inter variable (pesos 100-900 en un solo archivo) con el eje opsz que ya usaba la web.
 const inter = Inter({
@@ -50,6 +52,11 @@ export default async function RootLayout({
   return (
     <html lang={lang} className={inter.variable}>
       <body>
+        <script
+          type="application/ld+json"
+          // "<" escapado para que el JSON no pueda cerrar la etiqueta <script>
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(bikeStoreJsonLd(toLocale(lang))).replace(/</g, "\\u003c") }}
+        />
         <div className="min-h-screen flex flex-col bg-white">
           <Navbar lang={lang} labels={dict.nav} a11y={imageAlts[lang as keyof typeof imageAlts] ?? imageAlts.es} />
           <main className="flex-1">{children}</main>

@@ -9,12 +9,7 @@ export async function generateMetadata({
   params: Promise<{ lang: string }>;
 }): Promise<Metadata> {
   const { lang } = await params;
-  return {
-    title: "Política de Privacidad",
-    description:
-      "Consulta la política de privacidad de Gravitate Bikes. Información sobre el uso de datos, cookies y comunicaciones vía WhatsApp.",
-    ...localizedMetadata(lang, "/privacidad"),
-  };
+  return localizedMetadata(lang, "/privacidad");
 }
 
 export default async function Page({
