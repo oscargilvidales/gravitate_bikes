@@ -5,6 +5,9 @@ import type { NextConfig } from "next";
 const publicAssetCache = "public, max-age=2592000, stale-while-revalidate=86400";
 
 const nextConfig: NextConfig = {
+  // URLs sin barra final: /es/contacto/ redirige (308) a /es/contacto. Es el valor por defecto,
+  // pero se deja explícito porque sitemap, canonical y hreflang se generan sin barra.
+  trailingSlash: false,
   images: {
     formats: ["image/avif", "image/webp"],
     // Las variantes optimizadas se guardan 31 días en la caché de imágenes de Vercel.
