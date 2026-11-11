@@ -43,6 +43,14 @@ export async function QuienesSomosPage({ lang }: { lang: Locale }) {
         </div>
       </section>
 
+      {/* Nuestra historia: trayectoria de Gabriel antes de Gravitate */}
+      <section className="pb-16 px-4 max-w-6xl mx-auto">
+        <div className="max-w-3xl">
+          <h2 className="text-[#0E0E12] text-2xl font-bold mb-4">{t.quienesSomos.header.title}</h2>
+          <p className="text-gray-600 leading-relaxed">{t.quienesSomos.historia.text}</p>
+        </div>
+      </section>
+
       {/* Values */}
       <section className="bg-gray-50 py-16 px-4">
         <div className="max-w-6xl mx-auto">

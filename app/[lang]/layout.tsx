@@ -59,7 +59,7 @@ export default async function RootLayout({
           <script
             type="application/ld+json"
             // "<" escapado para que el JSON no pueda cerrar la etiqueta <script>
-            dangerouslySetInnerHTML={{ __html: JSON.stringify(bikeStoreJsonLd(lang, dict.meta.home.description)).replace(/</g, "\\u003c") }}
+            dangerouslySetInnerHTML={{ __html: JSON.stringify(bikeStoreJsonLd(lang, dict.meta.home.description, dict.jsonLd.founder)).replace(/</g, "\\u003c") }}
           />
           <div className="min-h-screen flex flex-col bg-white">
             <Navbar lang={lang} labels={dict.nav} a11y={dict.alts} />

@@ -32,7 +32,8 @@
         "title": "Cleaning Service",
         "desc": "Make it look like new. Drivetrain cleaning for 15€ and full bike cleaning for 20€.",
         "btn": "Request appointment"
-      }
+      },
+      "founderLine": "Gabriel, formerly at Yep Bike and Bike Base"
     },
     "whyUs": {
       "title": "Why choose us?",
@@ -262,6 +263,9 @@
       "cup": "Downhill Cup (ESP & PT)",
       "fac": "Official Cycling Instructor",
       "cupValue": "1st"
+    },
+    "historia": {
+      "text": "Gabriel has spent years in the local cycling scene. Before opening Gravitate, he was a key member of the team at Yep Bike and Bike Base, where many customers got to know him. Now he offers the same service in his own shop."
     }
   },
   "contacto": {
@@ -507,5 +511,11 @@
     "menuClose": "Close menu",
     "language": "Language",
     "mainNav": "Main navigation"
+  },
+  "jsonLd": {
+    "founder": {
+      "jobTitle": "Mechanic and founder",
+      "description": "Mechanic and founder of Gravitate Bikes. Before opening Gravitate, he spent years as part of the team at Yep Bike and Bike Base."
+    }
   }
 }

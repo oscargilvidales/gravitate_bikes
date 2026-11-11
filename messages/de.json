@@ -32,7 +32,8 @@
         "title": "Reinigungsservice",
         "desc": "Wieder wie neu. Antriebsreinigung für 15 € und vollständige Fahrradreinigung für 20 €.",
         "btn": "Termin anfragen"
-      }
+      },
+      "founderLine": "Gabriel, früher bei Yep Bike und Bike Base"
     },
     "whyUs": {
       "title": "Warum uns wählen?",
@@ -262,6 +263,9 @@
       "cup": "Downhill-Cup (ESP & PT)",
       "fac": "Offizieller Radsport-Instructor",
       "cupValue": "1. Platz"
+    },
+    "historia": {
+      "text": "Gabriel ist seit Jahren in der Fahrradszene der Region zu Hause. Bevor er Gravitate eröffnete, war er ein wichtiger Teil des Teams von Yep Bike und Bike Base, wo ihn viele Kunden kennengelernt haben. Heute bietet er denselben Service in seinem eigenen Laden an."
     }
   },
   "contacto": {
@@ -507,5 +511,11 @@
     "menuClose": "Menü schließen",
     "language": "Sprache",
     "mainNav": "Hauptnavigation"
+  },
+  "jsonLd": {
+    "founder": {
+      "jobTitle": "Mechaniker und Gründer",
+      "description": "Mechaniker und Gründer von Gravitate Bikes. Bevor er Gravitate eröffnete, war er jahrelang Teil des Teams von Yep Bike und Bike Base."
+    }
   }
 }

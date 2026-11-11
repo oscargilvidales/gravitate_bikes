@@ -70,6 +70,11 @@ export async function HomePage({ lang }: { lang: Locale }) {
             linkLabel={t.home.services.clean.btn}
           />
         </div>
+        <p className="mt-10 text-center text-sm text-gray-500">
+          <Link href="/quienes-somos" className="underline underline-offset-2 hover:text-[#7C3AED] transition-colors">
+            {t.home.services.founderLine}
+          </Link>
+        </p>
       </section>
       {/* CTA */}
       <section className="py-20 px-4">

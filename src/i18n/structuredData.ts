@@ -1,10 +1,14 @@
 import { OG_IMAGE, SITE_URL, localizedUrl, type SiteLocale } from "./seo";
 
+type Founder = { jobTitle: string; description: string };
+
 /**
- * Datos estructurados (schema.org BikeStore) del negocio.
- * Solo datos publicados en la web: dirección, teléfono, email, horario e Instagram.
+ * Datos estructurados (schema.org BikeStore; "BicycleStore" no existe en schema.org) del negocio.
+ * Solo datos publicados en la web: dirección, teléfono, email, horario, Instagram y fundador.
+ * Yep Bike y Bike Base solo se citan en la descripción del fundador (trabajó allí): no son
+ * alternateName ni sameAs de Gravitate, que es otra tienda.
  */
-export function bikeStoreJsonLd(lang: SiteLocale, description: string) {
+export function bikeStoreJsonLd(lang: SiteLocale, description: string, founder: Founder) {
   return {
     "@context": "https://schema.org",
     "@type": "BikeStore",
@@ -29,5 +33,14 @@ export function bikeStoreJsonLd(lang: SiteLocale, description: string) {
       { "@type": "OpeningHoursSpecification", dayOfWeek: "Sunday", opens: "10:00", closes: "20:00" },
     ],
     sameAs: ["https://instagram.com/gravitatebikes"],
+    founder: {
+      "@type": "Person",
+      "@id": `${SITE_URL}/#gabriel`,
+      name: "Gabriel Sarria",
+      jobTitle: founder.jobTitle,
+      description: founder.description,
+      image: `${SITE_URL}/about/gabriel-sarria.jpg`,
+      url: localizedUrl(lang, "/quienes-somos"),
+    },
   };
 }
