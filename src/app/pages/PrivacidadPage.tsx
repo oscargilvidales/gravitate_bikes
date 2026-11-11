@@ -1,8 +1,8 @@
 import { Shield } from "lucide-react";
 import { getDictionary, type Locale } from "@/i18n/server";
 
-export function PrivacidadPage({ lang }: { lang: Locale }) {
-  const t = getDictionary(lang);
+export async function PrivacidadPage({ lang }: { lang: Locale }) {
+  const t = await getDictionary(lang);
   const p = t.privacidad;
 
   return (

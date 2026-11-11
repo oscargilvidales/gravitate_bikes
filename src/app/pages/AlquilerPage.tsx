@@ -2,8 +2,8 @@ import { Bike, Zap, Clock } from "lucide-react";
 import Image from "next/image";
 import { getDictionary, type Locale } from "@/i18n/server";
 
-export function AlquilerPage({ lang }: { lang: Locale }) {
-  const t = getDictionary(lang);
+export async function AlquilerPage({ lang }: { lang: Locale }) {
+  const t = await getDictionary(lang);
 
   return (
     <div>

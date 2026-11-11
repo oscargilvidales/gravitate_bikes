@@ -1,6 +1,5 @@
 import { Bike } from "lucide-react";
 import { getDictionary, type Locale } from "@/i18n/server";
-import { imageAlts } from "@/i18n/alts";
 import Link from "next/link";
 import Image from "next/image";
 import { HoverCarousel } from "@/app/components/HoverCarousel";
@@ -92,8 +91,8 @@ const models = [
   },
 ];
 
-export function WoomPage({ lang }: { lang: Locale }) {
-  const t = getDictionary(lang);
+export async function WoomPage({ lang }: { lang: Locale }) {
+  const t = await getDictionary(lang);
 
   return (
     <div>
@@ -128,19 +127,19 @@ export function WoomPage({ lang }: { lang: Locale }) {
             {/* Imagen Principal (Izquierda, doble altura) */}
             <div className="col-span-1 row-span-2 rounded-[2rem] overflow-hidden relative shadow-lg">
               {/* Image optimized */}
-              <Image src="/woom/woom_0.jpeg" alt={imageAlts[lang].woom1} fill sizes="(max-width: 768px) 50vw, 288px" className="object-cover" preload fetchPriority="high" />
+              <Image src="/woom/woom_0.jpeg" alt={t.alts.woom1} fill sizes="(max-width: 768px) 50vw, 288px" className="object-cover" preload fetchPriority="high" />
             </div>
 
             {/* Imagen 2 (Arriba Derecha) */}
             <div className="col-span-1 row-span-1 rounded-[2rem] overflow-hidden relative shadow-lg">
               {/* Image optimized */}
-              <Image src="/woom/woom_0_1.jpeg" alt={imageAlts[lang].woom2} fill sizes="(max-width: 768px) 50vw, 288px" className="object-cover" />
+              <Image src="/woom/woom_0_1.jpeg" alt={t.alts.woom2} fill sizes="(max-width: 768px) 50vw, 288px" className="object-cover" />
             </div>
 
             {/* Imagen 3 (Abajo Derecha) */}
             <div className="col-span-1 row-span-1 rounded-[2rem] overflow-hidden relative shadow-lg">
               {/* Image optimized */}
-              <Image src="/woom/woom_0_2.jpeg" alt={imageAlts[lang].woom3} fill sizes="(max-width: 768px) 50vw, 288px" className="object-cover" />
+              <Image src="/woom/woom_0_2.jpeg" alt={t.alts.woom3} fill sizes="(max-width: 768px) 50vw, 288px" className="object-cover" />
             </div>
           </div>
         </div>

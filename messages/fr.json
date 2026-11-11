@@ -1,0 +1,521 @@
+{
+  "nav": {
+    "inicio": "Accueil",
+    "alquiler": "Locations",
+    "reparaciones": "Réparations",
+    "woom": "Vélos Enfants Woom",
+    "quienesSomos": "À propos",
+    "contacto": "Contact"
+  },
+  "home": {
+    "hero": {
+      "location": "San Pedro Alcántara · Marbella",
+      "title1": "Visitez Marbella",
+      "title2": "à vélo",
+      "btnRent": "Voir les tarifs de location",
+      "btnRepair": "Réparations"
+    },
+    "services": {
+      "title": "Profitez de Marbella d'une manière différente",
+      "subtitle": "Vélos de promenade et électriques à partir de 15€/jour. Explorez la promenade de Marbella à votre rythme, avec des prix clairs et un atelier sur place.",
+      "rent": {
+        "title": "Location de vélos à la journée",
+        "desc": "Des vélos confortables et légers, parfaits pour explorer la promenade à votre rythme.",
+        "btn": "Voir les tarifs"
+      },
+      "repair": {
+        "title": "Atelier de réparation",
+        "desc": "Réparations rapides et professionnelles. Crevaisons, freins, changements de vitesse, et bien plus encore.",
+        "btn": "Voir les services"
+      },
+      "clean": {
+        "title": "Service de nettoyage",
+        "desc": "Rendez-le comme neuf. Nettoyage de la transmission pour 15€ et nettoyage complet pour 20€.",
+        "btn": "Prendre rendez-vous"
+      },
+      "founderLine": "Gabriel, auparavant chez Bike Base"
+    },
+    "whyUs": {
+      "title": "Pourquoi nous choisir ?",
+      "subtitle": "Engagés pour votre expérience sur la promenade de San Pedro.",
+      "loc": {
+        "title": "Emplacement imbattable",
+        "desc": "Au cœur de la promenade de San Pedro Alcántara."
+      },
+      "hours": {
+        "title": "Ouvert tous les jours",
+        "desc": "Disponibles toute la saison pour que vous ne manquiez aucune balade."
+      },
+      "condition": {
+        "title": "Vélos en parfait état",
+        "desc": "Un entretien constant pour que votre expérience soit toujours sûre et confortable."
+      },
+      "ages": {
+        "title": "À partir de 15€ par jour",
+        "desc": "Des prix imbattables pour explorer Marbella à vélo. Sans surprises, sans frais cachés."
+      },
+      "fast": {
+        "title": "Atelier rapide",
+        "desc": "Réparations sur place pour ne pas perdre de temps et repartir rouler tout de suite."
+      },
+      "support": {
+        "title": "Attention personnalisée",
+        "desc": "Nous vous conseillons sur les itinéraires et vous recommandons la meilleure option selon vos besoins."
+      }
+    },
+    "cta": {
+      "title": "Prêt à rouler ?",
+      "subtitle": "Contactez-nous sans engagement ou réservez votre vélo dès maintenant.",
+      "btnWa": "Réserver via WhatsApp",
+      "btnLoc": "Où sommes-nous ?"
+    }
+  },
+  "alquiler": {
+    "header": {
+      "title": "Louez votre vélo",
+      "subtitle": "Choisissez entre nos vélos de ville et électriques pour profiter de la promenade à votre rythme."
+    },
+    "paseo": {
+      "title": "Vélo de ville",
+      "desc": "Confortable et léger, parfait pour explorer la promenade de San Pedro Alcántara. Comprend casque et cadenas.",
+      "priceDay": "Tarif journalier",
+      "priceDayDesc": "Location de 1 à 6 jours",
+      "priceWeek": "Tarif hebdomadaire (7+ jours)",
+      "priceWeekDesc": "Économisez 33%",
+      "note": "Comprend casque et cadenas. Le prix hebdomadaire s'applique à partir du 7ème jour consécutif."
+    },
+    "ebike": {
+      "title": "Vélos Électriques (E-bikes)",
+      "warning": "Pour louer des vélos électriques, une pièce d'identité/passeport original et une carte de crédit physique sont requis. La location est de 10h00 à 19h00. Si le vélo est rendu après 19h00, le jour suivant sera facturé.",
+      "aviso": "Avis important :",
+      "models": {
+        "basica": {
+          "title": "E-bike Basique",
+          "desc": "Parfait pour se déplacer sans effort dans la ville et sur la promenade. Batterie avec une bonne autonomie pour profiter de toute la journée.",
+          "rateDay": "Tarif journalier",
+          "priceStd": "Prix standard",
+          "perDay": "Par jour de location",
+          "day": "/ jour",
+          "includes": "Casque et antivol inclus.",
+          "btn": "Réserver par WhatsApp"
+        },
+        "premium": {
+          "badge": "Moteur Bosch",
+          "title": "E-bike Premium (Moteur Bosch)",
+          "desc": "Puissance et fiabilité maximales avec le moteur central Bosch. Idéal pour les longs trajets ou les terrains plus accidentés. Plus grande autonomie et confort supérieur.",
+          "rateDay": "Tarif journalier",
+          "rent1to4": "Location de 1 à 4 jours",
+          "priceStd": "Prix standard",
+          "day": "/ jour",
+          "promo": "Promotion !",
+          "rateReduced": "Tarif réduit (5 jours ou plus)",
+          "rent5plus": "Location de 5+ jours",
+          "pricePerDay": "Prix par jour",
+          "save": "Économisez",
+          "includes": "Casque et antivol inclus. Le prix promotionnel est obtenu en louant l'E-bike Bosch pendant 5 jours consécutifs ou plus.",
+          "btn": "Réserver par WhatsApp"
+        }
+      }
+    },
+    "info": {
+      "title": "Informations importantes",
+      "id": "Une pièce d'identité (Carte d'identité ou Passeport) est requise pour la location.",
+      "deposit": "Caution remboursable en espèces ou par carte lors de la récupération du vélo.",
+      "minors": "Les enfants de moins de 14 ans doivent être accompagnés d'un adulte.",
+      "rain": "En cas de pluie, veuillez vérifier les disponibilités et les conditions."
+    },
+    "btnWa": "Réserver via WhatsApp",
+    "aviso": {
+      "title": "Conditions générales de location",
+      "horario": "La période de location court toujours de 10h00 à 19h00, quelle que soit l'heure de prise en charge. Cela s'applique aussi bien aux vélos de ville qu'aux vélos électriques. Par exemple, un vélo de ville loué un mercredi pour 7 jours pourra être restitué le mardi suivant avant 19h00, ou le mercredi à 10h00. Toute restitution en dehors de ces horaires entraînera la facturation automatique d'un jour supplémentaire.",
+      "ebike": "Pour louer des vélos électriques, une pièce d'identité originale en cours de validité (carte d'identité ou passeport) ainsi qu'une carte de crédit physique sont obligatoires. Les cartes virtuelles et les cartes prépayées ne sont pas acceptées.",
+      "ebikeRetorno": "Les vélos électriques doivent impérativement être restituer le dernier jour contracté avant 19h00, car ils doivent être rechargés pendant la nuit. Contrairement aux vélos classiques, la restitution le lendemain matin n'est pas possible. Le non-respect de cet horaire entraînera la facturation d'un jour de location supplémentaire."
+    }
+  },
+  "reparaciones": {
+    "header": {
+      "title": "Réparations",
+      "subtitle": "Atelier spécialisé pour tous types de vélos. Chaque réparation est effectuée avec rigueur, expérience et des pièces de rechange d'origine."
+    },
+    "workshop": {
+      "title": "Service fiable et professionnel",
+      "desc": "Dans notre atelier, nous travaillons avec tous types de vélos : ville, montagne, route et e-bikes. Chaque travail est vérifié avant de quitter l'atelier et nous vous informons toujours avant d'intervenir.",
+      "points": [
+        "Diagnostic honnête, sans surprises",
+        "Devis gratuit avant toute intervention",
+        "Composants de qualité éprouvée",
+        "Techniciens expérimentés sur tout type de vélo"
+      ]
+    },
+    "plans": {
+      "title": "Plans d'entretien",
+      "btnProcess": "Voir le processus de réparation",
+      "btnClose": "Fermer",
+      "note": "* Les joints et composants de remplacement ne sont pas inclus.",
+      "btnWa": "Demander un rendez-vous à l'atelier"
+    },
+    "packages": {
+      "bronce": {
+        "name": "Bronze",
+        "features": [
+          "Réglage complet du vélo",
+          "Contrôle de sécurité"
+        ]
+      },
+      "plata": {
+        "name": "Argent",
+        "features": [
+          "Comprend le forfait Bronze",
+          "Nettoyage de la transmission"
+        ]
+      },
+      "gold": {
+        "name": "Or",
+        "features": [
+          "Comprend le forfait Argent",
+          "Nettoyage complet du vélo",
+          "Remplacement des câbles de vitesse (si nécessaire)",
+          "Contrôle du boîtier de pédalier, de la direction et des moyeux"
+        ]
+      },
+      "platinum": {
+        "name": "Platine",
+        "features": [
+          "Comprend le forfait Or",
+          "Révision des suspensions",
+          "Contrôle de la biellette",
+          "Purge des freins"
+        ],
+        "note": "* Les joints et composants de remplacement ne sont pas inclus."
+      }
+    },
+    "expandedView": {
+      "process": "Processus",
+      "closePanel": "Fermer le panneau ✕",
+      "photo": "Photo",
+      "size": "Taille recommandée : 1200x900px",
+      "stepDesc": "Description de l'étape",
+      "placeholderDesc": "[Ajoutez une description détaillée de l'étape pour le forfait. Ici, vous pouvez expliquer en détail ce qui est fait sur le vélo, quels outils sont utilisés et pourquoi cette étape est importante pour assurer un bon entretien.]"
+    },
+    "turnaround": {
+      "title": "Délais de livraison",
+      "desc": "Les réparations de base sont effectuées sur place. Pour les pannes plus complexes, nous vous indiquerons un délai approximatif. Si le vélo nécessite des travaux ou des pièces supplémentaires imprévus, nous vous contacterons toujours au préalable pour approuver le nouveau devis."
+    },
+    "limpieza": {
+      "title": "Nettoyage",
+      "packages": {
+        "transmision": {
+          "name": "Nettoyage de Transmission",
+          "features": [
+            "Dégraissage complet de la chaîne, cassette et plateaux",
+            "Lubrification professionnelle",
+            "Ajustement de base des vitesses"
+          ]
+        },
+        "completa": {
+          "name": "Nettoyage Complet",
+          "features": [
+            "Lavage à la main du vélo entier",
+            "Nettoyage de transmission inclus",
+            "Séchage et lustrage du cadre",
+            "Lubrification des composants"
+          ]
+        }
+      }
+    }
+  },
+  "quienesSomos": {
+    "header": {
+      "title": "Notre Histoire",
+      "subtitle": "Une entreprise familiale née de l'amour pour les vélos et la promenade de San Pedro Alcántara."
+    },
+    "bio": {
+      "title": "Gab a passé toute sa vie avec les vélos",
+      "desc1": "Gabriel Sarria travaille dans le monde du vélo depuis des années. Il a commencé par la compétition en descente, ce qui lui a donné une connaissance technique que très peu de personnes possèdent. Avec le temps, cette expérience l'a conduit à l'atelier, où il a réparé toutes sortes de vélos pour toutes sortes de cyclistes.",
+      "desc2": "Une partie de sa formation s'est faite à l'étranger, où il a appris à travailler selon les normes de réparation de différents pays. C'est cette expérience qu'il apporte aujourd'hui à Gravitate Bikes : un endroit où le travail est bien fait, simplement."
+    },
+    "values": {
+      "title": "Nos Valeurs",
+      "subtitle": "Ce qui nous motive chaque jour",
+      "q1": {
+        "title": "Qualité professionnelle",
+        "desc": "Nous appliquons les standards de la haute compétition à chaque vélo qui entre dans notre atelier."
+      },
+      "q2": {
+        "title": "Service convivial",
+        "desc": "Nous sommes une famille cycliste. Nous voulons que vous vous sentiez chez vous à chaque visite."
+      },
+      "q3": {
+        "title": "Passion",
+        "desc": "Ce n'est pas seulement notre travail, c'est notre mode de vie. Nous aimons chaque aspect du cyclisme."
+      }
+    },
+    "workshop": {
+      "title": "Notre atelier",
+      "desc": "Notre espace de travail est équipé des meilleurs outils pour garantir une réparation précise et de qualité. Nous veillons à ce que chaque vélo parte en parfait état.",
+      "btnWa": "Contacter par WhatsApp",
+      "findUs": "Retrouvez-nous à côté du boulevard",
+      "location": "Bulevar de San Pedro Alcántara, Marbella"
+    },
+    "stats": {
+      "y28": "Années d'expérience",
+      "ref": "Années de référence en Andalousie",
+      "cup": "Coupe de Descente (ESP & PT)",
+      "fac": "Moniteur de Cyclisme Officiel",
+      "cupValue": "1er"
+    },
+    "historia": {
+      "text": "Gabriel travaille depuis des années dans le monde du vélo de la région. Avant d'ouvrir Gravitate, il a été un pilier de l'équipe de Bike Base, où de nombreux clients ont fait sa connaissance. Aujourd'hui, il continue d'offrir le même service dans sa propre boutique."
+    }
+  },
+  "contacto": {
+    "header": {
+      "title": "Où sommes-nous ?",
+      "subtitle": "Notre atelier se trouve à côté du boulevard de San Pedro Alcántara. Passez à la boutique ou contactez-nous par l'un de ces moyens."
+    },
+    "address": "Adresse",
+    "phone": "Téléphone",
+    "email": "Email",
+    "hours": "Horaires",
+    "waBtn": "Écrivez-nous sur WhatsApp",
+    "weekdays": "Lundi – Vendredi",
+    "saturday": "Samedis",
+    "sunday": "Dimanches et jours fériés",
+    "mapConsentTitle": "Google Maps est bloqué",
+    "mapConsentDescription": "Cette carte utilise des cookies externes de tiers. Acceptez les cookies pour la charger.",
+    "mapConsentAccept": "Vous pouvez accepter les cookies depuis l'avis en bas de page.",
+    "mapTitle": "Carte de localisation de la boutique"
+  },
+  "woom": {
+    "header": {
+      "title": "Vélos Woom",
+      "subtitle": "Les meilleurs vélos ultra-légers pour enfants. Conçus pour rendre l'apprentissage du vélo facile, sûr et amusant.",
+      "cta": "Demander via WhatsApp"
+    },
+    "why": "Pourquoi woom ?",
+    "range": "Vélos pour enfants",
+    "rangeDesc": "Un vélo pour chaque étape, de 1,5 à 14 ans. Nous disposons également de toute la gamme d'accessoires originaux woom.",
+    "desc": "Les vélos Woom sont spécialement conçus pour l'anatomie des enfants. Ils sont jusqu'à 40 % plus légers que les vélos pour enfants classiques, ce qui rend l'apprentissage plus facile, rapide et sûr.",
+    "features": {
+      "weight": "Ultra-légers",
+      "weightDesc": "Faciles à manier et à soulever",
+      "ergonomics": "Ergonomie infantile",
+      "ergonomicsDesc": "Géométrie adaptée à leur corps",
+      "brakes": "Freins spéciaux",
+      "brakesDesc": "Leviers adaptés aux petites mains"
+    },
+    "pricing": {
+      "title": "Tarifs Woom",
+      "price": "18 €",
+      "day": "/ jour",
+      "btnWa": "Réserver un vélo Woom"
+    },
+    "models": {
+      "w1": {
+        "type": "Draisienne",
+        "age": "1,5 – 3 ans",
+        "desc": "Le premier vélo de votre enfant. Sans pédales pour apprendre l'équilibre naturellement."
+      },
+      "w2": {
+        "type": "À pédales",
+        "age": "3 – 4,5 ans",
+        "desc": "Léger et facile à manier. Passez aux pédales en toute confiance."
+      },
+      "w3": {
+        "type": "À pédales",
+        "age": "4 – 6 ans",
+        "desc": "Plus de vitesse, plus d'aventures. Avec des freins adaptés aux petites mains."
+      },
+      "w4": {
+        "type": "À pédales",
+        "age": "6 – 8 ans",
+        "desc": "Le passage aux grandes roues. Vitesses et géométrie optimisée pour enfants."
+      },
+      "w5": {
+        "type": "À pédales",
+        "age": "8 – 11 ans",
+        "desc": "Pour les jeunes cyclistes confirmés. Composants de qualité et faible poids."
+      },
+      "w6": {
+        "type": "À pédales",
+        "age": "10 – 14 ans",
+        "desc": "Presque un vélo d'adulte. Parfait pour les jeunes cyclistes exigeants."
+      },
+      "woff": {
+        "type": "VTT",
+        "age": "4 – 14 ans",
+        "desc": "Conçu pour la montagne. Pneus larges, suspension et conduite tout-terrain."
+      },
+      "wup": {
+        "type": "E-bike enfant",
+        "age": "8 – 14 ans",
+        "desc": "Avec une assistance électrique douce pour vous accompagner sur les longs trajets."
+      }
+    },
+    "ctaBottom": {
+      "title": "Vous ne savez pas quelle taille choisir ?",
+      "desc": "Passez chez Gravitate Bikes et nous vous aiderons à trouver le vélo woom parfait pour votre enfant. Nous avons des modèles d'exposition en magasin et des conseils personnalisés sans engagement.",
+      "btn": "Visitez notre magasin"
+    }
+  },
+  "footer": "© 2026 Gravitate Bikes · Av. Lopez de Mena 14, San Pedro Alcántara · Tous droits réservés",
+  "footerPrivacy": "Politique de Confidentialité",
+  "footerTerms": "Conditions Générales",
+  "cookieConsent": {
+    "title": "Cookies externes",
+    "description": "Ce site utilise du contenu externe qui peut installer des cookies tiers. Vous pouvez accepter ou refuser son chargement.",
+    "accept": "Accepter",
+    "reject": "Refuser"
+  },
+  "privacidad": {
+    "breadcrumb": "Mentions légales",
+    "title": "Politique de Confidentialité",
+    "lastUpdated": "Dernière mise à jour : juin 2026",
+    "intro": "Chez Gravitate Bikes, nous prenons la confidentialité de nos utilisateurs très au sérieux. Vous trouverez ci-dessous une explication claire des informations que nous collectons, dans quel but et comment nous les traitons.",
+    "s1": {
+      "title": "1. Responsable du traitement",
+      "body": "Le responsable du traitement des données personnelles est :",
+      "rows": [
+        {
+          "label": "Entreprise",
+          "value": "Gravitate Bikes"
+        },
+        {
+          "label": "Adresse",
+          "value": "Av. Lopez de Mena 14, 29670 San Pedro Alcántara, Marbella"
+        },
+        {
+          "label": "Email",
+          "value": "gravitatebikes@gmail.com"
+        },
+        {
+          "label": "Téléphone",
+          "value": "+34 612 47 78 41"
+        }
+      ]
+    },
+    "s2": {
+      "title": "2. Cookies",
+      "noCookies": "Gravitate Bikes n'utilise pas de cookies propres ni aucun système de suivi sur ce site web. Nous n'installons pas de cookies analytiques, publicitaires ou de préférences.",
+      "googleMapsLabel": "Google Maps :",
+      "googleMaps": "Ce site web intègre une carte Google Maps sur la page de contact pour faciliter la localisation de notre boutique. Google Maps peut placer des cookies tiers sur lesquels Gravitate Bikes n'a aucun contrôle ni responsabilité. Vous pouvez consulter la politique de confidentialité de Google pour plus d'informations.",
+      "googleLink": "Voir la politique de confidentialité de Google →"
+    },
+    "s3": {
+      "title": "3. Communication par WhatsApp",
+      "body": "Nous offrons la possibilité de nous contacter via WhatsApp pour effectuer des réservations, poser des questions et organiser des rendez-vous en atelier. Les données que vous fournissez via WhatsApp (comme votre nom et numéro de téléphone) sont utilisées exclusivement à des fins professionnelles pour traiter votre demande :",
+      "bullets": [
+        "Gestion des réservations de vélos et des rendez-vous en atelier.",
+        "Réponse aux demandes de renseignements sur les produits ou services.",
+        "Elles ne sont pas partagées avec des tiers ni utilisées à des fins commerciales."
+      ]
+    },
+    "s4": {
+      "title": "4. Données collectées via le site web",
+      "body": "Au-delà de l'utilisation de Google Maps décrite ci-dessus, ce site web ne collecte, ne stocke ni ne traite directement aucune donnée personnelle. Nous ne disposons pas de formulaires de contact propres ni de systèmes d'inscription d'utilisateurs."
+    },
+    "s5": {
+      "title": "5. Vos droits",
+      "body": "Vous avez le droit d'accéder, de rectifier, de supprimer et de vous opposer au traitement de vos données personnelles conformément à la réglementation en vigueur (RGPD). Pour exercer ces droits, veuillez nous contacter à :"
+    },
+    "s6": {
+      "title": "6. Modifications de cette politique",
+      "body": "Nous nous réservons le droit de mettre à jour cette politique de confidentialité à tout moment. Toute modification sera publiée sur cette même page avec la date de dernière mise à jour indiquée en haut."
+    },
+    "footer": "Gravitate Bikes · San Pedro Alcántara, Marbella"
+  },
+  "terminos": {
+    "breadcrumb": "Mentions légales",
+    "title": "Conditions Générales de Location",
+    "lastUpdated": "Dernière mise à jour : août 2026",
+    "intro": "Le présent document définit les conditions générales régissant le service de location de vélos proposé par Gravitate Bikes. En finalisant une location, le client accepte pleinement les conditions décrites ci-après.",
+    "s1": {
+      "title": "1. Horaires du service",
+      "body": "La période de location couvre toujours de 10h00 à 19h00, indépendamment de l'heure à laquelle le vélo est retiré. Pour le calcul des jours, chaque jour de location commence à 10h00 et se termine à 19h00 le même jour.",
+      "example": "Exemple : si un client prend son vélo un mercredi à 17h00 pour 7 jours, le dernier jour d'utilisation est le mardi suivant. La restitution doit être effectuée avant 19h00 ce mardi-là, ou à partir de 10h00 le mercredi suivant, selon l'accord préalable avec l'établissement."
+    },
+    "s2": {
+      "title": "2. Conditions requises pour la location de vélos électriques",
+      "body": "Pour louer des vélos électriques (e-bikes), les conditions suivantes doivent être remplies :",
+      "bullets": [
+        "Présenter une pièce d'identité originale en cours de validité (carte d'identité ou passeport). Les photocopies et les documents périmés ne sont pas acceptés.",
+        "Fournir une carte de crédit physique au nom du titulaire de la location. Les portefeuilles virtuels, les comptes de monnaie électronique et les cartes prépayées ne sont pas acceptés.",
+        "Laisser une caution remboursable, dont le montant sera communiqué au moment de la réservation."
+      ]
+    },
+    "s3": {
+      "title": "3. Restitution et pénalités de retard",
+      "body": "Le vélo doit être restitué dans les délais convenus. Une restitution en dehors des horaires établis (après 19h00) entraînera automatiquement la facturation d'un jour de location supplémentaire. En cas de non-restitution ou de perte, le client sera tenu responsable de la valeur de remplacement du vélo."
+    },
+    "s4": {
+      "title": "4. État du vélo et responsabilités",
+      "body": "Le client recevra le vélo en parfait état de fonctionnement et sera responsable de son entretien pendant la durée de la location. Tout dommage, usure anormale ou perte d'accessoires (casque, cadenas, etc.) sera imputé au client. Un contrôle de l'état du vélo sera effectué au moment du retrait et de la restitution."
+    },
+    "s5": {
+      "title": "5. Utilisation du vélo",
+      "body": "Les vélos loués sont destinés à un usage personnel et récréatif. Il est expressément interdit de :",
+      "bullets": [
+        "Sous-louer ou céder le vélo à des tiers.",
+        "L'utiliser dans des compétitions, épreuves sportives ou activités à haut risque.",
+        "Apporter des modifications au vélo."
+      ]
+    },
+    "s6": {
+      "title": "6. Annulations",
+      "body": "Les conditions d'annulation seront convenues au moment de la réservation. Gravitate Bikes se réserve le droit d'annuler ou de modifier le service dans des circonstances exceptionnelles (conditions météorologiques défavorables, cas de force majeure, etc.), en informant le client dans les meilleurs délais."
+    },
+    "s7": {
+      "title": "7. Modifications",
+      "body": "Gravitate Bikes se réserve le droit de mettre à jour ces conditions à tout moment. La version en vigueur sera toujours disponible sur cette page."
+    },
+    "footer": "Gravitate Bikes · San Pedro Alcántara, Marbella"
+  },
+  "meta": {
+    "home": {
+      "title": "Gravitate Bikes | Magasin de vélos à San Pedro Alcántara",
+      "description": "Location de vélos de ville et électriques dès 15 €/jour, atelier de réparation et vélos enfants woom à San Pedro Alcántara, Marbella."
+    },
+    "alquiler": {
+      "title": "Location de vélos à San Pedro Alcántara",
+      "description": "Louez un vélo de ville ou électrique chez Gravitate Bikes. Tarifs à la journée et à la semaine à San Pedro Alcántara, Marbella. Casque et antivol inclus."
+    },
+    "reparaciones": {
+      "title": "Atelier de réparation de vélos",
+      "description": "Réparations rapides et professionnelles pour tous types de vélos à San Pedro Alcántara. Crevaisons, freins, dérailleurs et révision complète."
+    },
+    "woom": {
+      "title": "Vélos woom – Revendeur officiel",
+      "description": "Revendeur officiel woom à San Pedro Alcántara. Les meilleurs vélos pour enfants au monde, légers et sûrs à chaque étape de leur croissance."
+    },
+    "quienesSomos": {
+      "title": "Qui sommes-nous",
+      "description": "Découvrez Gravitate Bikes, l'entreprise familiale de location et de réparation de vélos sur le front de mer de San Pedro Alcántara, Marbella."
+    },
+    "contacto": {
+      "title": "Contact et adresse",
+      "description": "Retrouvez Gravitate Bikes au 14 Avenida Lopez de Mena, San Pedro Alcántara, Marbella. Horaires, téléphone et itinéraire."
+    },
+    "privacidad": {
+      "title": "Politique de confidentialité",
+      "description": "Consultez la politique de confidentialité de Gravitate Bikes : utilisation des données, cookies et communications via WhatsApp."
+    }
+  },
+  "alts": {
+    "home": "Palmiers, fleurs et pont rouge à San Pedro Alcántara avec la montagne en arrière-plan",
+    "woom1": "Deux enfants casqués à côté de leurs vélos woom",
+    "woom2": "Tout-petit sur une draisienne woom et enfant plus âgé avec son vélo woom sur une place",
+    "woom3": "Deux enfants posant avec leurs vélos woom sur une place",
+    "about": "Gabriel Sarria en tenue de descente, assis dans la forêt à côté d'un autre pilote",
+    "shop": "Devanture du magasin Gravitate Bikes avec la vitrine remplie de vélos",
+    "menuOpen": "Ouvrir le menu",
+    "menuClose": "Fermer le menu",
+    "language": "Langue",
+    "mainNav": "Navigation principale"
+  },
+  "jsonLd": {
+    "founder": {
+      "jobTitle": "Mécanicien et fondateur",
+      "description": "Mécanicien et fondateur de Gravitate Bikes. Avant d'ouvrir Gravitate, il a fait partie pendant des années de l'équipe de Bike Base."
+    }
+  }
+}

@@ -1,10 +1,9 @@
 import { Heart, Wrench, Bike, Sun, Users, MapPin } from "lucide-react";
 import Image from "next/image";
 import { getDictionary, type Locale } from "@/i18n/server";
-import { imageAlts } from "@/i18n/alts";
 
-export function QuienesSomosPage({ lang }: { lang: Locale }) {
-  const t = getDictionary(lang);
+export async function QuienesSomosPage({ lang }: { lang: Locale }) {
+  const t = await getDictionary(lang);
 
   const values = [
     {
@@ -39,8 +38,16 @@ export function QuienesSomosPage({ lang }: { lang: Locale }) {
           </div>
           <div className="rounded-2xl overflow-hidden h-80 md:h-96 shadow-xl flex items-center justify-center relative">
             {/* Image optimized */}
-            <Image src="/about/gabriel-sarria.jpg" alt={imageAlts[lang].about} fill sizes="(max-width: 768px) 100vw, 576px" className="object-cover" />
+            <Image src="/about/gabriel-sarria.jpg" alt={t.alts.about} fill sizes="(max-width: 768px) 100vw, 576px" className="object-cover" />
           </div>
+        </div>
+      </section>
+
+      {/* Nuestra historia: trayectoria de Gabriel antes de Gravitate */}
+      <section className="pb-16 px-4 max-w-6xl mx-auto">
+        <div className="max-w-3xl">
+          <h2 className="text-[#0E0E12] text-2xl font-bold mb-4">{t.quienesSomos.header.title}</h2>
+          <p className="text-gray-600 leading-relaxed">{t.quienesSomos.historia.text}</p>
         </div>
       </section>
 
@@ -70,7 +77,7 @@ export function QuienesSomosPage({ lang }: { lang: Locale }) {
           {[
             { value: "28", label: t.quienesSomos.stats.y28 },
             { value: "10+", label: t.quienesSomos.stats.ref },
-            { value: lang === 'de' ? "1. Platz" : lang === 'en' ? "1st" : lang === 'fr' ? "1er" : "1º", label: t.quienesSomos.stats.cup },
+            { value: t.quienesSomos.stats.cupValue, label: t.quienesSomos.stats.cup },
             { value: "FAC", label: t.quienesSomos.stats.fac },
           ].map(({ value, label }) => (
             <div key={label}>

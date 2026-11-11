@@ -1,6 +1,7 @@
 import { AlquilerPage } from "@/app/pages/AlquilerPage";
 import type { Metadata } from "next";
 import { localizedMetadata } from "@/i18n/seo";
+import { setRequestLocale } from "next-intl/server";
 import { toLocale } from "@/i18n/server";
 
 export async function generateMetadata({
@@ -18,5 +19,6 @@ export default async function Page({
   params: Promise<{ lang: string }>;
 }) {
   const { lang } = await params;
+  setRequestLocale(toLocale(lang));
   return <AlquilerPage lang={toLocale(lang)} />;
 }

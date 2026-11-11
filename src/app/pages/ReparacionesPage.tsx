@@ -56,8 +56,8 @@ const cleaningPackages = [
   },
 ];
 
-export function ReparacionesPage({ lang }: { lang: Locale }) {
-  const t = getDictionary(lang);
+export async function ReparacionesPage({ lang }: { lang: Locale }) {
+  const t = await getDictionary(lang);
   // Nota: los bloques «VERSIÓN FUTURA» comentados usan estado (selectedTier, selectedCleaning);
   // al reactivarlos, muévelos a un componente hijo con "use client".
 
