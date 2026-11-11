@@ -1,0 +1,511 @@
+{
+  "nav": {
+    "inicio": "Inicio",
+    "alquiler": "Alquiler",
+    "reparaciones": "Reparaciones",
+    "woom": "Bicis Infantiles Woom",
+    "quienesSomos": "Quiénes somos",
+    "contacto": "Contacto"
+  },
+  "home": {
+    "hero": {
+      "location": "San Pedro Alcántara · Marbella",
+      "title1": "Visita Marbella",
+      "title2": "en bicicleta",
+      "btnRent": "Ver tarifas de alquiler",
+      "btnRepair": "Reparaciones"
+    },
+    "services": {
+      "title": "Disfruta de Marbella de una manera diferente",
+      "subtitle": "Bicis de paseo y eléctricas desde 15€/día. Recorre el paseo marítimo de Marbella a tu ritmo, con precios claros y taller propio.",
+      "rent": {
+        "title": "Alquiler de bicicletas por día",
+        "desc": "Bicis cómodas y ligeras, perfectas para recorrer el paseo marítimo a tu ritmo.",
+        "btn": "Ver tarifas"
+      },
+      "repair": {
+        "title": "Taller de reparaciones",
+        "desc": "Reparaciones rápidas y profesionales. Pinchazos, frenos, cambios de marchas y mucho más.",
+        "btn": "Ver servicios"
+      },
+      "clean": {
+        "title": "Servicio de limpieza",
+        "desc": "Déjala como nueva. Limpieza de transmisión por 15€ y limpieza de bici completa por 20€.",
+        "btn": "Solicitar cita"
+      }
+    },
+    "whyUs": {
+      "title": "¿Por qué elegirnos?",
+      "subtitle": "Comprometidos con tu experiencia en el paseo marítimo de San Pedro.",
+      "loc": {
+        "title": "Ubicación inmejorable",
+        "desc": "En el corazón del paseo marítimo de San Pedro Alcántara."
+      },
+      "hours": {
+        "title": "Abierto todos los días",
+        "desc": "Disponibles durante toda la temporada para que no te pierdas ni un paseo."
+      },
+      "condition": {
+        "title": "Bicis en perfecto estado",
+        "desc": "Mantenimiento constante para que tu experiencia sea siempre segura y cómoda."
+      },
+      "ages": {
+        "title": "Desde 15€ al día",
+        "desc": "Precios imbatibles para que pedalear por Marbella no te cueste un ojo de la cara. Sin sorpresas, sin letra pequeña."
+      },
+      "fast": {
+        "title": "Taller rápido",
+        "desc": "Reparaciones en el momento para que no pierdas tiempo y vuelvas a rodar enseguida."
+      },
+      "support": {
+        "title": "Atención personalizada",
+        "desc": "Te asesoramos sobre rutas y te recomendamos la mejor opción según tus necesidades."
+      }
+    },
+    "cta": {
+      "title": "¿Listo para pedalear?",
+      "subtitle": "Consúltanos sin compromiso o reserva tu bicicleta ahora mismo.",
+      "btnWa": "Reservar por WhatsApp",
+      "btnLoc": "¿Dónde estamos?"
+    }
+  },
+  "alquiler": {
+    "header": {
+      "title": "Alquila tu bici",
+      "subtitle": "Elige entre nuestras bicicletas de paseo y eléctricas para disfrutar del paseo marítimo a tu ritmo."
+    },
+    "paseo": {
+      "title": "Bicicleta de paseo",
+      "desc": "Cómoda y ligera, perfecta para recorrer el paseo marítimo de San Pedro Alcántara a tu propio ritmo. Incluye casco y candado.",
+      "priceDay": "Tarifa por día",
+      "priceDayDesc": "Alquiler de 1 a 6 días",
+      "priceWeek": "Tarifa semanal (7 días o más)",
+      "priceWeekDesc": "Ahorra 33%",
+      "note": "Incluye casco y candado. El precio semanal se aplica a partir del 7.º día de alquiler consecutivo."
+    },
+    "ebike": {
+      "title": "Bicicletas Eléctricas (E-bikes)",
+      "warning": "Para alquilar bicicletas eléctricas es necesario presentar DNI/Pasaporte original y tarjeta de crédito física. El alquiler es de 10:00 a 19:30 h. Si la bici se entrega después de las 19:30 h, se deberá abonar el día siguiente.",
+      "aviso": "Aviso importante:",
+      "models": {
+        "basica": {
+          "title": "E-bike Básica",
+          "desc": "Perfecta para moverte sin esfuerzo por la ciudad y el paseo marítimo. Batería con buena autonomía para disfrutar del día completo.",
+          "rateDay": "Tarifa por día",
+          "priceStd": "Precio estándar",
+          "perDay": "Por día de alquiler",
+          "day": "/ día",
+          "includes": "Incluye casco y candado.",
+          "btn": "Reservar por WhatsApp"
+        },
+        "premium": {
+          "badge": "Motor Bosch",
+          "title": "E-bike Premium (Motor Bosch)",
+          "desc": "Máxima potencia y fiabilidad con motor central Bosch. Ideal para rutas largas o terrenos con más desnivel. Mayor autonomía y confort superior.",
+          "rateDay": "Tarifa por día",
+          "rent1to4": "Alquiler de 1 a 4 días",
+          "priceStd": "Precio estándar",
+          "day": "/ día",
+          "promo": "¡Promoción!",
+          "rateReduced": "Tarifa reducida (5 días o más)",
+          "rent5plus": "Alquiler de 5+ días",
+          "pricePerDay": "Precio por día",
+          "save": "Ahorra",
+          "includes": "Incluye casco y candado. El precio promocional se consigue al alquilar la E-bike Bosch por 5 días consecutivos o más.",
+          "btn": "Reservar por WhatsApp"
+        }
+      }
+    },
+    "info": {
+      "title": "Información importante",
+      "id": "Se requiere un documento de identidad (DNI o pasaporte) para el alquiler.",
+      "deposit": "Depósito reembolsable en efectivo o tarjeta al recoger la bici.",
+      "minors": "Los menores de 14 años deben ir acompañados de un adulto.",
+      "rain": "En caso de lluvia, consulta disponibilidad y condiciones."
+    },
+    "btnWa": "Reservar por WhatsApp",
+    "aviso": {
+      "title": "Condiciones generales de alquiler",
+      "horario": "El período de alquiler abarca siempre de las 10:00 h a las 19:00 h, con independencia de la hora de recogida. Esto aplica tanto a bicicletas de paseo como a eléctricas. Por ejemplo, una bicicleta de paseo alquilada un miércoles por 7 días podrá devolverse el martes siguiente antes de las 19:00 h, o bien el miércoles a las 10:00 h. Cualquier devolución fuera de estos horarios conllevará el cargo automático de un día adicional.",
+      "ebike": "Para alquilar bicicletas eléctricas es imprescindible presentar DNI o Pasaporte original en vigor, así como una tarjeta de crédito física. No se aceptan tarjetas virtuales ni de prepago.",
+      "ebikeRetorno": "Las bicicletas eléctricas deben devolverse obligatoriamente el último día contratado antes de las 19:00 h, ya que necesitan cargarse durante la noche. A diferencia de las bicicletas de paseo, no es posible la devolución a la mañana siguiente. El incumplimiento de este horario conllevará el cargo de un día adicional de alquiler."
+    }
+  },
+  "reparaciones": {
+    "header": {
+      "title": "Reparaciones",
+      "subtitle": "Taller especializado en todo tipo de bicicletas. Cada reparación se hace con rigor, experiencia y recambios originales."
+    },
+    "workshop": {
+      "title": "Servicio fiable y profesional",
+      "desc": "En nuestro taller trabajamos con todo tipo de bicicletas: de paseo, montaña, carretera y eléctricas. Cada trabajo se revisa antes de salir del taller y siempre te informamos antes de hacer nada.",
+      "points": [
+        "Diagnóstico honesto y sin sorpresas",
+        "Presupuesto previo y sin compromiso",
+        "Componentes de calidad contrastada",
+        "Técnicos con años de experiencia en todo tipo de bicis"
+      ]
+    },
+    "plans": {
+      "title": "Planes de mantenimiento",
+      "btnProcess": "Ver proceso de reparación",
+      "btnClose": "Cerrar",
+      "note": "* No se incluyen retenes ni componentes de reemplazo.",
+      "btnWa": "Solicitar cita para taller"
+    },
+    "packages": {
+      "bronce": {
+        "name": "Bronze",
+        "features": [
+          "Ajuste total de la bicicleta",
+          "Checkeo de seguridad"
+        ]
+      },
+      "plata": {
+        "name": "Silver",
+        "features": [
+          "Incluye paquete Bronze",
+          "Limpieza de transmisión"
+        ]
+      },
+      "gold": {
+        "name": "Gold",
+        "features": [
+          "Incluye paquete Silver",
+          "Limpieza total de la bici",
+          "Sustitución de cables de cambios (si fuera necesario)",
+          "Checkeo de pedalier, dirección y bujes"
+        ]
+      },
+      "platinum": {
+        "name": "Platinum",
+        "features": [
+          "Incluye paquete Gold",
+          "Revisión de suspensiones",
+          "Revisión de basculante",
+          "Sangrado de frenos"
+        ],
+        "note": "* No se incluyen retenes ni componentes de reemplazo."
+      }
+    },
+    "expandedView": {
+      "process": "Proceso",
+      "closePanel": "Cerrar panel ✕",
+      "photo": "Foto",
+      "size": "Tamaño recomendado: 1200x900px",
+      "stepDesc": "Descripción del paso",
+      "placeholderDesc": "[Añadir descripción detallada del paso para la tarifa. Aquí puedes explicar a fondo qué se le hace a la bicicleta, qué herramientas se utilizan y por qué es importante este paso para asegurar el correcto mantenimiento.]"
+    },
+    "turnaround": {
+      "title": "Tiempos de entrega",
+      "desc": "Las reparaciones básicas se realizan en el momento. En caso de una avería más compleja, le indicaremos un plazo aproximado de tiempo. Si la bicicleta requiere algún trabajo o pieza extra no contemplada, siempre le contactaremos previamente para aprobar el nuevo presupuesto."
+    },
+    "limpieza": {
+      "title": "Limpieza",
+      "packages": {
+        "transmision": {
+          "name": "Limpieza de Transmisión",
+          "features": [
+            "Desengrasado completo de cadena, piñones y platos",
+            "Lubricación profesional",
+            "Ajuste básico de cambios"
+          ]
+        },
+        "completa": {
+          "name": "Limpieza Completa",
+          "features": [
+            "Lavado a mano de la bicicleta entera",
+            "Limpieza de transmisión incluida",
+            "Secado y abrillantado del cuadro",
+            "Lubricación de componentes"
+          ]
+        }
+      }
+    }
+  },
+  "quienesSomos": {
+    "header": {
+      "title": "Nuestra historia",
+      "subtitle": "Un negocio familiar nacido del amor por las bicis y por el paseo marítimo de San Pedro Alcántara."
+    },
+    "bio": {
+      "title": "Gab lleva toda la vida con las bicis",
+      "desc1": "Gabriel Sarria lleva años trabajando en el mundo de la bicicleta. Empezó compitiendo en descenso, lo que le dió un conocimiento técnico que muy pocos tienen. Con el tiempo, ese conocimiento lo llevó al taller: durante años fue el mecánico de Bike Base, donde ha reparado todo tipo de bicis para todo tipo de ciclistas.",
+      "desc2": "Parte de su formación la hizo en el extranjero, donde aprendió a trabajar con los estándares de reparación de distintos países. Esa experiencia es la que trae ahora a Gravitate Bikes: un sitio donde hacer las cosas bien, sin más complicaciones."
+    },
+    "values": {
+      "title": "Nuestros Valores",
+      "subtitle": "Lo que nos mueve cada día",
+      "q1": {
+        "title": "Calidad profesional",
+        "desc": "Aplicamos los estándares de la alta competición a cada bicicleta que entra en nuestro taller."
+      },
+      "q2": {
+        "title": "Trato cercano",
+        "desc": "Somos una familia ciclista. Queremos que te sientas como en casa cada vez que nos visitas."
+      },
+      "q3": {
+        "title": "Pasión",
+        "desc": "No es solo nuestro trabajo, es nuestra forma de vida. Amamos cada aspecto del ciclismo."
+      }
+    },
+    "workshop": {
+      "title": "Nuestro taller",
+      "desc": "Nuestro espacio de trabajo está equipado con las mejores herramientas para garantizar una reparación precisa y de calidad. Nos aseguramos de que cada bicicleta salga en perfectas condiciones.",
+      "btnWa": "Contactar por WhatsApp",
+      "findUs": "Encuéntranos junto al bulevar",
+      "location": "Bulevar de San Pedro Alcántara, Marbella"
+    },
+    "stats": {
+      "y28": "Años de experiencia",
+      "ref": "Años de referente en Andalucía",
+      "cup": "Copa de Descenso (ESP y PT)",
+      "fac": "Monitor de Ciclismo Oficial",
+      "cupValue": "1º"
+    }
+  },
+  "contacto": {
+    "header": {
+      "title": "¿Dónde estamos?",
+      "subtitle": "El taller se encuentra junto al bulevar de San Pedro Alcántara. Pásate por el local o contáctanos por cualquiera de estos medios."
+    },
+    "address": "Dirección",
+    "phone": "Teléfono",
+    "email": "Email",
+    "hours": "Horario",
+    "waBtn": "Escríbenos por WhatsApp",
+    "weekdays": "Lunes – Viernes",
+    "saturday": "Sábados",
+    "sunday": "Domingos y festivos",
+    "mapConsentTitle": "Mapa de Google Maps bloqueado",
+    "mapConsentDescription": "Este mapa utiliza cookies externas de terceros. Acepta las cookies para cargarlo.",
+    "mapConsentAccept": "Puedes aceptar las cookies desde el aviso inferior.",
+    "mapTitle": "Mapa de ubicación de la tienda"
+  },
+  "woom": {
+    "header": {
+      "title": "Bicis Woom",
+      "subtitle": "Las mejores bicicletas ultraligeras para niños. Diseñadas para que aprender a pedalear sea fácil, seguro y divertido.",
+      "cta": "Preguntar por WhatsApp"
+    },
+    "why": "¿Por qué woom?",
+    "range": "Bicis para niños",
+    "rangeDesc": "Una bici para cada etapa, de 1,5 a 14 años. También disponemos de toda la gama de accesorios originales woom.",
+    "desc": "Las bicicletas Woom están diseñadas específicamente para la anatomía de los niños. Son hasta un 40% más ligeras que las bicicletas infantiles convencionales, lo que hace que aprender a montar sea más fácil, rápido y seguro.",
+    "features": {
+      "weight": "Ultraligeras",
+      "weightDesc": "Fáciles de manejar y levantar",
+      "ergonomics": "Ergonomía infantil",
+      "ergonomicsDesc": "Geometría adaptada a su cuerpo",
+      "brakes": "Frenos especiales",
+      "brakesDesc": "Palancas adaptadas para manos pequeñas"
+    },
+    "pricing": {
+      "title": "Tarifas Woom",
+      "price": "18 €",
+      "day": "/ día",
+      "btnWa": "Consultar disponibilidad"
+    },
+    "models": {
+      "w1": {
+        "type": "Bici sin pedales",
+        "age": "1,5 – 3 años",
+        "desc": "La primera bici de tu hijo. Sin pedales para aprender el equilibrio de forma natural y segura."
+      },
+      "w2": {
+        "type": "Con pedales",
+        "age": "3 – 4,5 años",
+        "desc": "Ligera y fácil de manejar. Da el salto a los pedales con total confianza."
+      },
+      "w3": {
+        "type": "Con pedales",
+        "age": "4 – 6 años",
+        "desc": "Más velocidad, más aventuras. Con frenos de mano adaptados a manos pequeñas."
+      },
+      "w4": {
+        "type": "Con pedales",
+        "age": "6 – 8 años",
+        "desc": "El paso a ruedas grandes. Cambios de marchas y geometría optimizada para niños."
+      },
+      "w5": {
+        "type": "Con pedales",
+        "age": "8 – 11 años",
+        "desc": "Para los que ya pedalean fuerte. Componentes de calidad y bajo peso."
+      },
+      "w6": {
+        "type": "Con pedales",
+        "age": "10 – 14 años",
+        "desc": "Casi una bici de adulto. Perfecta para los ciclistas jóvenes más exigentes."
+      },
+      "woff": {
+        "type": "Mountain bike",
+        "age": "4 – 14 años",
+        "desc": "Diseñada para el monte. Neumáticos anchos, suspensión y manejo fuera del asfalto."
+      },
+      "wup": {
+        "type": "E-bike infantil",
+        "age": "8 – 14 años",
+        "desc": "Con asistencia eléctrica suave para que puedan acompañarte en las rutas más largas."
+      }
+    },
+    "ctaBottom": {
+      "title": "¿No sabes qué talla elegir?",
+      "desc": "Pásate por Gravitate Bikes y te ayudamos a encontrar la bici woom perfecta para tu hijo. Tenemos exposición en tienda y asesoramiento personalizado sin compromiso.",
+      "btn": "Visítanos en tienda"
+    }
+  },
+  "footer": "© 2026 Gravitate Bikes · Av. Lopez de Mena nº 14, San Pedro Alcántara · Todos los derechos reservados",
+  "footerPrivacy": "Política de Privacidad",
+  "footerTerms": "Términos y Condiciones",
+  "cookieConsent": {
+    "title": "Cookies externas",
+    "description": "Este sitio utiliza contenido externo que puede instalar cookies de terceros. Puedes aceptar o rechazar su carga.",
+    "accept": "Aceptar",
+    "reject": "Rechazar"
+  },
+  "privacidad": {
+    "breadcrumb": "Legal",
+    "title": "Política de Privacidad",
+    "lastUpdated": "Última actualización: junio de 2026",
+    "intro": "En Gravitate Bikes nos tomamos muy en serio la privacidad de nuestros usuarios. A continuación te explicamos de forma clara qué información recopilamos, con qué finalidad y cómo la tratamos.",
+    "s1": {
+      "title": "1. Responsable del tratamiento",
+      "body": "El responsable del tratamiento de los datos personales es:",
+      "rows": [
+        {
+          "label": "Negocio",
+          "value": "Gravitate Bikes"
+        },
+        {
+          "label": "Dirección",
+          "value": "Av. Lopez de Mena nº 14, 29670 San Pedro Alcántara, Marbella"
+        },
+        {
+          "label": "Email",
+          "value": "gravitatebikes@gmail.com"
+        },
+        {
+          "label": "Teléfono",
+          "value": "+34 612 47 78 41"
+        }
+      ]
+    },
+    "s2": {
+      "title": "2. Cookies",
+      "noCookies": "Gravitate Bikes no utiliza cookies propias ni sistemas de rastreo de ningún tipo en este sitio web. No instalamos cookies de análisis, marketing ni de preferencias.",
+      "googleMapsLabel": "Google Maps:",
+      "googleMaps": "Esta web embebe un mapa de Google Maps en la página de contacto para facilitar la localización de nuestra tienda. Google Maps puede establecer cookies de terceros sobre las que Gravitate Bikes no tiene control ni responsabilidad. Si lo deseas, puedes consultar la política de privacidad de Google para más información.",
+      "googleLink": "Ver política de privacidad de Google →"
+    },
+    "s3": {
+      "title": "3. Comunicación por WhatsApp",
+      "body": "Ofrecemos la posibilidad de contactar con nosotros a través de WhatsApp para realizar reservas, consultas y gestionar servicios de taller. Los datos que facilitas a través de WhatsApp (como tu nombre y número de teléfono) se utilizan exclusivamente con fines profesionales y para atender tu solicitud:",
+      "bullets": [
+        "Gestión de reservas de bicicletas y citas de taller.",
+        "Respuesta a consultas sobre productos o servicios.",
+        "No se ceden a terceros ni se utilizan con fines comerciales."
+      ]
+    },
+    "s4": {
+      "title": "4. Datos recogidos a través del sitio web",
+      "body": "Más allá del uso de Google Maps descrito anteriormente, este sitio web no recoge, almacena ni procesa ningún dato personal de forma directa. No disponemos de formularios de contacto propios ni sistemas de registro de usuarios."
+    },
+    "s5": {
+      "title": "5. Tus derechos",
+      "body": "Tienes derecho a acceder, rectificar, suprimir y oponerte al tratamiento de tus datos personales en los términos previstos por la normativa vigente (RGPD y LOPDGDD). Para ejercer estos derechos, puedes contactarnos en:"
+    },
+    "s6": {
+      "title": "6. Cambios en esta política",
+      "body": "Nos reservamos el derecho de actualizar esta política de privacidad en cualquier momento. Cualquier modificación se publicará en esta misma página con la fecha de última actualización indicada al inicio."
+    },
+    "footer": "Gravitate Bikes · San Pedro Alcántara, Marbella"
+  },
+  "terminos": {
+    "breadcrumb": "Legal",
+    "title": "Términos y Condiciones de Alquiler",
+    "lastUpdated": "Última actualización: agosto de 2026",
+    "intro": "El presente documento recoge las condiciones generales que regulan el servicio de alquiler de bicicletas ofrecido por Gravitate Bikes. Al formalizar un alquiler, el cliente acepta íntegramente las condiciones aquí descritas.",
+    "s1": {
+      "title": "1. Horario del servicio",
+      "body": "El período de alquiler cubre siempre de las 10:00 h a las 19:00 h, con independencia de la hora a la que se efectúe la recogida de la bicicleta. A efectos de cómputo de días, cada día de alquiler comienza a las 10:00 h y finaliza a las 19:00 h del mismo día.",
+      "example": "Ejemplo: si un cliente recoge la bicicleta un miércoles a las 17:00 h y contrata 7 días de alquiler, el último día de uso es el martes siguiente. La devolución deberá realizarse antes de las 19:00 h de ese martes, o bien a partir de las 10:00 h del miércoles siguiente, según convenga al cliente y esté previamente acordado con el establecimiento."
+    },
+    "s2": {
+      "title": "2. Requisitos para el alquiler de bicicletas eléctricas",
+      "body": "Para el alquiler de bicicletas eléctricas (e-bikes) es imprescindible cumplir los siguientes requisitos:",
+      "bullets": [
+        "Presentar DNI o Pasaporte original en vigor. No se aceptarán fotocopias ni documentos caducados.",
+        "Disponer de una tarjeta de crédito física a nombre del titular del alquiler. No se aceptan tarjetas virtuales, monederos electrónicos ni tarjetas de prepago.",
+        "Dejar un depósito de garantía reembolsable, cuyo importe se comunicará en el momento de la reserva."
+      ]
+    },
+    "s3": {
+      "title": "3. Devolución y penalizaciones por retraso",
+      "body": "La bicicleta deberá devolverse en el plazo acordado. La devolución fuera del horario establecido (después de las 19:00 h) implicará el cargo automático de un día adicional de alquiler. En caso de no devolución o extravío, el cliente será responsable del valor de reposición de la bicicleta."
+    },
+    "s4": {
+      "title": "4. Estado de la bicicleta y responsabilidades",
+      "body": "El cliente recibirá la bicicleta en perfecto estado de funcionamiento y será responsable de su cuidado durante el período de alquiler. Cualquier daño, deterioro anormal o pérdida de accesorios (casco, candado, etc.) será imputado al cliente. Se realizará una revisión del estado de la bicicleta en el momento de la recogida y de la devolución."
+    },
+    "s5": {
+      "title": "5. Uso de la bicicleta",
+      "body": "Las bicicletas alquiladas están destinadas al uso personal y recreativo del cliente. Queda expresamente prohibido:",
+      "bullets": [
+        "Subalquilar o ceder la bicicleta a terceros.",
+        "Utilizarla en competiciones, pruebas deportivas o actividades de alto riesgo.",
+        "Realizar modificaciones en la bicicleta."
+      ]
+    },
+    "s6": {
+      "title": "6. Cancelaciones",
+      "body": "Las condiciones de cancelación se acordarán en el momento de la reserva. Gravitate Bikes se reserva el derecho de cancelar o modificar el servicio en circunstancias excepcionales (condiciones meteorológicas adversas, causas de fuerza mayor, etc.), informando al cliente con la mayor antelación posible."
+    },
+    "s7": {
+      "title": "7. Modificaciones",
+      "body": "Gravitate Bikes se reserva el derecho de actualizar estas condiciones en cualquier momento. La versión vigente estará siempre disponible en esta página."
+    },
+    "footer": "Gravitate Bikes · San Pedro Alcántara, Marbella"
+  },
+  "meta": {
+    "home": {
+      "title": "Gravitate Bikes | Tienda de bicicletas en San Pedro Alcántara",
+      "description": "Alquiler de bicis de paseo y eléctricas desde 15 €/día, taller de reparaciones y bicis infantiles woom en San Pedro Alcántara, Marbella."
+    },
+    "alquiler": {
+      "title": "Alquiler de bicicletas en San Pedro Alcántara",
+      "description": "Alquila tu bicicleta de paseo o eléctrica en Gravitate Bikes. Tarifas por día y por semana en San Pedro Alcántara, Marbella. Incluye casco y candado."
+    },
+    "reparaciones": {
+      "title": "Taller de reparaciones de bicicletas",
+      "description": "Reparaciones rápidas y profesionales para todo tipo de bicicletas en San Pedro Alcántara. Pinchazos, frenos, cambios de marchas y puesta a punto."
+    },
+    "woom": {
+      "title": "Bicicletas woom – Distribuidor oficial",
+      "description": "Distribuidor oficial de bicicletas woom en San Pedro Alcántara. Las mejores bicis infantiles del mundo, ligeras y seguras para cada etapa del crecimiento."
+    },
+    "quienesSomos": {
+      "title": "Quiénes somos",
+      "description": "Conoce a Gravitate Bikes, el negocio familiar de alquiler y reparación de bicicletas en el paseo marítimo de San Pedro Alcántara, Marbella."
+    },
+    "contacto": {
+      "title": "Contacto y ubicación",
+      "description": "Encuentra Gravitate Bikes en la Avenida Lopez de Mena nº 14, San Pedro Alcántara, Marbella. Horarios, teléfono y cómo llegar."
+    },
+    "privacidad": {
+      "title": "Política de privacidad",
+      "description": "Consulta la política de privacidad de Gravitate Bikes. Información sobre el uso de datos, cookies y comunicaciones vía WhatsApp."
+    }
+  },
+  "alts": {
+    "home": "Palmeras, flores y puente rojo en San Pedro Alcántara con la sierra al fondo",
+    "woom1": "Dos niños con casco junto a sus bicicletas woom",
+    "woom2": "Niño pequeño en una bici de equilibrio woom y niño mayor con su bici woom en una plaza",
+    "woom3": "Dos niños posando con sus bicicletas woom en una plaza",
+    "about": "Gabriel Sarria con equipación de descenso, sentado en el bosque junto a otro piloto",
+    "shop": "Fachada de la tienda Gravitate Bikes con el escaparate lleno de bicicletas",
+    "menuOpen": "Abrir menú",
+    "menuClose": "Cerrar menú",
+    "language": "Idioma",
+    "mainNav": "Navegación principal"
+  }
+}
