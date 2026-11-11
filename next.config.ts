@@ -1,4 +1,7 @@
 import type { NextConfig } from "next";
+import createNextIntlPlugin from "next-intl/plugin";
+
+const withNextIntl = createNextIntlPlugin("./src/i18n/request.ts");
 
 // Imágenes de /public sin hash en el nombre: caché larga en navegador y CDN,
 // pero revalidable (si se sustituye un archivo con el mismo nombre se acaba actualizando).
@@ -19,11 +22,20 @@ const nextConfig: NextConfig = {
       },
     ],
   },
+  // El español se sirve sin prefijo: las URLs antiguas /es y /es/... redirigen con 301 a / y /...
+  // (antes de que actúe proxy.ts; la query string se conserva).
+  async redirects() {
+    return [
+      { source: "/es", destination: "/", statusCode: 301 },
+      { source: "/es/:path*", destination: "/:path*", statusCode: 301 },
+    ];
+  },
   async headers() {
-    return ["/carrusel/:path*", "/bikes/:path*", "/woom/:path*", "/home/:path*", "/about/:path*", "/dondeEstamos/:path*", "/logo.png", "/whatsapp-glyph-black.svg"].map(
+    // ":path+" (no "*"): "/woom/:path*" también coincidiría con la página /woom en español.
+    return ["/carrusel/:path+", "/bikes/:path+", "/woom/:path+", "/home/:path+", "/about/:path+", "/dondeEstamos/:path+", "/logo.png", "/whatsapp-glyph-black.svg"].map(
       (source) => ({ source, headers: [{ key: "Cache-Control", value: publicAssetCache }] }),
     );
   },
 };
 
-export default nextConfig;
+export default withNextIntl(nextConfig);
