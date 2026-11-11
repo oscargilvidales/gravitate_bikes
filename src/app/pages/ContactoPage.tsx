@@ -1,11 +1,10 @@
 import { MapPin, Phone, Clock, Mail, Instagram, Facebook } from "lucide-react";
 import Image from "next/image";
 import { getDictionary, type Locale } from "@/i18n/server";
-import { imageAlts } from "@/i18n/alts";
 import { GoogleMapsConsent } from "@/app/components/GoogleMapsConsent";
 
-export function ContactoPage({ lang }: { lang: Locale }) {
-  const t = getDictionary(lang);
+export async function ContactoPage({ lang }: { lang: Locale }) {
+  const t = await getDictionary(lang);
 
   const hours = [
     { day: t.contacto.weekdays, time: "09:00 – 20:00" },
@@ -32,7 +31,7 @@ export function ContactoPage({ lang }: { lang: Locale }) {
           <div className="rounded-2xl overflow-hidden border border-white/10 shadow-2xl max-w-sm mx-auto w-full">
             <Image 
               src="/dondeEstamos/taller.jpg"
-              alt={imageAlts[lang].shop}
+              alt={t.alts.shop}
               width={1200}
               height={1600}
               sizes="(max-width: 448px) 100vw, 384px"

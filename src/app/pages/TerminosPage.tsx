@@ -1,10 +1,9 @@
-"use client";
-
 import { Scale } from "lucide-react";
-import { useTranslation } from "@/i18n/useTranslation";
+import { getDictionary, type Locale } from "@/i18n/server";
 
-export function TerminosPage() {
-  const { t } = useTranslation();
+// Sin ruta publicada (no existe /terminos); se conserva migrada a messages/*.json.
+export async function TerminosPage({ lang }: { lang: Locale }) {
+  const t = await getDictionary(lang);
   const terms = t.terminos;
 
   return (

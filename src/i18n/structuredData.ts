@@ -1,17 +1,16 @@
 import { OG_IMAGE, SITE_URL, localizedUrl, type SiteLocale } from "./seo";
-import { pageMeta } from "./meta";
 
 /**
  * Datos estructurados (schema.org BikeStore) del negocio.
  * Solo datos publicados en la web: dirección, teléfono, email, horario e Instagram.
  */
-export function bikeStoreJsonLd(lang: SiteLocale) {
+export function bikeStoreJsonLd(lang: SiteLocale, description: string) {
   return {
     "@context": "https://schema.org",
     "@type": "BikeStore",
     "@id": `${SITE_URL}/#store`,
     name: "Gravitate Bikes",
-    description: pageMeta[lang][""].description,
+    description,
     url: localizedUrl(lang, ""),
     logo: `${SITE_URL}/logo.png`,
     image: `${SITE_URL}${OG_IMAGE.url}`,
