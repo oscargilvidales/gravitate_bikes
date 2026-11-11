@@ -265,7 +265,7 @@
       "cupValue": "1st"
     },
     "historia": {
-      "text": "Gabriel has spent years in the local cycling scene. Before opening Gravitate, he was a key member of the team at Bike Base, where many customers got to know him. Now he offers the same service in his own shop."
+      "text": "Gabriel has spent years in the local cycling scene. Before opening Gravitate, he was the manager in charge of Bike Base, where many customers got to know him. Now he offers the same service in his own shop."
     }
   },
   "contacto": {
@@ -515,7 +515,7 @@
   "jsonLd": {
     "founder": {
       "jobTitle": "Mechanic and founder",
-      "description": "Mechanic and founder of Gravitate Bikes. Before opening Gravitate, he spent years as part of the team at Bike Base."
+      "description": "Mechanic and founder of Gravitate Bikes. Before opening Gravitate, he spent years as the manager in charge of Bike Base."
     }
   }
 }
