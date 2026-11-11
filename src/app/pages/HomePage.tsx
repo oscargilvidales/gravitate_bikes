@@ -1,12 +1,11 @@
-import Link from "next/link";
+import { Link } from "@/i18n/navigation";
 import Image from "next/image";
 import { Wrench, Bike, Zap, MapPin, Clock, Phone, Sparkles } from "lucide-react";
 import { getDictionary, type Locale } from "@/i18n/server";
-import { imageAlts } from "@/i18n/alts";
 import { BrandCarousel } from "../components/BrandCarousel";
 
-export function HomePage({ lang }: { lang: Locale }) {
-  const t = getDictionary(lang);
+export async function HomePage({ lang }: { lang: Locale }) {
+  const t = await getDictionary(lang);
 
   return (
     <div>
@@ -14,7 +13,7 @@ export function HomePage({ lang }: { lang: Locale }) {
       {/* Hero */}
       <section className="relative h-[90vh] min-h-[520px] flex items-center justify-center overflow-hidden">
         {/* Hero Image optimized */}
-        <Image src="/home/puestaDeSol.jpg" alt={imageAlts[lang].home} fill sizes="100vw" className="object-cover" preload fetchPriority="high" />
+        <Image src="/home/puestaDeSol.jpg" alt={t.alts.home} fill sizes="100vw" className="object-cover" preload fetchPriority="high" />
         <div className="relative z-10 text-center px-4 max-w-3xl mx-auto -translate-y-[10vh]">
           <span className="inline-block backdrop-blur-md bg-black/30 text-white border border-white/20 text-sm px-4 py-1.5 rounded-full mb-6 font-medium shadow-sm">
             {t.home.hero.location}
@@ -25,14 +24,14 @@ export function HomePage({ lang }: { lang: Locale }) {
           </h1>
           <div className="flex flex-col sm:flex-row gap-3 justify-center">
             <Link
-              href={`/${lang}/alquiler`}
+              href="/alquiler"
               className="inline-flex items-center justify-center gap-2 bg-[#7C3AED] hover:bg-[#6D28D9] text-white px-7 py-3.5 rounded-lg font-medium transition-colors"
             >
               <Bike size={18} />
               {t.home.hero.btnRent}
             </Link>
             <Link
-              href={`/${lang}/reparaciones`}
+              href="/reparaciones"
               className="inline-flex items-center justify-center gap-2 bg-white/30 hover:bg-white/40 backdrop-blur-md text-white border border-white/40 px-7 py-3.5 rounded-lg font-medium transition-colors"
             >
               <Wrench size={18} />
@@ -53,21 +52,21 @@ export function HomePage({ lang }: { lang: Locale }) {
             icon={<Bike size={28} className="text-[#A78BFA]" />}
             title={t.home.services.rent.title}
             description={t.home.services.rent.desc}
-            linkTo={`/${lang}/alquiler`}
+            linkTo="/alquiler"
             linkLabel={t.home.services.rent.btn}
           />
           <ServiceCard
             icon={<Wrench size={28} className="text-[#A78BFA]" />}
             title={t.home.services.repair.title}
             description={t.home.services.repair.desc}
-            linkTo={`/${lang}/reparaciones`}
+            linkTo="/reparaciones"
             linkLabel={t.home.services.repair.btn}
           />
           <ServiceCard
             icon={<Sparkles size={28} className="text-[#A78BFA]" />}
             title={t.home.services.clean.title}
             description={t.home.services.clean.desc}
-            linkTo={`/${lang}/reparaciones#limpieza`}
+            linkTo="/reparaciones#limpieza"
             linkLabel={t.home.services.clean.btn}
           />
         </div>
@@ -87,7 +86,7 @@ export function HomePage({ lang }: { lang: Locale }) {
               {t.home.cta.btnWa}
             </a>
             <Link
-              href={`/${lang}/contacto`}
+              href="/contacto"
               className="inline-flex items-center justify-center gap-2 bg-[#0E0E12] hover:bg-[#1a1a22] text-white px-8 py-4 rounded-lg font-medium transition-colors"
             >
               <MapPin size={18} />

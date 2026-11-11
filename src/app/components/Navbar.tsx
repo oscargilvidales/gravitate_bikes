@@ -1,12 +1,14 @@
 "use client";
 
 import { useState } from "react";
-import Link from "next/link";
-import { usePathname } from "next/navigation";
+import NextLink from "next/link";
+import { Link, getPathname, usePathname } from "@/i18n/navigation";
+import { LOCALE_COOKIE, LOCALE_COOKIE_MAX_AGE } from "@/i18n/routing";
 import Image from "next/image";
 import { Menu, X, Globe } from "lucide-react";
+import type { Locale } from "next-intl";
 
-const availableLocales = [
+const availableLocales: { code: Locale; label: string; name: string }[] = [
   { code: "es", label: "ES", name: "Español" },
   { code: "en", label: "EN", name: "English" },
   { code: "fr", label: "FR", name: "Français" },
@@ -24,22 +26,28 @@ type NavLabels = {
 
 type NavA11y = { menuOpen: string; menuClose: string; language: string; mainNav: string };
 
+// Guarda el idioma elegido a mano: proxy.ts lo respeta en vez de detectar el del navegador.
+function rememberLocale(locale: Locale) {
+  document.cookie = `${LOCALE_COOKIE}=${locale}; path=/; max-age=${LOCALE_COOKIE_MAX_AGE}; samesite=lax`;
+}
+
 // Recibe solo los textos que necesita desde el layout (servidor), para no enviar los diccionarios completos al navegador.
 export function Navbar({ lang, labels, a11y }: { lang: string; labels: NavLabels; a11y: NavA11y }) {
   const [open, setOpen] = useState(false);
+  // Ruta sin prefijo de idioma ("/", "/alquiler"…): Link le añade el prefijo que toque.
   const pathname = usePathname();
 
   const links = [
-    { href: `/${lang}`, label: labels.inicio },
-    { href: `/${lang}/alquiler`, label: labels.alquiler },
-    { href: `/${lang}/reparaciones`, label: labels.reparaciones },
-    { href: `/${lang}/woom`, label: labels.woom },
-    { href: `/${lang}/quienes-somos`, label: labels.quienesSomos },
-    { href: `/${lang}/contacto`, label: labels.contacto },
+    { href: "/", label: labels.inicio },
+    { href: "/alquiler", label: labels.alquiler },
+    { href: "/reparaciones", label: labels.reparaciones },
+    { href: "/woom", label: labels.woom },
+    { href: "/quienes-somos", label: labels.quienesSomos },
+    { href: "/contacto", label: labels.contacto },
   ];
 
   const isActive = (href: string) =>
-    href === `/${lang}` ? pathname === `/${lang}` : pathname.startsWith(href);
+    href === "/" ? pathname === "/" : pathname.startsWith(href);
 
   return (
     <header className="sticky top-0 z-50 bg-[#0E0E12]/95 backdrop-blur-md border-b border-white/10">
@@ -47,7 +55,7 @@ export function Navbar({ lang, labels, a11y }: { lang: string; labels: NavLabels
 
         {/* Logo */}
         <Link
-          href={`/${lang}`}
+          href="/"
           className="flex items-center group shrink-0"
           onClick={() => setOpen(false)}
         >
@@ -82,14 +90,13 @@ export function Navbar({ lang, labels, a11y }: { lang: string; labels: NavLabels
         {/* Desktop Language Switcher */}
         <div role="group" aria-label={a11y.language} className="hidden md:flex items-center gap-2 border-l border-white/20 pl-4 ml-2">
           {availableLocales.map((l) => {
-            // Generate path for the language (replace /es with /en, etc.)
-            const parts = pathname.split('/');
-            parts[1] = l.code;
-            const newPath = parts.join('/');
+            // Misma página en otro idioma, con la URL final (español sin /es) para no enlazar a una redirección.
             return (
-              <Link
+              <NextLink
                 key={l.code}
-                href={newPath || `/${l.code}`}
+                href={getPathname({ locale: l.code, href: pathname })}
+                prefetch={false}
+                onClick={() => rememberLocale(l.code)}
                 hrefLang={l.code}
                 lang={l.code}
                 title={l.name}
@@ -98,7 +105,7 @@ export function Navbar({ lang, labels, a11y }: { lang: string; labels: NavLabels
                   }`}
               >
                 {l.label}
-              </Link>
+              </NextLink>
             );
           })}
         </div>
@@ -137,23 +144,24 @@ export function Navbar({ lang, labels, a11y }: { lang: string; labels: NavLabels
             <Globe size={18} className="text-white/50" aria-hidden="true" />
             <div role="group" aria-label={a11y.language} className="flex gap-2">
               {availableLocales.map((l) => {
-                const parts = pathname.split('/');
-                parts[1] = l.code;
-                const newPath = parts.join('/');
                 return (
-                  <Link
+                  <NextLink
                     key={l.code}
-                    href={newPath || `/${l.code}`}
+                    href={getPathname({ locale: l.code, href: pathname })}
+                    prefetch={false}
                     hrefLang={l.code}
                     lang={l.code}
                     title={l.name}
                     aria-current={lang === l.code ? "true" : undefined}
-                    onClick={() => setOpen(false)}
+                    onClick={() => {
+                      rememberLocale(l.code);
+                      setOpen(false);
+                    }}
                     className={`text-sm font-bold px-3 py-1.5 rounded transition-colors ${lang === l.code ? "bg-[#7C3AED] text-white" : "bg-white/10 text-white/70"
                       }`}
                   >
                     {l.label}
-                  </Link>
+                  </NextLink>
                 );
               })}
             </div>
