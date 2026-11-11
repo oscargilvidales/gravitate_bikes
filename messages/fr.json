@@ -33,7 +33,7 @@
         "desc": "Rendez-le comme neuf. Nettoyage de la transmission pour 15€ et nettoyage complet pour 20€.",
         "btn": "Prendre rendez-vous"
       },
-      "founderLine": "Gabriel, auparavant chez Yep Bike et Bike Base"
+      "founderLine": "Gabriel, auparavant chez Bike Base"
     },
     "whyUs": {
       "title": "Pourquoi nous choisir ?",
@@ -265,7 +265,7 @@
       "cupValue": "1er"
     },
     "historia": {
-      "text": "Gabriel travaille depuis des années dans le monde du vélo de la région. Avant d'ouvrir Gravitate, il a été un pilier de l'équipe de Yep Bike et de Bike Base, où de nombreux clients ont fait sa connaissance. Aujourd'hui, il continue d'offrir le même service dans sa propre boutique."
+      "text": "Gabriel travaille depuis des années dans le monde du vélo de la région. Avant d'ouvrir Gravitate, il a été un pilier de l'équipe de Bike Base, où de nombreux clients ont fait sa connaissance. Aujourd'hui, il continue d'offrir le même service dans sa propre boutique."
     }
   },
   "contacto": {
@@ -515,7 +515,7 @@
   "jsonLd": {
     "founder": {
       "jobTitle": "Mécanicien et fondateur",
-      "description": "Mécanicien et fondateur de Gravitate Bikes. Avant d'ouvrir Gravitate, il a fait partie pendant des années de l'équipe de Yep Bike et de Bike Base."
+      "description": "Mécanicien et fondateur de Gravitate Bikes. Avant d'ouvrir Gravitate, il a fait partie pendant des années de l'équipe de Bike Base."
     }
   }
 }

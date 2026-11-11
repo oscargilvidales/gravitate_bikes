@@ -5,7 +5,7 @@ type Founder = { jobTitle: string; description: string };
 /**
  * Datos estructurados (schema.org BikeStore; "BicycleStore" no existe en schema.org) del negocio.
  * Solo datos publicados en la web: dirección, teléfono, email, horario, Instagram y fundador.
- * Yep Bike y Bike Base solo se citan en la descripción del fundador (trabajó allí): no son
+ * Bike Base solo se cita en la descripción del fundador (trabajó allí): no es
  * alternateName ni sameAs de Gravitate, que es otra tienda.
  */
 export function bikeStoreJsonLd(lang: SiteLocale, description: string, founder: Founder) {
