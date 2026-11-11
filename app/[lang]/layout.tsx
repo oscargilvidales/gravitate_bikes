@@ -35,9 +35,7 @@ export const metadata: Metadata = {
   description:
     "Bicis de paseo y eléctricas desde 15€/día. Recorre el paseo marítimo de Marbella a tu ritmo, con precios claros y taller propio.",
   keywords: ["Taller de bicicletas", "reparación de bicicletas", "venta de bicicletas", "alquiler de bicicletas", "san pedro alcántara", "marbella", "bici eléctrica", "reparaciones bici", "woom", "bici niña", "bici niño", "bici montaña", "bici eléctrica"],
-  icons: {
-    icon: '/logo.png',
-  },
+  // Iconos: app/favicon.ico, app/icon.png y app/apple-icon.png (cuadrados; Google exige 1:1 y ≥48px).
 };
 
 export default async function RootLayout({
