@@ -86,7 +86,7 @@
     },
     "ebike": {
       "title": "Electric Bicycles (E-bikes)",
-      "warning": "To rent electric bicycles, an original ID/Passport and a physical credit card are required. Rental hours are from 10:00 to 19:30. If the bike is returned after 19:30, the following day will be charged.",
+      "warning": "To rent electric bicycles, an original ID/Passport and a physical credit card are required. Rental hours are from 10:00 to 19:00. If the bike is returned after 19:00, the following day will be charged.",
       "aviso": "Important notice:",
       "models": {
         "basica": {

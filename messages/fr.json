@@ -86,7 +86,7 @@
     },
     "ebike": {
       "title": "Vélos Électriques (E-bikes)",
-      "warning": "Pour louer des vélos électriques, une pièce d'identité/passeport original et une carte de crédit physique sont requis. La location est de 10h00 à 19h30. Si le vélo est rendu après 19h30, le jour suivant sera facturé.",
+      "warning": "Pour louer des vélos électriques, une pièce d'identité/passeport original et une carte de crédit physique sont requis. La location est de 10h00 à 19h00. Si le vélo est rendu après 19h00, le jour suivant sera facturé.",
       "aviso": "Avis important :",
       "models": {
         "basica": {

@@ -86,7 +86,7 @@
     },
     "ebike": {
       "title": "Bicicletas Eléctricas (E-bikes)",
-      "warning": "Para alquilar bicicletas eléctricas es necesario presentar DNI/Pasaporte original y tarjeta de crédito física. El alquiler es de 10:00 a 19:30 h. Si la bici se entrega después de las 19:30 h, se deberá abonar el día siguiente.",
+      "warning": "Para alquilar bicicletas eléctricas es necesario presentar DNI/Pasaporte original y tarjeta de crédito física. El alquiler es de 10:00 a 19:00 h. Si la bici se entrega después de las 19:00 h, se deberá abonar el día siguiente.",
       "aviso": "Aviso importante:",
       "models": {
         "basica": {

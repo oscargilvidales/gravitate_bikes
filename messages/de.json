@@ -86,7 +86,7 @@
     },
     "ebike": {
       "title": "Elektrofahrräder (E-Bikes)",
-      "warning": "Zum Mieten von Elektrofahrrädern sind ein gültiger Personalausweis/Reisepass und eine physische Kreditkarte erforderlich. Ein Miettag gilt von 10:00 bis 19:30 Uhr. Bei Rückgabe nach 19:30 Uhr wird der folgende Tag berechnet.",
+      "warning": "Zum Mieten von Elektrofahrrädern sind ein gültiger Personalausweis/Reisepass und eine physische Kreditkarte erforderlich. Ein Miettag gilt von 10:00 bis 19:00 Uhr. Bei Rückgabe nach 19:00 Uhr wird der folgende Tag berechnet.",
       "aviso": "Wichtiger Hinweis:",
       "models": {
         "basica": {
