@@ -21,12 +21,12 @@
 
 ## Español
 
-- [Inicio](https://gravitatebikes.com/es)
-- [Alquiler de bicicletas](https://gravitatebikes.com/es/alquiler): tarifas de bicis de paseo y eléctricas
-- [Taller de reparaciones](https://gravitatebikes.com/es/reparaciones): planes de mantenimiento y limpieza
-- [Bicicletas woom](https://gravitatebikes.com/es/woom): bicis infantiles por edades
-- [Quiénes somos](https://gravitatebikes.com/es/quienes-somos)
-- [Contacto y ubicación](https://gravitatebikes.com/es/contacto): dirección, horario y mapa
+- [Inicio](https://gravitatebikes.com)
+- [Alquiler de bicicletas](https://gravitatebikes.com/alquiler): tarifas de bicis de paseo y eléctricas
+- [Taller de reparaciones](https://gravitatebikes.com/reparaciones): planes de mantenimiento y limpieza
+- [Bicicletas woom](https://gravitatebikes.com/woom): bicis infantiles por edades
+- [Quiénes somos](https://gravitatebikes.com/quienes-somos)
+- [Contacto y ubicación](https://gravitatebikes.com/contacto): dirección, horario y mapa
 
 ## English
 
@@ -57,5 +57,5 @@
 
 ## Optional
 
-- [Política de privacidad](https://gravitatebikes.com/es/privacidad)
+- [Política de privacidad](https://gravitatebikes.com/privacidad)
 - [Sitemap](https://gravitatebikes.com/sitemap.xml)

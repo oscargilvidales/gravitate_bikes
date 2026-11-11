@@ -49,9 +49,10 @@ export function localizedPath(lang: SiteLocale, path: PagePath): string {
   return getPathname({ locale: lang, href: path || "/" });
 }
 
-/** URL absoluta: https://gravitatebikes.com/ (home en español), https://gravitatebikes.com/en/alquiler… */
+/** URL absoluta: https://gravitatebikes.com (home en español, sin barra, igual que el canonical que genera Next), https://gravitatebikes.com/en/alquiler… */
 export function localizedUrl(lang: SiteLocale, path: PagePath): string {
-  return `${SITE_URL}${localizedPath(lang, path)}`;
+  const pathname = localizedPath(lang, path);
+  return pathname === "/" ? SITE_URL : `${SITE_URL}${pathname}`;
 }
 
 /** Mapa hreflang -> URL absoluta, incluida la propia página y x-default (versión en español, sin prefijo). */
