@@ -1,4 +1,4 @@
-import { MapPin, Phone, Clock, Mail, Instagram, Facebook } from "lucide-react";
+import { MapPin, Phone, Clock, Mail, Instagram, Facebook, Youtube } from "lucide-react";
 import Image from "next/image";
 import { getDictionary, type Locale } from "@/i18n/server";
 import { GoogleMapsConsent } from "@/app/components/GoogleMapsConsent";
@@ -103,18 +103,34 @@ export async function ContactoPage({ lang }: { lang: Locale }) {
               </a>
             </div>
 
-            <a
-              href="https://instagram.com/gravitatebikes"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="group inline-flex w-full items-center justify-center gap-3 rounded-2xl border border-[#A78BFA]/30 bg-[#111827] px-5 py-3.5 text-white shadow-sm transition-all duration-200 hover:-translate-y-0.5 hover:bg-[#1f2937] hover:shadow-md focus:outline-none focus:ring-2 focus:ring-[#A78BFA]/60"
-              aria-label="Instagram de Gravitate Bikes"
-            >
-              <span className="flex h-10 w-10 items-center justify-center rounded-xl bg-gradient-to-br from-[#F58529] via-[#DD2A7B] to-[#8134AF] text-white shadow-sm transition-transform duration-200 group-hover:scale-105">
-                <Instagram size={18} />
-              </span>
-              <span className="text-base font-semibold tracking-wide">@GRAVITATEBIKES</span>
-            </a>
+            {/* Redes sociales */}
+            <div>
+              <p className="text-xs font-medium text-gray-500 uppercase tracking-wider mb-3 text-center">
+                {t.contacto.socialTitle}
+              </p>
+              <div className="grid sm:grid-cols-2 gap-3">
+                <a
+                  href="https://instagram.com/gravitatebikes"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label={t.contacto.igAria}
+                  className="flex items-center justify-center gap-3 bg-gradient-to-r from-[#F58529] via-[#DD2A7B] to-[#8134AF] hover:brightness-110 text-white w-full py-4 rounded-xl font-bold transition-all shadow-md hover:shadow-lg text-lg"
+                >
+                  <Instagram size={24} />
+                  Instagram
+                </a>
+                <a
+                  href="https://www.youtube.com/@Gravitatebikes"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label={t.contacto.ytAria}
+                  className="flex items-center justify-center gap-3 bg-[#FF0000] hover:bg-[#e00000] text-white w-full py-4 rounded-xl font-bold transition-all shadow-md hover:shadow-lg text-lg"
+                >
+                  <Youtube size={24} />
+                  YouTube
+                </a>
+              </div>
+            </div>
           </div>
 
           {/* Mapa Interactivo */}

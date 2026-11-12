@@ -4,7 +4,7 @@ type Founder = { jobTitle: string; description: string };
 
 /**
  * Datos estructurados (schema.org BikeStore; "BicycleStore" no existe en schema.org) del negocio.
- * Solo datos publicados en la web: dirección, teléfono, email, horario, Instagram y fundador.
+ * Solo datos publicados en la web: dirección, teléfono, email, horario, Instagram, YouTube y fundador.
  * Bike Base solo se cita en la descripción del fundador (fue su manager y encargado): no es
  * alternateName ni sameAs de Gravitate, que es otra tienda.
  */
@@ -32,7 +32,7 @@ export function bikeStoreJsonLd(lang: SiteLocale, description: string, founder: 
       { "@type": "OpeningHoursSpecification", dayOfWeek: "Saturday", opens: "09:00", closes: "21:00" },
       { "@type": "OpeningHoursSpecification", dayOfWeek: "Sunday", opens: "10:00", closes: "20:00" },
     ],
-    sameAs: ["https://instagram.com/gravitatebikes"],
+    sameAs: ["https://instagram.com/gravitatebikes", "https://www.youtube.com/@Gravitatebikes"],
     founder: {
       "@type": "Person",
       "@id": `${SITE_URL}/#gabriel`,
